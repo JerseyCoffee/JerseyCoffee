@@ -1,0 +1,518 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3547F839BDBAC4702DD9979F /* libPods-JerseyCoffee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A40335F599FD0E1C7292803F /* libPods-JerseyCoffee.a */; };
+		5542BA8222E5BE0000ADCCAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5542BA8122E5BE0000ADCCAC /* AppDelegate.m */; };
+		5542BA8822E5BE0000ADCCAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5542BA8622E5BE0000ADCCAC /* Main.storyboard */; };
+		5542BA8A22E5BE0100ADCCAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5542BA8922E5BE0100ADCCAC /* Assets.xcassets */; };
+		5542BA8D22E5BE0100ADCCAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5542BA8B22E5BE0100ADCCAC /* LaunchScreen.storyboard */; };
+		5542BA9022E5BE0100ADCCAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5542BA8F22E5BE0100ADCCAC /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2741154BE751079261D2B9F7 /* Pods-JerseyCoffee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JerseyCoffee.release.xcconfig"; path = "Target Support Files/Pods-JerseyCoffee/Pods-JerseyCoffee.release.xcconfig"; sourceTree = "<group>"; };
+		5542BA7D22E5BE0000ADCCAC /* JerseyCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JerseyCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5542BA8022E5BE0000ADCCAC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5542BA8122E5BE0000ADCCAC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5542BA8722E5BE0000ADCCAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5542BA8922E5BE0100ADCCAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5542BA8C22E5BE0100ADCCAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5542BA8E22E5BE0100ADCCAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5542BA8F22E5BE0100ADCCAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		55703AB722E5C10600C2EC01 /* JSDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDPrefixHeader.pch; sourceTree = "<group>"; };
+		55703AB822E5C10600C2EC01 /* JSDDevMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDDevMacro.h; sourceTree = "<group>"; };
+		55703AB922E5C10600C2EC01 /* JSDMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDMacro.h; sourceTree = "<group>"; };
+		55703ABA22E5C10600C2EC01 /* JSDPublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDPublic.h; sourceTree = "<group>"; };
+		7F5E24E53A3B4D07A28557E2 /* Pods-JerseyCoffee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JerseyCoffee.debug.xcconfig"; path = "Target Support Files/Pods-JerseyCoffee/Pods-JerseyCoffee.debug.xcconfig"; sourceTree = "<group>"; };
+		A40335F599FD0E1C7292803F /* libPods-JerseyCoffee.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JerseyCoffee.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5542BA7A22E5BE0000ADCCAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3547F839BDBAC4702DD9979F /* libPods-JerseyCoffee.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5542BA7422E5BE0000ADCCAC = {
+			isa = PBXGroup;
+			children = (
+				5542BA7F22E5BE0000ADCCAC /* JerseyCoffee */,
+				5542BA7E22E5BE0000ADCCAC /* Products */,
+				99ECA596A68D06A47FFCEDBF /* Pods */,
+				FF059F6BF10693FA7BB3ACE1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5542BA7E22E5BE0000ADCCAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5542BA7D22E5BE0000ADCCAC /* JerseyCoffee.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5542BA7F22E5BE0000ADCCAC /* JerseyCoffee */ = {
+			isa = PBXGroup;
+			children = (
+				55703AB222E5C02E00C2EC01 /* Application */,
+				55703AB022E5C02E00C2EC01 /* Base */,
+				55703AB522E5C02E00C2EC01 /* BaseKit */,
+				55703AB622E5C02E00C2EC01 /* CategoryTool */,
+				55703AB322E5C02E00C2EC01 /* Modules */,
+				55703AB422E5C02E00C2EC01 /* Public */,
+				55703AB122E5C02E00C2EC01 /* Supporting Files */,
+			);
+			path = JerseyCoffee;
+			sourceTree = "<group>";
+		};
+		55703AB022E5C02E00C2EC01 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		55703AB122E5C02E00C2EC01 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5542BA8622E5BE0000ADCCAC /* Main.storyboard */,
+				5542BA8922E5BE0100ADCCAC /* Assets.xcassets */,
+				5542BA8B22E5BE0100ADCCAC /* LaunchScreen.storyboard */,
+				5542BA8E22E5BE0100ADCCAC /* Info.plist */,
+				5542BA8F22E5BE0100ADCCAC /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55703AB222E5C02E00C2EC01 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				5542BA8022E5BE0000ADCCAC /* AppDelegate.h */,
+				5542BA8122E5BE0000ADCCAC /* AppDelegate.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		55703AB322E5C02E00C2EC01 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		55703AB422E5C02E00C2EC01 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				55703AB822E5C10600C2EC01 /* JSDDevMacro.h */,
+				55703AB922E5C10600C2EC01 /* JSDMacro.h */,
+				55703AB722E5C10600C2EC01 /* JSDPrefixHeader.pch */,
+				55703ABA22E5C10600C2EC01 /* JSDPublic.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		55703AB522E5C02E00C2EC01 /* BaseKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseKit;
+			sourceTree = "<group>";
+		};
+		55703AB622E5C02E00C2EC01 /* CategoryTool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CategoryTool;
+			sourceTree = "<group>";
+		};
+		99ECA596A68D06A47FFCEDBF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F5E24E53A3B4D07A28557E2 /* Pods-JerseyCoffee.debug.xcconfig */,
+				2741154BE751079261D2B9F7 /* Pods-JerseyCoffee.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FF059F6BF10693FA7BB3ACE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A40335F599FD0E1C7292803F /* libPods-JerseyCoffee.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5542BA7C22E5BE0000ADCCAC /* JerseyCoffee */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5542BA9322E5BE0100ADCCAC /* Build configuration list for PBXNativeTarget "JerseyCoffee" */;
+			buildPhases = (
+				C02AB30631D0BB4A6BC2335D /* [CP] Check Pods Manifest.lock */,
+				5542BA7922E5BE0000ADCCAC /* Sources */,
+				5542BA7A22E5BE0000ADCCAC /* Frameworks */,
+				5542BA7B22E5BE0000ADCCAC /* Resources */,
+				A612DC1C594793A810590567 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JerseyCoffee;
+			productName = JerseyCoffee;
+			productReference = 5542BA7D22E5BE0000ADCCAC /* JerseyCoffee.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5542BA7522E5BE0000ADCCAC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JSD;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = jerseyCafe;
+				TargetAttributes = {
+					5542BA7C22E5BE0000ADCCAC = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 5542BA7822E5BE0000ADCCAC /* Build configuration list for PBXProject "JerseyCoffee" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5542BA7422E5BE0000ADCCAC;
+			productRefGroup = 5542BA7E22E5BE0000ADCCAC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5542BA7C22E5BE0000ADCCAC /* JerseyCoffee */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5542BA7B22E5BE0000ADCCAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5542BA8D22E5BE0100ADCCAC /* LaunchScreen.storyboard in Resources */,
+				5542BA8A22E5BE0100ADCCAC /* Assets.xcassets in Resources */,
+				5542BA8822E5BE0000ADCCAC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A612DC1C594793A810590567 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JerseyCoffee/Pods-JerseyCoffee-resources.sh",
+				"${PODS_ROOT}/MaterialComponents/components/ActivityIndicator/src/MaterialActivityIndicator.bundle",
+				"${PODS_ROOT}/MaterialComponents/components/AppBar/src/MaterialAppBar.bundle",
+				"${PODS_ROOT}/MaterialComponents/components/BottomNavigation/src/MaterialBottomNavigation.bundle",
+				"${PODS_ROOT}/MaterialComponents/components/CollectionCells/src/MaterialCollectionCells.bundle",
+				"${PODS_ROOT}/MaterialComponents/components/Collections/src/MaterialCollections.bundle",
+				"${PODS_ROOT}/MaterialComponents/components/Dialogs/src/MaterialDialogs.bundle",
+				"${PODS_ROOT}/MaterialComponents/components/FeatureHighlight/src/MaterialFeatureHighlight.bundle",
+				"${PODS_ROOT}/MaterialComponents/components/PageControl/src/MaterialPageControl.bundle",
+				"${PODS_ROOT}/MaterialComponents/components/Snackbar/src/MaterialSnackbar.bundle",
+				"${PODS_ROOT}/MaterialComponents/components/Tabs/src/MaterialTabs.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MaterialComponents/MaterialIcons_ic_arrow_back.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MaterialComponents/MaterialIcons_ic_check.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MaterialComponents/MaterialIcons_ic_check_circle.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MaterialComponents/MaterialIcons_ic_chevron_right.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MaterialComponents/MaterialIcons_ic_color_lens.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MaterialComponents/MaterialIcons_ic_help_outline.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MaterialComponents/MaterialIcons_ic_info.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MaterialComponents/MaterialIcons_ic_more_horiz.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MaterialComponents/MaterialIcons_ic_radio_button_unchecked.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MaterialComponents/MaterialIcons_ic_reorder.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MaterialComponents/MaterialIcons_ic_settings.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialActivityIndicator.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialAppBar.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialBottomNavigation.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCollectionCells.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCollections.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialDialogs.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialFeatureHighlight.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialPageControl.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialSnackbar.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialTabs.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons_ic_arrow_back.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons_ic_check.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons_ic_check_circle.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons_ic_chevron_right.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons_ic_color_lens.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons_ic_help_outline.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons_ic_info.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons_ic_more_horiz.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons_ic_radio_button_unchecked.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons_ic_reorder.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons_ic_settings.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JerseyCoffee/Pods-JerseyCoffee-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C02AB30631D0BB4A6BC2335D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JerseyCoffee-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5542BA7922E5BE0000ADCCAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5542BA9022E5BE0100ADCCAC /* main.m in Sources */,
+				5542BA8222E5BE0000ADCCAC /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5542BA8622E5BE0000ADCCAC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5542BA8722E5BE0000ADCCAC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5542BA8B22E5BE0100ADCCAC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5542BA8C22E5BE0100ADCCAC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5542BA9122E5BE0100ADCCAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5542BA9222E5BE0100ADCCAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5542BA9422E5BE0100ADCCAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F5E24E53A3B4D07A28557E2 /* Pods-JerseyCoffee.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6GD2CA4X64;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Supporting Files/JSDPrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/JerseyCoffee/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jerseyCafe.JerseyCoffee;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5542BA9522E5BE0100ADCCAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2741154BE751079261D2B9F7 /* Pods-JerseyCoffee.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6GD2CA4X64;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Supporting Files/JSDPrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/JerseyCoffee/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jerseyCafe.JerseyCoffee;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5542BA7822E5BE0000ADCCAC /* Build configuration list for PBXProject "JerseyCoffee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5542BA9122E5BE0100ADCCAC /* Debug */,
+				5542BA9222E5BE0100ADCCAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5542BA9322E5BE0100ADCCAC /* Build configuration list for PBXNativeTarget "JerseyCoffee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5542BA9422E5BE0100ADCCAC /* Debug */,
+				5542BA9522E5BE0100ADCCAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5542BA7522E5BE0000ADCCAC /* Project object */;
+}
