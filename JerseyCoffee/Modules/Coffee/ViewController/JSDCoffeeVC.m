@@ -49,6 +49,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)setupView {
     
     self.view.backgroundColor = [UIColor jsd_mainGrayColor];
+    self.collectionView.backgroundColor = self.view.backgroundColor;
     
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.mas_equalTo(0);
@@ -58,7 +59,9 @@ static NSString * const reuseIdentifier = @"Cell";
             make.bottom.mas_equalTo(0);
         }
     }];
-    [self.collectionView registerClass:[JSDCoffeeCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+//    [self.collectionView registerClass:[JSDCoffeeCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"JSDCoffeeCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:reuseIdentifier];
+    
     self.collectionView.alwaysBounceVertical = NO;
     
     UICollectionViewFlowLayout* layout = (UICollectionViewFlowLayout *)self.collectionViewLayout;
@@ -93,7 +96,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     JSDCoffeeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    cell.contentView.backgroundColor = [UIColor redColor];
+
     // Configure the cell
     
     return cell;
@@ -111,7 +114,7 @@ static NSString * const reuseIdentifier = @"Cell";
 //设置每个item的UIEdgeInsets
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return UIEdgeInsetsMake(10, 40, 30, 30);
+    return UIEdgeInsetsMake(10, 40, 30, 20);
 //    UIEdgeInsetsMake(<#CGFloat top#>, <#CGFloat left#>, <#CGFloat bottom#>, <#CGFloat right#>)
 }
 
@@ -126,6 +129,39 @@ static NSString * const reuseIdentifier = @"Cell";
 {
     return 15;
 }
+
+#pragma mark - ScrolleViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    NSInteger i = (scrollView.contentOffset.x + ScreenWidth / 2) / ScreenWidth;
+    NSIndexPath* index = [NSIndexPath indexPathForItem:i inSection:0];
+    [self.collectionView scrollToItemAtIndexPath:index atScrollPosition: UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+}
+
+//- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
+//
+//    NSInteger i = (scrollView.contentOffset.x + ScreenWidth / 2) / ScreenWidth;
+////    NSLog(@"%ld", i);
+//    NSIndexPath* index = [NSIndexPath indexPathForItem:i inSection:0];
+//    if (i) {
+////        [self.collectionView setContentOffset: CGPointMake((ScreenWidth * (i)), 0)];
+//        NSLog(@"%f", self.collectionView.contentOffset.x);
+//
+//
+//    } else {
+////        [self.collectionView setContentOffset: CGPointMake(0, 0)];
+//        NSLog(@"%f", self.collectionView.contentOffset.x);
+//    }
+//    [self.collectionView scrollToItemAtIndexPath:index atScrollPosition: UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+//}
+
+//- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+//
+//    NSInteger i = (scrollView.contentOffset.x + ScreenWidth / 2) / ScreenWidth;
+//    NSIndexPath* index = [NSIndexPath indexPathForItem:i inSection:0];
+//    [self.collectionView scrollToItemAtIndexPath:index atScrollPosition: UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+//}
 
 #pragma mark - 5.Event Response
 

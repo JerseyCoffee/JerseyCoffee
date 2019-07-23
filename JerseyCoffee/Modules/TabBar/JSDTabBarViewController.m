@@ -23,7 +23,8 @@
         return nil;
     }
     UIEdgeInsets imageInsets = UIEdgeInsetsZero;//UIEdgeInsetsMake(4.5, 0, -4.5, 0);
-    UIOffset titlePositionAdjustment = UIOffsetMake(0, -3.5);
+//    UIOffset titlePositionAdjustment = UIOffsetMake(0, -3.5);
+    UIOffset titlePositionAdjustment = UIOffsetMake(0, 1.5);
     
     CYLTabBarController* tabBarController = [CYLTabBarController tabBarControllerWithViewControllers:self.viewControllers  tabBarItemsAttributes:[self tabBarItemsAttributesForController] imageInsets:imageInsets titlePositionAdjustment:titlePositionAdjustment];
     
@@ -41,23 +42,23 @@
     
     NSDictionary *coffeeItemsAttributes = @{
                                                  CYLTabBarItemTitle : @"咖啡",
-                                                 CYLTabBarItemImage : @"home_defalut",
-                                                 CYLTabBarItemSelectedImage : @"home_selected",  /* NSString and UIImage are supported*/
+                                                 CYLTabBarItemImage : @"coffee_tabbar_defalut",
+                                                 CYLTabBarItemSelectedImage : @"coffee_tabbar_selected",  /* NSString and UIImage are supported*/
                                                  };
     NSDictionary *materialItemsAttributes = @{
                                                   CYLTabBarItemTitle : @"材料",
-                                                  CYLTabBarItemImage : @"my_defalut",
-                                                  CYLTabBarItemSelectedImage : @"my_selected",
+                                                  CYLTabBarItemImage : @"material_tabbar_defalut",
+                                                  CYLTabBarItemSelectedImage : @"material_tabbar_selected",
                                                   };
     NSDictionary *kitItemsAttributes = @{
                                                   CYLTabBarItemTitle : @"器具",
-                                                  CYLTabBarItemImage : @"my_defalut",
-                                                  CYLTabBarItemSelectedImage : @"my_selected",
+                                                  CYLTabBarItemImage : @"kit_tabbar_selected",
+                                                  CYLTabBarItemSelectedImage : @"kit_tabbar_selected",
                                                   };
     NSDictionary *myItemsAttributes = @{
                                                   CYLTabBarItemTitle : @"我的",
-                                                  CYLTabBarItemImage : @"my_defalut",
-                                                  CYLTabBarItemSelectedImage : @"my_selected",
+                                                  CYLTabBarItemImage : @"my_tabbar_default",
+                                                  CYLTabBarItemSelectedImage : @"my_tabbar_default",
                                                   };
     
     NSArray *tabBarItemsAttributes = @[

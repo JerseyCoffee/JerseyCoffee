@@ -54,7 +54,7 @@
 
 + (UIColor *)jsd_mainGrayColor {
     
-    return [self jsd_grayColor];
+    return [UIColor colorWithRed:231/255.0 green:227/255.0 blue:227/255.0 alpha:1.0];
 }
 
 + (UIColor *)jsd_grayColor {

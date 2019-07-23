@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JSDCoffeeCollectionViewCell : MDCCollectionViewCell
+@interface JSDCoffeeCollectionViewCell : UICollectionViewCell
 
 @end
 
