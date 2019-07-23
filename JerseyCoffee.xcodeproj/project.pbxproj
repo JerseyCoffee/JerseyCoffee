@@ -9,10 +9,22 @@
 /* Begin PBXBuildFile section */
 		3547F839BDBAC4702DD9979F /* libPods-JerseyCoffee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A40335F599FD0E1C7292803F /* libPods-JerseyCoffee.a */; };
 		5542BA8222E5BE0000ADCCAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5542BA8122E5BE0000ADCCAC /* AppDelegate.m */; };
-		5542BA8822E5BE0000ADCCAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5542BA8622E5BE0000ADCCAC /* Main.storyboard */; };
 		5542BA8A22E5BE0100ADCCAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5542BA8922E5BE0100ADCCAC /* Assets.xcassets */; };
 		5542BA8D22E5BE0100ADCCAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5542BA8B22E5BE0100ADCCAC /* LaunchScreen.storyboard */; };
 		5542BA9022E5BE0100ADCCAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5542BA8F22E5BE0100ADCCAC /* main.m */; };
+		55BE3C8522E6AFAE00D28107 /* UIColor+JSDStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3C8422E6AFAE00D28107 /* UIColor+JSDStyle.m */; };
+		55BE3C8822E6B21A00D28107 /* JSDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3C8722E6B21A00D28107 /* JSDBaseViewController.m */; };
+		55BE3C8B22E6B23000D28107 /* JSDCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3C8A22E6B23000D28107 /* JSDCollectionViewController.m */; };
+		55BE3C8E22E6B33900D28107 /* JSDBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3C8D22E6B33900D28107 /* JSDBaseNavigationController.m */; };
+		55BE3CA122E6B5C300D28107 /* JSDBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3CA022E6B5C300D28107 /* JSDBaseView.m */; };
+		55BE3CA422E6B5CD00D28107 /* JSDBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3CA322E6B5CD00D28107 /* JSDBaseModel.m */; };
+		55BE3CA722E6B5FF00D28107 /* JSDMyCenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3CA622E6B5FF00D28107 /* JSDMyCenterVC.m */; };
+		55BE3CBA22E6B75F00D28107 /* JSDKitTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3CB922E6B75F00D28107 /* JSDKitTypeVC.m */; };
+		55BE3CBD22E6B77000D28107 /* JSDMaterialVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3CBC22E6B77000D28107 /* JSDMaterialVC.m */; };
+		55BE3CC022E6B77F00D28107 /* JSDCoffeeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3CBF22E6B77F00D28107 /* JSDCoffeeVC.m */; };
+		55BE3CC422E6B7C800D28107 /* JSDTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3CC322E6B7C800D28107 /* JSDTabBarViewController.m */; };
+		55BE3CC822E6E16500D28107 /* JSDCoffeeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3CC622E6E16500D28107 /* JSDCoffeeCollectionViewCell.m */; };
+		55BE3CC922E6E16500D28107 /* JSDCoffeeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55BE3CC722E6E16500D28107 /* JSDCoffeeCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +32,6 @@
 		5542BA7D22E5BE0000ADCCAC /* JerseyCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JerseyCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5542BA8022E5BE0000ADCCAC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5542BA8122E5BE0000ADCCAC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5542BA8722E5BE0000ADCCAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5542BA8922E5BE0100ADCCAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5542BA8C22E5BE0100ADCCAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5542BA8E22E5BE0100ADCCAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -29,6 +40,31 @@
 		55703AB822E5C10600C2EC01 /* JSDDevMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDDevMacro.h; sourceTree = "<group>"; };
 		55703AB922E5C10600C2EC01 /* JSDMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDMacro.h; sourceTree = "<group>"; };
 		55703ABA22E5C10600C2EC01 /* JSDPublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDPublic.h; sourceTree = "<group>"; };
+		55BE3C8322E6AFAE00D28107 /* UIColor+JSDStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+JSDStyle.h"; sourceTree = "<group>"; };
+		55BE3C8422E6AFAE00D28107 /* UIColor+JSDStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JSDStyle.m"; sourceTree = "<group>"; };
+		55BE3C8622E6B21A00D28107 /* JSDBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDBaseViewController.h; sourceTree = "<group>"; };
+		55BE3C8722E6B21A00D28107 /* JSDBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDBaseViewController.m; sourceTree = "<group>"; };
+		55BE3C8922E6B23000D28107 /* JSDCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCollectionViewController.h; sourceTree = "<group>"; };
+		55BE3C8A22E6B23000D28107 /* JSDCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCollectionViewController.m; sourceTree = "<group>"; };
+		55BE3C8C22E6B33900D28107 /* JSDBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDBaseNavigationController.h; sourceTree = "<group>"; };
+		55BE3C8D22E6B33900D28107 /* JSDBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDBaseNavigationController.m; sourceTree = "<group>"; };
+		55BE3C9F22E6B5C300D28107 /* JSDBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDBaseView.h; sourceTree = "<group>"; };
+		55BE3CA022E6B5C300D28107 /* JSDBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDBaseView.m; sourceTree = "<group>"; };
+		55BE3CA222E6B5CD00D28107 /* JSDBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDBaseModel.h; sourceTree = "<group>"; };
+		55BE3CA322E6B5CD00D28107 /* JSDBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDBaseModel.m; sourceTree = "<group>"; };
+		55BE3CA522E6B5FF00D28107 /* JSDMyCenterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDMyCenterVC.h; sourceTree = "<group>"; };
+		55BE3CA622E6B5FF00D28107 /* JSDMyCenterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDMyCenterVC.m; sourceTree = "<group>"; };
+		55BE3CB822E6B75F00D28107 /* JSDKitTypeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDKitTypeVC.h; sourceTree = "<group>"; };
+		55BE3CB922E6B75F00D28107 /* JSDKitTypeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDKitTypeVC.m; sourceTree = "<group>"; };
+		55BE3CBB22E6B77000D28107 /* JSDMaterialVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDMaterialVC.h; sourceTree = "<group>"; };
+		55BE3CBC22E6B77000D28107 /* JSDMaterialVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDMaterialVC.m; sourceTree = "<group>"; };
+		55BE3CBE22E6B77F00D28107 /* JSDCoffeeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCoffeeVC.h; sourceTree = "<group>"; };
+		55BE3CBF22E6B77F00D28107 /* JSDCoffeeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCoffeeVC.m; sourceTree = "<group>"; };
+		55BE3CC222E6B7C800D28107 /* JSDTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDTabBarViewController.h; sourceTree = "<group>"; };
+		55BE3CC322E6B7C800D28107 /* JSDTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDTabBarViewController.m; sourceTree = "<group>"; };
+		55BE3CC522E6E16500D28107 /* JSDCoffeeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCoffeeCollectionViewCell.h; sourceTree = "<group>"; };
+		55BE3CC622E6E16500D28107 /* JSDCoffeeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCoffeeCollectionViewCell.m; sourceTree = "<group>"; };
+		55BE3CC722E6E16500D28107 /* JSDCoffeeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDCoffeeCollectionViewCell.xib; sourceTree = "<group>"; };
 		7F5E24E53A3B4D07A28557E2 /* Pods-JerseyCoffee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JerseyCoffee.debug.xcconfig"; path = "Target Support Files/Pods-JerseyCoffee/Pods-JerseyCoffee.debug.xcconfig"; sourceTree = "<group>"; };
 		A40335F599FD0E1C7292803F /* libPods-JerseyCoffee.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JerseyCoffee.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -80,6 +116,9 @@
 		55703AB022E5C02E00C2EC01 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				55BE3C7F22E6AD4600D28107 /* Model */,
+				55BE3C7E22E6AD3F00D28107 /* View */,
+				55BE3C7D22E6AD3700D28107 /* ViewController */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -87,7 +126,6 @@
 		55703AB122E5C02E00C2EC01 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5542BA8622E5BE0000ADCCAC /* Main.storyboard */,
 				5542BA8922E5BE0100ADCCAC /* Assets.xcassets */,
 				5542BA8B22E5BE0100ADCCAC /* LaunchScreen.storyboard */,
 				5542BA8E22E5BE0100ADCCAC /* Info.plist */,
@@ -108,6 +146,11 @@
 		55703AB322E5C02E00C2EC01 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				55BE3CC122E6B7C800D28107 /* TabBar */,
+				55BE3C9222E6B4A300D28107 /* My */,
+				55BE3C9122E6B49800D28107 /* Kit */,
+				55BE3C9022E6B48D00D28107 /* Material */,
+				55BE3C8F22E6B48300D28107 /* Coffee */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -117,8 +160,8 @@
 			children = (
 				55703AB822E5C10600C2EC01 /* JSDDevMacro.h */,
 				55703AB922E5C10600C2EC01 /* JSDMacro.h */,
-				55703AB722E5C10600C2EC01 /* JSDPrefixHeader.pch */,
 				55703ABA22E5C10600C2EC01 /* JSDPublic.h */,
+				55703AB722E5C10600C2EC01 /* JSDPrefixHeader.pch */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -133,8 +176,185 @@
 		55703AB622E5C02E00C2EC01 /* CategoryTool */ = {
 			isa = PBXGroup;
 			children = (
+				55BE3C8322E6AFAE00D28107 /* UIColor+JSDStyle.h */,
+				55BE3C8422E6AFAE00D28107 /* UIColor+JSDStyle.m */,
 			);
 			path = CategoryTool;
+			sourceTree = "<group>";
+		};
+		55BE3C7D22E6AD3700D28107 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				55BE3C8622E6B21A00D28107 /* JSDBaseViewController.h */,
+				55BE3C8722E6B21A00D28107 /* JSDBaseViewController.m */,
+				55BE3C8922E6B23000D28107 /* JSDCollectionViewController.h */,
+				55BE3C8A22E6B23000D28107 /* JSDCollectionViewController.m */,
+				55BE3C8C22E6B33900D28107 /* JSDBaseNavigationController.h */,
+				55BE3C8D22E6B33900D28107 /* JSDBaseNavigationController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		55BE3C7E22E6AD3F00D28107 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				55BE3C9F22E6B5C300D28107 /* JSDBaseView.h */,
+				55BE3CA022E6B5C300D28107 /* JSDBaseView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55BE3C7F22E6AD4600D28107 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55BE3CA222E6B5CD00D28107 /* JSDBaseModel.h */,
+				55BE3CA322E6B5CD00D28107 /* JSDBaseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		55BE3C8F22E6B48300D28107 /* Coffee */ = {
+			isa = PBXGroup;
+			children = (
+				55BE3C9D22E6B5AD00D28107 /* Model */,
+				55BE3C9E22E6B5AD00D28107 /* View */,
+				55BE3C9C22E6B59E00D28107 /* ViewController */,
+			);
+			path = Coffee;
+			sourceTree = "<group>";
+		};
+		55BE3C9022E6B48D00D28107 /* Material */ = {
+			isa = PBXGroup;
+			children = (
+				55BE3C9A22E6B59600D28107 /* Model */,
+				55BE3C9922E6B59600D28107 /* View */,
+				55BE3C9B22E6B59600D28107 /* ViewController */,
+			);
+			path = Material;
+			sourceTree = "<group>";
+		};
+		55BE3C9122E6B49800D28107 /* Kit */ = {
+			isa = PBXGroup;
+			children = (
+				55BE3C9822E6B58B00D28107 /* Model */,
+				55BE3C9722E6B58B00D28107 /* View */,
+				55BE3C9622E6B58B00D28107 /* ViewController */,
+			);
+			path = Kit;
+			sourceTree = "<group>";
+		};
+		55BE3C9222E6B4A300D28107 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				55BE3C9322E6B58500D28107 /* Model */,
+				55BE3C9422E6B58500D28107 /* View */,
+				55BE3C9522E6B58500D28107 /* ViewController */,
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		55BE3C9322E6B58500D28107 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		55BE3C9422E6B58500D28107 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55BE3C9522E6B58500D28107 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				55BE3CA522E6B5FF00D28107 /* JSDMyCenterVC.h */,
+				55BE3CA622E6B5FF00D28107 /* JSDMyCenterVC.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		55BE3C9622E6B58B00D28107 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				55BE3CB822E6B75F00D28107 /* JSDKitTypeVC.h */,
+				55BE3CB922E6B75F00D28107 /* JSDKitTypeVC.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		55BE3C9722E6B58B00D28107 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55BE3C9822E6B58B00D28107 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		55BE3C9922E6B59600D28107 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55BE3C9A22E6B59600D28107 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		55BE3C9B22E6B59600D28107 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				55BE3CBB22E6B77000D28107 /* JSDMaterialVC.h */,
+				55BE3CBC22E6B77000D28107 /* JSDMaterialVC.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		55BE3C9C22E6B59E00D28107 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				55BE3CBE22E6B77F00D28107 /* JSDCoffeeVC.h */,
+				55BE3CBF22E6B77F00D28107 /* JSDCoffeeVC.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		55BE3C9D22E6B5AD00D28107 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		55BE3C9E22E6B5AD00D28107 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				55BE3CC522E6E16500D28107 /* JSDCoffeeCollectionViewCell.h */,
+				55BE3CC622E6E16500D28107 /* JSDCoffeeCollectionViewCell.m */,
+				55BE3CC722E6E16500D28107 /* JSDCoffeeCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55BE3CC122E6B7C800D28107 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				55BE3CC222E6B7C800D28107 /* JSDTabBarViewController.h */,
+				55BE3CC322E6B7C800D28107 /* JSDTabBarViewController.m */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		99ECA596A68D06A47FFCEDBF /* Pods */ = {
@@ -215,8 +435,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5542BA8D22E5BE0100ADCCAC /* LaunchScreen.storyboard in Resources */,
+				55BE3CC922E6E16500D28107 /* JSDCoffeeCollectionViewCell.xib in Resources */,
 				5542BA8A22E5BE0100ADCCAC /* Assets.xcassets in Resources */,
-				5542BA8822E5BE0000ADCCAC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,22 +534,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55BE3CC022E6B77F00D28107 /* JSDCoffeeVC.m in Sources */,
+				55BE3C8E22E6B33900D28107 /* JSDBaseNavigationController.m in Sources */,
+				55BE3CC822E6E16500D28107 /* JSDCoffeeCollectionViewCell.m in Sources */,
+				55BE3CA722E6B5FF00D28107 /* JSDMyCenterVC.m in Sources */,
+				55BE3C8822E6B21A00D28107 /* JSDBaseViewController.m in Sources */,
+				55BE3C8B22E6B23000D28107 /* JSDCollectionViewController.m in Sources */,
+				55BE3CA422E6B5CD00D28107 /* JSDBaseModel.m in Sources */,
 				5542BA9022E5BE0100ADCCAC /* main.m in Sources */,
 				5542BA8222E5BE0000ADCCAC /* AppDelegate.m in Sources */,
+				55BE3C8522E6AFAE00D28107 /* UIColor+JSDStyle.m in Sources */,
+				55BE3CC422E6B7C800D28107 /* JSDTabBarViewController.m in Sources */,
+				55BE3CBA22E6B75F00D28107 /* JSDKitTypeVC.m in Sources */,
+				55BE3CBD22E6B77000D28107 /* JSDMaterialVC.m in Sources */,
+				55BE3CA122E6B5C300D28107 /* JSDBaseView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5542BA8622E5BE0000ADCCAC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5542BA8722E5BE0000ADCCAC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5542BA8B22E5BE0100ADCCAC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -460,7 +684,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6GD2CA4X64;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/Supporting Files/JSDPrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JerseyCoffee/Public/JSDPrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/JerseyCoffee/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -479,7 +703,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6GD2CA4X64;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/Supporting Files/JSDPrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JerseyCoffee/Public/JSDPrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/JerseyCoffee/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
