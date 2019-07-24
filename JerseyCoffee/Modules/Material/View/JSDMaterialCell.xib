@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14835.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14790.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="iOS 13.0 system colors" minToolsVersion="11.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="JSDMaterialCell">
+            <rect key="frame" x="0.0" y="0.0" width="304" height="250"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="304" height="250"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="material_" translatesAutoresizingMaskIntoConstraints="NO" id="IFj-oh-XhL">
+                        <rect key="frame" x="0.0" y="0.0" width="304" height="150"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="150" id="xUh-1r-KG8"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0xi-OU-DqN">
+                        <rect key="frame" x="0.0" y="150" width="304" height="100"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aDv-c8-WZZ">
+                                <rect key="frame" x="94.5" y="49" width="115" height="2"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="systemBrownColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="8dI-bu-G3n"/>
+                                    <constraint firstAttribute="height" constant="2" id="bnw-Tc-Jcb"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="肯亚咖啡豆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEq-5y-XDK">
+                                <rect key="frame" x="108.5" y="16" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="咖啡故事" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFp-ct-MAd">
+                                <rect key="frame" x="117.5" y="68" width="69.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xFp-ct-MAd" firstAttribute="top" secondItem="aDv-c8-WZZ" secondAttribute="bottom" constant="17" id="7jp-hg-H1c"/>
+                            <constraint firstItem="aDv-c8-WZZ" firstAttribute="centerX" secondItem="0xi-OU-DqN" secondAttribute="centerX" id="Bqf-ke-2qI"/>
+                            <constraint firstItem="xFp-ct-MAd" firstAttribute="centerX" secondItem="0xi-OU-DqN" secondAttribute="centerX" id="FEs-0v-U8t"/>
+                            <constraint firstItem="aDv-c8-WZZ" firstAttribute="top" secondItem="xEq-5y-XDK" secondAttribute="bottom" constant="12" id="WD2-wm-phS"/>
+                            <constraint firstItem="xEq-5y-XDK" firstAttribute="centerX" secondItem="0xi-OU-DqN" secondAttribute="centerX" id="cy7-k3-LiT"/>
+                            <constraint firstItem="aDv-c8-WZZ" firstAttribute="centerY" secondItem="0xi-OU-DqN" secondAttribute="centerY" id="v1H-4S-CUg"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="0xi-OU-DqN" secondAttribute="trailing" id="4Jj-g7-Qme"/>
+                <constraint firstItem="0xi-OU-DqN" firstAttribute="top" secondItem="IFj-oh-XhL" secondAttribute="bottom" id="AWR-Vg-ONA"/>
+                <constraint firstAttribute="trailing" secondItem="IFj-oh-XhL" secondAttribute="trailing" id="M7p-I2-sLq"/>
+                <constraint firstAttribute="bottom" secondItem="0xi-OU-DqN" secondAttribute="bottom" id="Y89-df-Oz0"/>
+                <constraint firstItem="IFj-oh-XhL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="c14-uu-v4I"/>
+                <constraint firstItem="IFj-oh-XhL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ln4-5g-x7X"/>
+                <constraint firstItem="0xi-OU-DqN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vLh-3n-A6g"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <connections>
+                <outlet property="coffeeStoryLabel" destination="xFp-ct-MAd" id="A3S-YY-GyN"/>
+                <outlet property="lineView" destination="aDv-c8-WZZ" id="hMb-aR-QYc"/>
+                <outlet property="materialImageView" destination="IFj-oh-XhL" id="UUF-gB-TnK"/>
+                <outlet property="meterialNameLabel" destination="xEq-5y-XDK" id="xtz-u8-CyI"/>
+                <outlet property="textContentView" destination="0xi-OU-DqN" id="etO-Mz-cnb"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="119.86607142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="material_" width="152" height="116"/>
+    </resources>
+</document>

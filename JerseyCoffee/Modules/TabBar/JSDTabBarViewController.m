@@ -86,13 +86,14 @@
     
     [coffeeNaiVC cyl_setHideNavigationBarSeparator:YES];
     [coffeeNaiVC cyl_setNavigationBarHidden:YES];
+    UIViewController *materialVC = [[JSDMaterialVC alloc] init];
+    JSDBaseNavigationController *materialVCNaiVC = [[JSDBaseNavigationController alloc]
+                                                    initWithRootViewController:materialVC];
     UIViewController *kitTypeVC = [[JSDKitTypeVC alloc] init];
     JSDBaseNavigationController *kitTypeNaiVC = [[JSDBaseNavigationController alloc]
                                      initWithRootViewController:kitTypeVC];
     [kitTypeNaiVC cyl_setHideNavigationBarSeparator:NO];
-    UIViewController *materialVC = [[JSDMaterialVC alloc] init];
-    JSDBaseNavigationController *materialVCNaiVC = [[JSDBaseNavigationController alloc]
-                                     initWithRootViewController:materialVC];
+
     [materialVCNaiVC cyl_setHideNavigationBarSeparator:NO];
     UIViewController *myCenterVC = [[JSDMyCenterVC alloc] init];
     JSDBaseNavigationController *myCenterNaiVC = [[JSDBaseNavigationController alloc]
@@ -100,8 +101,8 @@
     [myCenterNaiVC cyl_setHideNavigationBarSeparator:NO];
     NSArray *viewControllers = @[
                                  coffeeNaiVC,
-                                 kitTypeNaiVC,
                                  materialVCNaiVC,
+                                 kitTypeNaiVC,
                                  myCenterNaiVC,
                                  ];
     return viewControllers;
