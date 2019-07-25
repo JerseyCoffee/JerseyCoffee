@@ -12,6 +12,7 @@
 #import "JSDMaterialTextView.h"
 #import <MaterialPageControl.h>
 #import "JSDMaterialViewModel.h"
+#import "JSDMaterialDetailVC.h"
 
 static CGFloat kUIEdgeInsetsTop = 10;
 static CGFloat kUIEdgeInsetsLeft = 40;
@@ -183,6 +184,17 @@ static NSString * const reuseIdentifier = @"Cell";
     return kInterItemSpace;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [super collectionView:collectionView didSelectItemAtIndexPath:indexPath];
+    
+    JSDMaterialModel* model = self.viewModel.listArray[indexPath.item];
+    JSDMaterialDetailVC* coffeeDetailVC = [[JSDMaterialDetailVC alloc] init];
+    coffeeDetailVC.model = model;
+    
+    [self.navigationController pushViewController:coffeeDetailVC animated:YES];
+}
+
 #pragma mark - ScrolleViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -214,12 +226,12 @@ static NSString * const reuseIdentifier = @"Cell";
     
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    
-    NSInteger number = change[NSKeyValueChangeNewKey];
-    
-    NSLog(@"当前滚到了%ld", number);
-}
+//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+//    
+//    NSInteger number = change[NSKeyValueChangeNewKey];
+//    
+//    NSLog(@"当前滚到了%ld", number);
+//}
 
 #pragma mark - 7.GET & SET
 

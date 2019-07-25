@@ -29,6 +29,10 @@
 		55BE3CC422E6B7C800D28107 /* JSDTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3CC322E6B7C800D28107 /* JSDTabBarViewController.m */; };
 		55BE3CC822E6E16500D28107 /* JSDCoffeeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3CC622E6E16500D28107 /* JSDCoffeeCollectionViewCell.m */; };
 		55BE3CC922E6E16500D28107 /* JSDCoffeeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55BE3CC722E6E16500D28107 /* JSDCoffeeCollectionViewCell.xib */; };
+		55C2042722E9B05600F193E6 /* JSDCoffeeDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C2042522E9B05600F193E6 /* JSDCoffeeDetailVC.m */; };
+		55C2042822E9B05600F193E6 /* JSDCoffeeDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55C2042622E9B05600F193E6 /* JSDCoffeeDetailVC.xib */; };
+		55C2042C22E9B07F00F193E6 /* JSDMaterialDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C2042A22E9B07F00F193E6 /* JSDMaterialDetailVC.m */; };
+		55C2042D22E9B07F00F193E6 /* JSDMaterialDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55C2042B22E9B07F00F193E6 /* JSDMaterialDetailVC.xib */; };
 		55E952D322E951A5008BADB5 /* JSDKitTypeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E952D122E951A5008BADB5 /* JSDKitTypeViewCell.m */; };
 		55E952D422E951A5008BADB5 /* JSDKitTypeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55E952D222E951A5008BADB5 /* JSDKitTypeViewCell.xib */; };
 		55E952D722E958D8008BADB5 /* UIFont+JSDStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E952D622E958D8008BADB5 /* UIFont+JSDStyle.m */; };
@@ -84,6 +88,12 @@
 		55BE3CC522E6E16500D28107 /* JSDCoffeeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCoffeeCollectionViewCell.h; sourceTree = "<group>"; };
 		55BE3CC622E6E16500D28107 /* JSDCoffeeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCoffeeCollectionViewCell.m; sourceTree = "<group>"; };
 		55BE3CC722E6E16500D28107 /* JSDCoffeeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDCoffeeCollectionViewCell.xib; sourceTree = "<group>"; };
+		55C2042422E9B05600F193E6 /* JSDCoffeeDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCoffeeDetailVC.h; sourceTree = "<group>"; };
+		55C2042522E9B05600F193E6 /* JSDCoffeeDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCoffeeDetailVC.m; sourceTree = "<group>"; };
+		55C2042622E9B05600F193E6 /* JSDCoffeeDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDCoffeeDetailVC.xib; sourceTree = "<group>"; };
+		55C2042922E9B07F00F193E6 /* JSDMaterialDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDMaterialDetailVC.h; sourceTree = "<group>"; };
+		55C2042A22E9B07F00F193E6 /* JSDMaterialDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDMaterialDetailVC.m; sourceTree = "<group>"; };
+		55C2042B22E9B07F00F193E6 /* JSDMaterialDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDMaterialDetailVC.xib; sourceTree = "<group>"; };
 		55E952D022E951A5008BADB5 /* JSDKitTypeViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDKitTypeViewCell.h; sourceTree = "<group>"; };
 		55E952D122E951A5008BADB5 /* JSDKitTypeViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDKitTypeViewCell.m; sourceTree = "<group>"; };
 		55E952D222E951A5008BADB5 /* JSDKitTypeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDKitTypeViewCell.xib; sourceTree = "<group>"; };
@@ -368,6 +378,9 @@
 			children = (
 				55BE3CBB22E6B77000D28107 /* JSDMaterialVC.h */,
 				55BE3CBC22E6B77000D28107 /* JSDMaterialVC.m */,
+				55C2042922E9B07F00F193E6 /* JSDMaterialDetailVC.h */,
+				55C2042A22E9B07F00F193E6 /* JSDMaterialDetailVC.m */,
+				55C2042B22E9B07F00F193E6 /* JSDMaterialDetailVC.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -377,6 +390,9 @@
 			children = (
 				55BE3CBE22E6B77F00D28107 /* JSDCoffeeVC.h */,
 				55BE3CBF22E6B77F00D28107 /* JSDCoffeeVC.m */,
+				55C2042422E9B05600F193E6 /* JSDCoffeeDetailVC.h */,
+				55C2042522E9B05600F193E6 /* JSDCoffeeDetailVC.m */,
+				55C2042622E9B05600F193E6 /* JSDCoffeeDetailVC.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -496,6 +512,8 @@
 				55E952DC22E95FAE008BADB5 /* coffeeData.json in Resources */,
 				5542BA8A22E5BE0100ADCCAC /* Assets.xcassets in Resources */,
 				55E952D422E951A5008BADB5 /* JSDKitTypeViewCell.xib in Resources */,
+				55C2042D22E9B07F00F193E6 /* JSDMaterialDetailVC.xib in Resources */,
+				55C2042822E9B05600F193E6 /* JSDCoffeeDetailVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,6 +628,8 @@
 				55E952D322E951A5008BADB5 /* JSDKitTypeViewCell.m in Sources */,
 				55BE3C8522E6AFAE00D28107 /* UIColor+JSDStyle.m in Sources */,
 				5501256D22E7F2D400835DE4 /* JSDMaterialCell.m in Sources */,
+				55C2042722E9B05600F193E6 /* JSDCoffeeDetailVC.m in Sources */,
+				55C2042C22E9B07F00F193E6 /* JSDMaterialDetailVC.m in Sources */,
 				55BE3CC422E6B7C800D28107 /* JSDTabBarViewController.m in Sources */,
 				55BE3CBA22E6B75F00D28107 /* JSDKitTypeVC.m in Sources */,
 				55BE3CBD22E6B77000D28107 /* JSDMaterialVC.m in Sources */,

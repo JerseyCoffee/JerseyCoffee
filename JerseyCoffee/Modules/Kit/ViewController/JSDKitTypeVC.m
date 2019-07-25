@@ -197,9 +197,6 @@ static NSString * const reuseIdentifier = @"Cell";
         _pageControl.currentPageIndicatorTintColor = [UIColor jsd_colorWithHexString:@"#8A8987"];
         _pageControl.pageIndicatorTintColor = [UIColor jsd_colorWithHexString:@"#A5A3A1"];
         
-        _pageControl.currentPageIndicatorTintColor = [UIColor redColor];
-        _pageControl.pageIndicatorTintColor = [UIColor yellowColor];
-        _pageControl.tintColor = [UIColor blueColor];
         [_pageControl addTarget:self action:@selector(didChangePage:) forControlEvents:UIControlEventValueChanged];
     }
     return _pageControl;

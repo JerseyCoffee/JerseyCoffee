@@ -11,6 +11,7 @@
 #import "JSDCoffeeCollectionViewCell.h"
 #import <MaterialPageControl.h>
 #import "JSDCoffeeViewModel.h"
+#import "JSDCoffeeDetailVC.h"
 
 static CGFloat kUIEdgeInsetsTop = 10;
 static CGFloat kUIEdgeInsetsLeft = 40;
@@ -54,12 +55,23 @@ static NSString * const reuseIdentifier = @"Cell";
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.hidden = NO;
+}
+
 #pragma mark - 2.SettingView and Style
 
 - (void)setupNavBar {
     
     self.navigationItem.title = @"Coffee";
-    self.navigationController.navigationBar.hidden = YES;
 }
 
 - (void)setupView {
@@ -125,6 +137,17 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 #pragma mark <UICollectionViewDelegate>
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [super collectionView:collectionView didSelectItemAtIndexPath:indexPath];
+    
+    JSDCoffeeModel* model = self.viewModel.listArray[indexPath.item];
+    JSDCoffeeDetailVC* coffeeDetailVC = [[JSDCoffeeDetailVC alloc] init];
+    coffeeDetailVC.model = model;
+    
+    [self.navigationController pushViewController:coffeeDetailVC animated:YES];
+}
 
 #pragma mark <UICollectionViewLayoutDelegate>
 
@@ -197,9 +220,7 @@ static NSString * const reuseIdentifier = @"Cell";
         _pageControl.numberOfPages = self.viewModel.listArray.count;
         _pageControl.currentPageIndicatorTintColor = [UIColor jsd_colorWithHexString:@"#8A8987"];
         _pageControl.pageIndicatorTintColor = [UIColor jsd_colorWithHexString:@"#A5A3A1"];
-        
-        _pageControl.currentPageIndicatorTintColor = [UIColor redColor];
-        _pageControl.pageIndicatorTintColor = [UIColor yellowColor];
+    
         _pageControl.tintColor = [UIColor blueColor];
         [_pageControl addTarget:self action:@selector(didChangePage:) forControlEvents:UIControlEventValueChanged];
     }
