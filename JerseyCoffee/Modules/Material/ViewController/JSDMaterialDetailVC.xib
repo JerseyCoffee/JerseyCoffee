@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14835.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14790.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,7 +39,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="e1l-3v-ORU" firstAttribute="top" secondItem="Eht-gT-5bk" secondAttribute="top" id="26A-Ak-Obg"/>
                         <constraint firstItem="SvD-NJ-Bmj" firstAttribute="centerY" secondItem="Eht-gT-5bk" secondAttribute="centerY" id="8Px-LO-lOk"/>
@@ -51,10 +53,10 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fC6-jQ-QF3">
-                    <rect key="frame" x="0.0" y="244" width="414" height="618"/>
+                    <rect key="frame" x="0.0" y="224" width="414" height="638"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wy3-Tj-RVp">
-                            <rect key="frame" x="0.0" y="30" width="414" height="588"/>
+                            <rect key="frame" x="0.0" y="30" width="414" height="608"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFE-Cl-chI">
                                     <rect key="frame" x="25" y="10" width="364" height="21"/>
@@ -63,7 +65,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="jFE-Cl-chI" firstAttribute="top" secondItem="Wy3-Tj-RVp" secondAttribute="top" constant="10" id="FHp-E8-oUr"/>
                                 <constraint firstItem="jFE-Cl-chI" firstAttribute="leading" secondItem="Wy3-Tj-RVp" secondAttribute="leading" constant="25" id="HLb-OQ-jh7"/>
@@ -71,7 +73,7 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="Wy3-Tj-RVp" firstAttribute="top" secondItem="fC6-jQ-QF3" secondAttribute="top" constant="30" id="0tw-kR-btc"/>
                         <constraint firstAttribute="trailing" secondItem="Wy3-Tj-RVp" secondAttribute="trailing" id="VHN-rl-OI7"/>
@@ -84,7 +86,7 @@
             <constraints>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="fC6-jQ-QF3" secondAttribute="bottom" id="ALG-ok-JSN"/>
                 <constraint firstItem="fC6-jQ-QF3" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Hsh-4Z-EgY"/>
-                <constraint firstItem="fC6-jQ-QF3" firstAttribute="top" secondItem="Eht-gT-5bk" secondAttribute="bottom" id="L4H-s0-BFI"/>
+                <constraint firstItem="fC6-jQ-QF3" firstAttribute="top" secondItem="Eht-gT-5bk" secondAttribute="bottom" constant="-20" id="L4H-s0-BFI"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="fC6-jQ-QF3" secondAttribute="trailing" id="LcS-QT-fwb"/>
                 <constraint firstItem="Eht-gT-5bk" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="OBe-Y4-Viu"/>
                 <constraint firstItem="Eht-gT-5bk" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="U8d-DP-orL"/>

@@ -42,6 +42,11 @@
 		55E952E122E984AC008BADB5 /* kitTyopeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 55E952E022E984AC008BADB5 /* kitTyopeData.json */; };
 		55E952E422E98E4D008BADB5 /* JSDMaterialViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E952E322E98E4D008BADB5 /* JSDMaterialViewModel.m */; };
 		55E952E622E98F56008BADB5 /* MaterialData.json in Resources */ = {isa = PBXBuildFile; fileRef = 55E952E522E98F56008BADB5 /* MaterialData.json */; };
+		601E98C522E9EA85008CBE2B /* JSDCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601E98C222E9EA85008CBE2B /* JSDCollectionViewCell.xib */; };
+		601E98C622E9EA85008CBE2B /* JSDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E98C422E9EA85008CBE2B /* JSDCollectionViewCell.m */; };
+		601E98C922E9EA8E008CBE2B /* JSDMyCenterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E98C722E9EA8E008CBE2B /* JSDMyCenterViewModel.m */; };
+		601E98CD22E9F282008CBE2B /* JSDCoffeeHistoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E98CB22E9F282008CBE2B /* JSDCoffeeHistoryVC.m */; };
+		601E98CE22E9F282008CBE2B /* JSDCoffeeHistoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601E98CC22E9F282008CBE2B /* JSDCoffeeHistoryVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +113,14 @@
 		55E952E222E98E4D008BADB5 /* JSDMaterialViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDMaterialViewModel.h; sourceTree = "<group>"; };
 		55E952E322E98E4D008BADB5 /* JSDMaterialViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDMaterialViewModel.m; sourceTree = "<group>"; };
 		55E952E522E98F56008BADB5 /* MaterialData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MaterialData.json; path = JerseyCoffee/Modules/Material/MaterialData.json; sourceTree = SOURCE_ROOT; };
+		601E98C222E9EA85008CBE2B /* JSDCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSDCollectionViewCell.xib; sourceTree = "<group>"; };
+		601E98C322E9EA85008CBE2B /* JSDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDCollectionViewCell.h; sourceTree = "<group>"; };
+		601E98C422E9EA85008CBE2B /* JSDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDCollectionViewCell.m; sourceTree = "<group>"; };
+		601E98C722E9EA8E008CBE2B /* JSDMyCenterViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDMyCenterViewModel.m; sourceTree = "<group>"; };
+		601E98C822E9EA8E008CBE2B /* JSDMyCenterViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDMyCenterViewModel.h; sourceTree = "<group>"; };
+		601E98CA22E9F282008CBE2B /* JSDCoffeeHistoryVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCoffeeHistoryVC.h; sourceTree = "<group>"; };
+		601E98CB22E9F282008CBE2B /* JSDCoffeeHistoryVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCoffeeHistoryVC.m; sourceTree = "<group>"; };
+		601E98CC22E9F282008CBE2B /* JSDCoffeeHistoryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDCoffeeHistoryVC.xib; sourceTree = "<group>"; };
 		7F5E24E53A3B4D07A28557E2 /* Pods-JerseyCoffee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JerseyCoffee.debug.xcconfig"; path = "Target Support Files/Pods-JerseyCoffee/Pods-JerseyCoffee.debug.xcconfig"; sourceTree = "<group>"; };
 		A40335F599FD0E1C7292803F /* libPods-JerseyCoffee.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JerseyCoffee.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -291,25 +304,11 @@
 		55BE3C9222E6B4A300D28107 /* My */ = {
 			isa = PBXGroup;
 			children = (
-				55BE3C9322E6B58500D28107 /* Model */,
-				55BE3C9422E6B58500D28107 /* View */,
+				601E98C022E9EA6B008CBE2B /* Model */,
+				601E98C122E9EA6B008CBE2B /* View */,
 				55BE3C9522E6B58500D28107 /* ViewController */,
 			);
 			path = My;
-			sourceTree = "<group>";
-		};
-		55BE3C9322E6B58500D28107 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		55BE3C9422E6B58500D28107 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		55BE3C9522E6B58500D28107 /* ViewController */ = {
@@ -317,6 +316,9 @@
 			children = (
 				55BE3CA522E6B5FF00D28107 /* JSDMyCenterVC.h */,
 				55BE3CA622E6B5FF00D28107 /* JSDMyCenterVC.m */,
+				601E98CA22E9F282008CBE2B /* JSDCoffeeHistoryVC.h */,
+				601E98CB22E9F282008CBE2B /* JSDCoffeeHistoryVC.m */,
+				601E98CC22E9F282008CBE2B /* JSDCoffeeHistoryVC.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -426,6 +428,25 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		601E98C022E9EA6B008CBE2B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				601E98C822E9EA8E008CBE2B /* JSDMyCenterViewModel.h */,
+				601E98C722E9EA8E008CBE2B /* JSDMyCenterViewModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		601E98C122E9EA6B008CBE2B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				601E98C322E9EA85008CBE2B /* JSDCollectionViewCell.h */,
+				601E98C422E9EA85008CBE2B /* JSDCollectionViewCell.m */,
+				601E98C222E9EA85008CBE2B /* JSDCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		99ECA596A68D06A47FFCEDBF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -513,6 +534,8 @@
 				5542BA8A22E5BE0100ADCCAC /* Assets.xcassets in Resources */,
 				55E952D422E951A5008BADB5 /* JSDKitTypeViewCell.xib in Resources */,
 				55C2042D22E9B07F00F193E6 /* JSDMaterialDetailVC.xib in Resources */,
+				601E98CE22E9F282008CBE2B /* JSDCoffeeHistoryVC.xib in Resources */,
+				601E98C522E9EA85008CBE2B /* JSDCollectionViewCell.xib in Resources */,
 				55C2042822E9B05600F193E6 /* JSDCoffeeDetailVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -612,7 +635,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5501257122E7F9F400835DE4 /* JSDMaterialTextView.m in Sources */,
+				601E98C922E9EA8E008CBE2B /* JSDMyCenterViewModel.m in Sources */,
 				55BE3CC022E6B77F00D28107 /* JSDCoffeeVC.m in Sources */,
+				601E98CD22E9F282008CBE2B /* JSDCoffeeHistoryVC.m in Sources */,
+				601E98C622E9EA85008CBE2B /* JSDCollectionViewCell.m in Sources */,
 				55BE3C8E22E6B33900D28107 /* JSDBaseNavigationController.m in Sources */,
 				55E952DF22E98474008BADB5 /* JSDKitTypeViewModel.m in Sources */,
 				55BE3CC822E6E16500D28107 /* JSDCoffeeCollectionViewCell.m in Sources */,

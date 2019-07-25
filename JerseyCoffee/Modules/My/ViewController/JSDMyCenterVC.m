@@ -8,7 +8,12 @@
 
 #import "JSDMyCenterVC.h"
 
+#import "JSDMyCenterViewModel.h"
+#import "JSDCollectionViewCell.h"
+
 @interface JSDMyCenterVC ()
+
+@property (strong, nonatomic) JSDMyCenterViewModel *viewModel;
 
 @end
 
@@ -49,7 +54,9 @@ static NSString * const reuseIdentifier = @"Cell";
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"JSDCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:reuseIdentifier];
+    
+    self.collectionView.backgroundColor = [UIColor jsd_mainGrayColor];
 }
 
 - (void)reloadView {
@@ -74,15 +81,52 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 6;
+    return self.viewModel.listArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    JSDCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    // Configure the cell
+    JSDMyCenterModel* model = self.viewModel.listArray[indexPath.item];
+    cell.model = model;
     
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [super collectionView:collectionView didSelectItemAtIndexPath:indexPath];
+    JSDMyCenterModel* model = self.viewModel.listArray[indexPath.item];
+    
+    if (model.route) {
+        UIViewController* vc = [NSClassFromString(model.route) new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
+
+#pragma mark <UICollectionViewLayoutDelegate>
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return CGSizeMake((ScreenWidth - 20), 60);
+}
+
+//设置每个item的UIEdgeInsets
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(21, 10, 20, 10);
+}
+
+//设置每个item水平间距
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 20;
+}
+
+//设置每个item垂直间距
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 20;
 }
 
 #pragma mark <UICollectionViewDelegate>
@@ -97,5 +141,13 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 #pragma mark - 7.GET & SET
+
+- (JSDMyCenterViewModel *)viewModel {
+    
+    if (!_viewModel) {
+        _viewModel = [[JSDMyCenterViewModel alloc] init];
+    }
+    return _viewModel;
+}
 
 @end
