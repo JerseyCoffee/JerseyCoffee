@@ -8,9 +8,13 @@
 
 #import "MDCCollectionViewCell.h"
 
+#import "JSDCoffeeViewModel.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface JSDCoffeeCollectionViewCell : UICollectionViewCell
+
+@property (nonatomic, strong) JSDCoffeeModel* model;
 
 @end
 

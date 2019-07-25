@@ -10,6 +10,7 @@
 #define JSDPublic_h
 
 #import "UIColor+JSDStyle.h"
+#import "UIFont+JSDStyle.h"
 //#import "UIView+JSDFrame.h"
 //#import "UIImage+Tool.h"
 //#import "JSDSnackManage.h"

@@ -18,6 +18,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIColor *)jsd_tealcolor;
 + (UIColor *)jsd_skyBluecolor;
 
+#pragma mark -Text Color
+
++ (UIColor *)jsd_mainTextColor;
++ (UIColor *)jsd_minorTextColor;
++ (UIColor *)jsd_detailTextColor;
+
 + (UIColor *)jsd_mainGrayColor;
 
 + (CAGradientLayer *)jsd_setGradualChangeView:(UIView *)view fromColor:(NSString *)fromHexColorStr toColor:(NSString *)toHexColorStr;

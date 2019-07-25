@@ -27,7 +27,9 @@
     self.layer.cornerRadius = 10;
     self.layer.masksToBounds = YES;
     
-    self.contentView.backgroundColor = [UIColor jsd_mainGrayColor];
+//    self.contentView.backgroundColor = [UIColor jsd_mainGrayColor];
+    self.textContentView.backgroundColor = [UIColor colorWithRed:243/255.0 green:241/255.0 blue:241/255.0 alpha:1.0];
+    
 }
 
 @end

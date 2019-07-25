@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14835.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14790.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FGd-1I-8Pe" customClass="JSDKitTypeViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="304" height="514"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="304" height="514"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="latte_coffee" translatesAutoresizingMaskIntoConstraints="NO" id="fTY-si-txK">
+                        <rect key="frame" x="59.5" y="45" width="185" height="154"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="154" id="LX4-uL-Vhg"/>
+                            <constraint firstAttribute="width" constant="185" id="adv-FU-jrx"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="拿铁咖啡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zG3-CH-hho">
+                        <rect key="frame" x="117.5" y="239" width="69" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caffè Latte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBn-zE-mUW">
+                        <rect key="frame" x="109.5" y="275" width="85" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXV-hb-e1J">
+                        <rect key="frame" x="20" y="316" width="9" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="拿铁咖啡是意大利浓缩咖啡(Espresso)与牛奶的经典混合，意大利人也很喜欢把拿铁作为早餐的饮料。意大利人早晨的厨房里，照得到阳光的炉子上通常会同时煮着咖啡和牛奶。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhV-9h-ucC">
+                        <rect key="frame" x="20" y="346" width="264" height="119"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="126" id="kDM-Sw-k9w"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3R-Nv-8JS">
+                        <rect key="frame" x="276" y="485" width="8" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="fTY-si-txK" firstAttribute="centerX" secondItem="FGd-1I-8Pe" secondAttribute="centerX" id="7II-Lh-apo"/>
+                <constraint firstItem="fTY-si-txK" firstAttribute="top" secondItem="FGd-1I-8Pe" secondAttribute="top" constant="45" id="AXT-Se-RDz"/>
+                <constraint firstItem="zG3-CH-hho" firstAttribute="centerX" secondItem="FGd-1I-8Pe" secondAttribute="centerX" id="Bgz-Vv-lMs"/>
+                <constraint firstItem="dhV-9h-ucC" firstAttribute="top" secondItem="CBn-zE-mUW" secondAttribute="bottom" constant="50" id="D4Q-9V-jc5"/>
+                <constraint firstItem="IXV-hb-e1J" firstAttribute="top" secondItem="CBn-zE-mUW" secondAttribute="bottom" constant="20" id="Inz-bD-blh"/>
+                <constraint firstAttribute="trailing" secondItem="V3R-Nv-8JS" secondAttribute="trailing" constant="20" id="J2L-iX-nq8"/>
+                <constraint firstItem="zG3-CH-hho" firstAttribute="top" secondItem="fTY-si-txK" secondAttribute="bottom" constant="40" id="TlT-UZ-VYp"/>
+                <constraint firstItem="dhV-9h-ucC" firstAttribute="leading" secondItem="IXV-hb-e1J" secondAttribute="leading" id="co3-BR-eQA"/>
+                <constraint firstItem="CBn-zE-mUW" firstAttribute="top" secondItem="zG3-CH-hho" secondAttribute="bottom" constant="15" id="gtz-im-bTZ"/>
+                <constraint firstItem="CBn-zE-mUW" firstAttribute="centerX" secondItem="FGd-1I-8Pe" secondAttribute="centerX" id="pIF-r4-E90"/>
+                <constraint firstItem="V3R-Nv-8JS" firstAttribute="top" secondItem="dhV-9h-ucC" secondAttribute="bottom" constant="20" id="q52-LL-EIz"/>
+                <constraint firstAttribute="trailing" secondItem="dhV-9h-ucC" secondAttribute="trailing" constant="20" id="uLk-4o-Pg3"/>
+                <constraint firstItem="IXV-hb-e1J" firstAttribute="leading" secondItem="FGd-1I-8Pe" secondAttribute="leading" constant="20" id="wpm-7U-tSB"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="X5y-K4-KCx"/>
+            <connections>
+                <outlet property="coffeeImageView" destination="fTY-si-txK" id="7mw-2d-Pu7"/>
+                <outlet property="detailLabel" destination="dhV-9h-ucC" id="dtT-nF-Ku7"/>
+                <outlet property="detailLeftLabel" destination="IXV-hb-e1J" id="5x0-vX-bI2"/>
+                <outlet property="detailLeftRight" destination="V3R-Nv-8JS" id="zXV-up-Vgh"/>
+                <outlet property="titleCNLabel" destination="zG3-CH-hho" id="ZgK-HN-PTH"/>
+                <outlet property="titleENLabel" destination="CBn-zE-mUW" id="UI0-hG-Vxc"/>
+            </connections>
+            <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="latte_coffee" width="369" height="307"/>
+    </resources>
+</document>

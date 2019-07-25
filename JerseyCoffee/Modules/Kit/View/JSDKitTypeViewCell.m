@@ -1,14 +1,14 @@
 //
-//  JSDCoffeeCollectionViewCell.m
+//  JSDKitTypeViewCell.m
 //  JerseyCoffee
 //
-//  Created by Jersey on 2019/7/23.
+//  Created by Jersey on 2019/7/25.
 //  Copyright © 2019 jerseyCafe. All rights reserved.
 //
 
-#import "JSDCoffeeCollectionViewCell.h"
+#import "JSDKitTypeViewCell.h"
 
-@interface JSDCoffeeCollectionViewCell()
+@interface JSDKitTypeViewCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *coffeeImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleCNLabel;
@@ -17,10 +17,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *detailLeftRight;
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 
-
 @end
 
-@implementation JSDCoffeeCollectionViewCell
+@implementation JSDKitTypeViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -29,7 +28,7 @@
     self.contentView.backgroundColor = [UIColor whiteColor];
     
     self.layer.shadowColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.1].CGColor;
-//    self.layer.shadowColor = [UIColor redColor].CGColor;
+    //    self.layer.shadowColor = [UIColor redColor].CGColor;
     self.layer.shadowOffset = CGSizeMake(0,3);
     self.layer.shadowOpacity = 1;
     self.layer.cornerRadius = 20;
@@ -37,7 +36,7 @@
     
     self.titleCNLabel.textColor = [UIColor jsd_mainTextColor];
     self.titleCNLabel.font = [UIFont jsd_fontSize:24];
-
+    
     self.titleENLabel.textColor = [UIColor jsd_detailTextColor];
     self.titleENLabel.font = [UIFont jsd_fontSize:14];
     
@@ -46,18 +45,10 @@
     
     self.detailLeftRight.textColor = [UIColor jsd_mainTextColor];
     self.detailLeftRight.font = [UIFont jsd_fontSize:36];
-
-
-    NSMutableParagraphStyle  *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    // 行间距设置为20
-    [paragraphStyle setLineSpacing: 15];
-    NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"拿铁咖啡是意大利浓缩咖啡(Espresso)与牛奶的经典混合，意大利人也很喜欢把拿铁作为早餐的饮料。意大利人早晨的厨房里，照得到阳光的炉子上通常会同时煮着咖啡和牛奶。" attributes:@{NSFontAttributeName: [UIFont fontWithName:@"Helvetica Neue" size: 14.0],NSForegroundColorAttributeName: [UIColor colorWithRed:113/255.0 green:120/255.0 blue:130/255.0 alpha:1.0]}];
-    [string addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [string length])];
     
-    self.detailLabel.attributedText = string;
 }
 
-- (void)setModel:(JSDCoffeeModel *)model {
+- (void)setModel:(JSDKitTypeModel *)model {
     
     _model = model;
     
