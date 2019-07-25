@@ -8,9 +8,11 @@
 
 #import "JSDMaterialTextView.h"
 
+#import "JSDPublic.h"
+
 @interface JSDMaterialTextView ()
 
-@property (weak, nonatomic) IBOutlet UILabel *coffeeNameCNLabel;
+@property (weak, nonatomic) IBOutlet UILabel *coffeeNameCNLabel; //材料名称
 @property (weak, nonatomic) IBOutlet UILabel *coffeeNameENLabel;
 @property (weak, nonatomic) IBOutlet UILabel *bakeCNLabel;
 @property (weak, nonatomic) IBOutlet UILabel *backENLabel;
@@ -28,45 +30,42 @@
     
     [super awakeFromNib];
     
+    self.coffeeNameCNLabel.font = [UIFont jsd_fontSize:24];
+    self.coffeeNameCNLabel.textColor = [UIColor jsd_mainTextColor];
     
+    self.coffeeNameENLabel.font = [UIFont jsd_fontSize:14];
+    self.coffeeNameENLabel.textColor = [UIColor jsd_detailTextColor];
+    
+    self.bakeCNLabel.font = [UIFont jsd_fontSize:14];
+    self.bakeCNLabel.textColor = [UIColor jsd_mainTextColor];
+    
+    self.backENLabel.font = [UIFont jsd_fontSize:14];
+    self.backENLabel.textColor = [UIColor jsd_detailTextColor];
+    
+    self.sourCNLabel.font = [UIFont jsd_fontSize:14];
+    self.sourCNLabel.textColor = [UIColor jsd_mainTextColor];
+    
+    self.sourENLabel.font = [UIFont jsd_fontSize:14];
+    self.sourENLabel.textColor = [UIColor jsd_detailTextColor];
+    
+    self.chunCNLabel.font = [UIFont jsd_fontSize:14];
+    self.chunCNLabel.textColor = [UIColor jsd_mainTextColor];
+    
+    self.chunENLabel.font = [UIFont jsd_fontSize:14];
+    self.chunENLabel.textColor = [UIColor jsd_detailTextColor];
+}
+
+- (void)setModel:(JSDMaterialModel *)model {
+    
+    _model = model;
+    
+    self.coffeeNameCNLabel.text = model.materialName;
+    self.coffeeNameENLabel.text = model.materialENName;
+}
+
+- (void)updateViewWithModel:(JSDMaterialModel *)model {
+    
+    [self setModel:model];
 }
 
 @end
-
-/*
- //
- //  JSDMaterialCell.m
- //  JerseyCoffee
- //
- //  Created by Jersey on 2019/7/24.
- //  Copyright © 2019 jerseyCafe. All rights reserved.
- //
- 
- #import "JSDMaterialCell.h"
- 
- @interface JSDMaterialCell ()
- 
- @property (weak, nonatomic) IBOutlet UIImageView *materialImageView;
- @property (weak, nonatomic) IBOutlet UIView *textContentView;
- @property (weak, nonatomic) IBOutlet UILabel *meterialNameLabel;
- @property (weak, nonatomic) IBOutlet UIView *lineView;
- @property (weak, nonatomic) IBOutlet UILabel *coffeeStoryLabel;
- 
- @end
- 
- @implementation JSDMaterialCell
- 
- - (void)awakeFromNib {
- [super awakeFromNib];
- // Initialization code
- 
- self.layer.cornerRadius = 10;
- self.layer.masksToBounds = YES;
- 
- self.contentView.backgroundColor = [UIColor jsd_mainGrayColor];
- }
- 
- @end
- */
-
-

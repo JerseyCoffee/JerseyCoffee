@@ -8,9 +8,12 @@
 
 #import "MDCCollectionViewCell.h"
 
+#import "JSDMaterialViewModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JSDMaterialCell : MDCCollectionViewCell
+@interface JSDMaterialCell : UICollectionViewCell
+
+@property (nonatomic, strong) JSDMaterialModel* model;
 
 @end
 

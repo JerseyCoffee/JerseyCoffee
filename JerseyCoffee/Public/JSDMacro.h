@@ -22,9 +22,6 @@
 #pragma mark -- IPHONE Device
 #define zhouu @"http"
 
-
-
-
 //获得屏幕的宽高
 #define ScreenWidth ([UIScreen mainScreen].bounds.size.width)
 #define ScreenHeight ([UIScreen mainScreen].bounds.size.height)
@@ -63,6 +60,7 @@
 //self.view属性宏
 #define View_Width (self.view.bounds.size.width)
 #define View_Height (self.view.bounds.size.height)
+#define IphoneScale [UIScreen mainScreen].scale
 
 //颜色
 //格式 0xdae8a6, 0.5
@@ -116,8 +114,6 @@ alpha:(a)])
 // More easy way to post a notification with user info from notification center.
 #define JSDPostNotificationWithNameAndUserInfo(notificationName, userInfo) \
 [kNotificationCenter postNotificationName:notificationName object:nil userInfo:userInfo]
-
-
 
 #pragma mark - Judge
 

@@ -11,11 +11,21 @@
 #import "JSDMaterialCell.h"
 #import "JSDMaterialTextView.h"
 #import <MaterialPageControl.h>
+#import "JSDMaterialViewModel.h"
+
+static CGFloat kUIEdgeInsetsTop = 10;
+static CGFloat kUIEdgeInsetsLeft = 40;
+static CGFloat kUIEdgeInsetsBottom = 10;
+static CGFloat kUIEdgeInsetsRight = 40;
+static CGFloat kLineItemSpace = 0;    //水平
+static CGFloat kInterItemSpace = 20;    //垂直
+static CGFloat kItemLeftShowWidth = 20; //每个 Item 漏出宽度
 
 @interface JSDMaterialVC ()
 
 @property (nonatomic, strong) JSDMaterialTextView* textView;
 @property (nonatomic, strong) MDCPageControl* pageControl;
+@property (nonatomic, strong) JSDMaterialViewModel* viewModel;
 
 
 @end
@@ -94,7 +104,6 @@ static NSString * const reuseIdentifier = @"Cell";
 
     [self.collectionView registerNib:[UINib nibWithNibName:@"JSDMaterialCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:reuseIdentifier];
     
-    
     UICollectionViewFlowLayout* flowLayout = (UICollectionViewFlowLayout *)self.collectionViewLayout;
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
     self.collectionView.alwaysBounceVertical = NO;
@@ -109,6 +118,10 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)setupData {
     
+    self.textView.model = self.viewModel.listArray.firstObject;
+    
+    //KVO 观察失败; 其重写了 set 方法. 没有发出通知;
+    [self.pageControl addObserver:self forKeyPath:@"currentPage" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
 }
 
 #pragma mark - 4.UITableViewDataSource and UITableViewDelegate
@@ -120,16 +133,27 @@ static NSString * const reuseIdentifier = @"Cell";
     return 1;
 }
 
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 
-    return 6;
+    return self.viewModel.listArray.count;;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    JSDMaterialCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    
+    cell.model = self.viewModel.listArray[indexPath.item];
     
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath API_AVAILABLE(ios(8.0)) {
+    
+    NSLog(@"当前正在准备展示%ld", indexPath.item);
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSLog(@"当前正在展示%ld", indexPath.item);
 }
 
 #pragma mark <UICollectionViewDelegate>
@@ -138,33 +162,63 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    return CGSizeMake((ScreenWidth - 50), collectionView.frame.size.height - 20);
+    return CGSizeMake((ScreenWidth - kUIEdgeInsetsLeft - kInterItemSpace - kItemLeftShowWidth), collectionView.frame.size.height - 40);
 }
 
 //设置每个item的UIEdgeInsets
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return UIEdgeInsetsMake(10, 35, 10, 15);
+    return UIEdgeInsetsMake(kUIEdgeInsetsTop, kUIEdgeInsetsLeft, kUIEdgeInsetsBottom, kUIEdgeInsetsRight);
 }
 
 //设置每个item水平间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
-    return 15;
+    return kLineItemSpace;
 }
 
 //设置每个item垂直间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {
-    return 15;
+    return kInterItemSpace;
+}
+
+#pragma mark - ScrolleViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self.pageControl scrollViewDidScroll:scrollView];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    [self.pageControl scrollViewDidEndDecelerating:scrollView];
+    //更新 View
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    [self.pageControl scrollViewDidEndScrollingAnimation:scrollView];
+    // 更新View
 }
 
 #pragma mark - 5.Event Response
+
+- (void)didChangePage:(MDCPageControl*)sender {
+    
+    CGPoint offset = self.collectionView.contentOffset;
+    offset.x = (CGFloat)sender.currentPage * (ScreenWidth - kInterItemSpace - kItemLeftShowWidth - 20);
+    [self.collectionView setContentOffset:offset animated: true];
+}
 
 #pragma mark - 6.Private Methods
 
 - (void)setupNotification {
     
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    
+    NSInteger number = change[NSKeyValueChangeNewKey];
+    
+    NSLog(@"当前滚到了%ld", number);
 }
 
 #pragma mark - 7.GET & SET
@@ -181,11 +235,25 @@ static NSString * const reuseIdentifier = @"Cell";
     
     if (!_pageControl) {
         _pageControl = [[MDCPageControl alloc] init];
-        _pageControl.numberOfPages = 6;
-        _pageControl.currentPageIndicatorTintColor = [UIColor jsd_colorWithHexString:@"#8A8987"];
-        _pageControl.pageIndicatorTintColor = [UIColor jsd_colorWithHexString:@"#A5A3A1"];
+        _pageControl.numberOfPages = self.viewModel.listArray.count;
+//        _pageControl.currentPageIndicatorTintColor = [UIColor jsd_colorWithHexString:@"#8A8987"];
+//        _pageControl.pageIndicatorTintColor = [UIColor jsd_colorWithHexString:@"#A5A3A1"];
+//
+//        _pageControl.currentPageIndicatorTintColor = [UIColor redColor];
+//        _pageControl.pageIndicatorTintColor = [UIColor yellowColor];
+//        _pageControl.tintColor = [UIColor blueColor];
+        [_pageControl addTarget:self action:@selector(didChangePage:) forControlEvents:UIControlEventValueChanged];
+        
     }
     return _pageControl;
+}
+
+- (JSDMaterialViewModel *)viewModel {
+    
+    if (!_viewModel) {
+        _viewModel = [[JSDMaterialViewModel alloc] init];
+    }
+    return _viewModel;
 }
 
 @end
