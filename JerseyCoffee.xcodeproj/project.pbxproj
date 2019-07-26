@@ -17,6 +17,20 @@
 		5542BA9022E5BE0100ADCCAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5542BA8F22E5BE0100ADCCAC /* main.m */; };
 		556D4DA822E94A6500E3DBB2 /* JSDMaterialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556D4DA722E94A6500E3DBB2 /* JSDMaterialCell.xib */; };
 		556D4E0922EAA18C00E3DBB2 /* JSDShowNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 556D4E0822EAA18C00E3DBB2 /* JSDShowNumberView.m */; };
+		556D4E0F22EAC64300E3DBB2 /* macchiato_coffee.png in Resources */ = {isa = PBXBuildFile; fileRef = 556D4E0A22EAC64300E3DBB2 /* macchiato_coffee.png */; };
+		556D4E1022EAC64300E3DBB2 /* mocha_coffee.png in Resources */ = {isa = PBXBuildFile; fileRef = 556D4E0B22EAC64300E3DBB2 /* mocha_coffee.png */; };
+		556D4E1122EAC64300E3DBB2 /* cappuccino_coffee.png in Resources */ = {isa = PBXBuildFile; fileRef = 556D4E0C22EAC64300E3DBB2 /* cappuccino_coffee.png */; };
+		556D4E1222EAC64300E3DBB2 /* latte_coffee.png in Resources */ = {isa = PBXBuildFile; fileRef = 556D4E0D22EAC64300E3DBB2 /* latte_coffee.png */; };
+		556D4E1322EAC64300E3DBB2 /* americano_coffee.png in Resources */ = {isa = PBXBuildFile; fileRef = 556D4E0E22EAC64300E3DBB2 /* americano_coffee.png */; };
+		556D4E1822EAD00700E3DBB2 /* dand.png in Resources */ = {isa = PBXBuildFile; fileRef = 556D4E1522EAD00700E3DBB2 /* dand.png */; };
+		556D4E1922EAD00700E3DBB2 /* siphon.png in Resources */ = {isa = PBXBuildFile; fileRef = 556D4E1622EAD00700E3DBB2 /* siphon.png */; };
+		556D4E1A22EAD00700E3DBB2 /* frenchpress.png in Resources */ = {isa = PBXBuildFile; fileRef = 556D4E1722EAD00700E3DBB2 /* frenchpress.png */; };
+		556D4E1F22EADA1500E3DBB2 /* JSDFeedBacksVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 556D4E1D22EADA1500E3DBB2 /* JSDFeedBacksVC.m */; };
+		556D4E2022EADA1500E3DBB2 /* JSDFeedBacksVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556D4E1E22EADA1500E3DBB2 /* JSDFeedBacksVC.xib */; };
+		556D4E2422EADDD500E3DBB2 /* JSDAboutUSVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 556D4E2322EADDD500E3DBB2 /* JSDAboutUSVC.m */; };
+		556D4E2722EADF6400E3DBB2 /* JSDAbountViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 556D4E2622EADF6400E3DBB2 /* JSDAbountViewModel.m */; };
+		556D4E2B22EAE48800E3DBB2 /* JSDKitTypeStepVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 556D4E2922EAE48800E3DBB2 /* JSDKitTypeStepVC.m */; };
+		556D4E2C22EAE48800E3DBB2 /* JSDKitTypeStepVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556D4E2A22EAE48800E3DBB2 /* JSDKitTypeStepVC.xib */; };
 		55BE3C8522E6AFAE00D28107 /* UIColor+JSDStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3C8422E6AFAE00D28107 /* UIColor+JSDStyle.m */; };
 		55BE3C8822E6B21A00D28107 /* JSDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3C8722E6B21A00D28107 /* JSDBaseViewController.m */; };
 		55BE3C8B22E6B23000D28107 /* JSDCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3C8A22E6B23000D28107 /* JSDCollectionViewController.m */; };
@@ -67,6 +81,24 @@
 		556D4DA722E94A6500E3DBB2 /* JSDMaterialCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDMaterialCell.xib; sourceTree = "<group>"; };
 		556D4E0722EAA18C00E3DBB2 /* JSDShowNumberView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDShowNumberView.h; sourceTree = "<group>"; };
 		556D4E0822EAA18C00E3DBB2 /* JSDShowNumberView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDShowNumberView.m; sourceTree = "<group>"; };
+		556D4E0A22EAC64300E3DBB2 /* macchiato_coffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = macchiato_coffee.png; path = ../macchiato_coffee.png; sourceTree = "<group>"; };
+		556D4E0B22EAC64300E3DBB2 /* mocha_coffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mocha_coffee.png; path = ../mocha_coffee.png; sourceTree = "<group>"; };
+		556D4E0C22EAC64300E3DBB2 /* cappuccino_coffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cappuccino_coffee.png; path = ../cappuccino_coffee.png; sourceTree = "<group>"; };
+		556D4E0D22EAC64300E3DBB2 /* latte_coffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = latte_coffee.png; path = ../latte_coffee.png; sourceTree = "<group>"; };
+		556D4E0E22EAC64300E3DBB2 /* americano_coffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = americano_coffee.png; path = ../americano_coffee.png; sourceTree = "<group>"; };
+		556D4E1522EAD00700E3DBB2 /* dand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dand.png; sourceTree = "<group>"; };
+		556D4E1622EAD00700E3DBB2 /* siphon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = siphon.png; sourceTree = "<group>"; };
+		556D4E1722EAD00700E3DBB2 /* frenchpress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frenchpress.png; sourceTree = "<group>"; };
+		556D4E1C22EADA1500E3DBB2 /* JSDFeedBacksVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDFeedBacksVC.h; sourceTree = "<group>"; };
+		556D4E1D22EADA1500E3DBB2 /* JSDFeedBacksVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDFeedBacksVC.m; sourceTree = "<group>"; };
+		556D4E1E22EADA1500E3DBB2 /* JSDFeedBacksVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDFeedBacksVC.xib; sourceTree = "<group>"; };
+		556D4E2222EADDD500E3DBB2 /* JSDAboutUSVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDAboutUSVC.h; sourceTree = "<group>"; };
+		556D4E2322EADDD500E3DBB2 /* JSDAboutUSVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDAboutUSVC.m; sourceTree = "<group>"; };
+		556D4E2522EADF6400E3DBB2 /* JSDAbountViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDAbountViewModel.h; sourceTree = "<group>"; };
+		556D4E2622EADF6400E3DBB2 /* JSDAbountViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDAbountViewModel.m; sourceTree = "<group>"; };
+		556D4E2822EAE48800E3DBB2 /* JSDKitTypeStepVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDKitTypeStepVC.h; sourceTree = "<group>"; };
+		556D4E2922EAE48800E3DBB2 /* JSDKitTypeStepVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDKitTypeStepVC.m; sourceTree = "<group>"; };
+		556D4E2A22EAE48800E3DBB2 /* JSDKitTypeStepVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDKitTypeStepVC.xib; sourceTree = "<group>"; };
 		55703AB722E5C10600C2EC01 /* JSDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDPrefixHeader.pch; sourceTree = "<group>"; };
 		55703AB822E5C10600C2EC01 /* JSDDevMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDDevMacro.h; sourceTree = "<group>"; };
 		55703AB922E5C10600C2EC01 /* JSDMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDMacro.h; sourceTree = "<group>"; };
@@ -181,6 +213,42 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		556D4E1422EAC65E00E3DBB2 /* ImageAssets */ = {
+			isa = PBXGroup;
+			children = (
+				556D4E1522EAD00700E3DBB2 /* dand.png */,
+				556D4E1722EAD00700E3DBB2 /* frenchpress.png */,
+				556D4E1622EAD00700E3DBB2 /* siphon.png */,
+				556D4E0E22EAC64300E3DBB2 /* americano_coffee.png */,
+				556D4E0C22EAC64300E3DBB2 /* cappuccino_coffee.png */,
+				556D4E0D22EAC64300E3DBB2 /* latte_coffee.png */,
+				556D4E0A22EAC64300E3DBB2 /* macchiato_coffee.png */,
+				556D4E0B22EAC64300E3DBB2 /* mocha_coffee.png */,
+			);
+			path = ImageAssets;
+			sourceTree = "<group>";
+		};
+		556D4E1B22EAD9F100E3DBB2 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				556D4E1C22EADA1500E3DBB2 /* JSDFeedBacksVC.h */,
+				556D4E1D22EADA1500E3DBB2 /* JSDFeedBacksVC.m */,
+				556D4E1E22EADA1500E3DBB2 /* JSDFeedBacksVC.xib */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
+		556D4E2122EADDAD00E3DBB2 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				556D4E2222EADDD500E3DBB2 /* JSDAboutUSVC.h */,
+				556D4E2322EADDD500E3DBB2 /* JSDAboutUSVC.m */,
+				556D4E2522EADF6400E3DBB2 /* JSDAbountViewModel.h */,
+				556D4E2622EADF6400E3DBB2 /* JSDAbountViewModel.m */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
 		55703AB022E5C02E00C2EC01 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +262,7 @@
 		55703AB122E5C02E00C2EC01 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				556D4E1422EAC65E00E3DBB2 /* ImageAssets */,
 				5542BA8922E5BE0100ADCCAC /* Assets.xcassets */,
 				5542BA8B22E5BE0100ADCCAC /* LaunchScreen.storyboard */,
 				5542BA8E22E5BE0100ADCCAC /* Info.plist */,
@@ -317,6 +386,8 @@
 		55BE3C9222E6B4A300D28107 /* My */ = {
 			isa = PBXGroup;
 			children = (
+				556D4E2122EADDAD00E3DBB2 /* About */,
+				556D4E1B22EAD9F100E3DBB2 /* Feedback */,
 				601E98C022E9EA6B008CBE2B /* Model */,
 				601E98C122E9EA6B008CBE2B /* View */,
 				55BE3C9522E6B58500D28107 /* ViewController */,
@@ -341,6 +412,9 @@
 			children = (
 				55BE3CB822E6B75F00D28107 /* JSDKitTypeVC.h */,
 				55BE3CB922E6B75F00D28107 /* JSDKitTypeVC.m */,
+				556D4E2822EAE48800E3DBB2 /* JSDKitTypeStepVC.h */,
+				556D4E2922EAE48800E3DBB2 /* JSDKitTypeStepVC.m */,
+				556D4E2A22EAE48800E3DBB2 /* JSDKitTypeStepVC.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -541,14 +615,24 @@
 				55E952E622E98F56008BADB5 /* MaterialData.json in Resources */,
 				5542BA8D22E5BE0100ADCCAC /* LaunchScreen.storyboard in Resources */,
 				5501257322E7F9FE00835DE4 /* JSDMaterialTextView.xib in Resources */,
+				556D4E1122EAC64300E3DBB2 /* cappuccino_coffee.png in Resources */,
 				55BE3CC922E6E16500D28107 /* JSDCoffeeCollectionViewCell.xib in Resources */,
 				55E952E122E984AC008BADB5 /* kitTyopeData.json in Resources */,
 				55E952DC22E95FAE008BADB5 /* coffeeData.json in Resources */,
+				556D4E1222EAC64300E3DBB2 /* latte_coffee.png in Resources */,
+				556D4E1322EAC64300E3DBB2 /* americano_coffee.png in Resources */,
 				5542BA8A22E5BE0100ADCCAC /* Assets.xcassets in Resources */,
 				55E952D422E951A5008BADB5 /* JSDKitTypeViewCell.xib in Resources */,
+				556D4E1A22EAD00700E3DBB2 /* frenchpress.png in Resources */,
+				556D4E2022EADA1500E3DBB2 /* JSDFeedBacksVC.xib in Resources */,
+				556D4E1822EAD00700E3DBB2 /* dand.png in Resources */,
 				55C2042D22E9B07F00F193E6 /* JSDMaterialDetailVC.xib in Resources */,
+				556D4E2C22EAE48800E3DBB2 /* JSDKitTypeStepVC.xib in Resources */,
 				601E98CE22E9F282008CBE2B /* JSDCoffeeHistoryVC.xib in Resources */,
+				556D4E0F22EAC64300E3DBB2 /* macchiato_coffee.png in Resources */,
+				556D4E1022EAC64300E3DBB2 /* mocha_coffee.png in Resources */,
 				601E98C522E9EA85008CBE2B /* JSDCollectionViewCell.xib in Resources */,
+				556D4E1922EAD00700E3DBB2 /* siphon.png in Resources */,
 				55C2042822E9B05600F193E6 /* JSDCoffeeDetailVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -656,7 +740,9 @@
 				55BE3C8E22E6B33900D28107 /* JSDBaseNavigationController.m in Sources */,
 				55E952DF22E98474008BADB5 /* JSDKitTypeViewModel.m in Sources */,
 				55BE3CC822E6E16500D28107 /* JSDCoffeeCollectionViewCell.m in Sources */,
+				556D4E1F22EADA1500E3DBB2 /* JSDFeedBacksVC.m in Sources */,
 				55BE3CA722E6B5FF00D28107 /* JSDMyCenterVC.m in Sources */,
+				556D4E2422EADDD500E3DBB2 /* JSDAboutUSVC.m in Sources */,
 				55BE3C8822E6B21A00D28107 /* JSDBaseViewController.m in Sources */,
 				55BE3C8B22E6B23000D28107 /* JSDCollectionViewController.m in Sources */,
 				55BE3CA422E6B5CD00D28107 /* JSDBaseModel.m in Sources */,
@@ -672,8 +758,10 @@
 				55C2042C22E9B07F00F193E6 /* JSDMaterialDetailVC.m in Sources */,
 				55BE3CC422E6B7C800D28107 /* JSDTabBarViewController.m in Sources */,
 				55BE3CBA22E6B75F00D28107 /* JSDKitTypeVC.m in Sources */,
+				556D4E2B22EAE48800E3DBB2 /* JSDKitTypeStepVC.m in Sources */,
 				55BE3CBD22E6B77000D28107 /* JSDMaterialVC.m in Sources */,
 				55BE3CA122E6B5C300D28107 /* JSDBaseView.m in Sources */,
+				556D4E2722EADF6400E3DBB2 /* JSDAbountViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

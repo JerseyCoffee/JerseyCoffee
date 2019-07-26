@@ -61,6 +61,10 @@
     
     _model = model;
     
+    if (model.imageName) {
+        NSString* imagePath = [JSDBundle pathForResource:model.imageName ofType:@"png"];
+        self.coffeeImageView.image = [UIImage imageWithContentsOfFile:imagePath];
+    }
     self.titleCNLabel.text = model.coffeeCNName;
     self.titleENLabel.text = model.coffeeENName;
     

@@ -52,13 +52,22 @@
     
     _model = model;
     
-    self.titleCNLabel.text = model.coffeeCNName;
-    self.titleENLabel.text = model.coffeeENName;
+    if (model.kitImageName) {
+        NSString* imagePath = [JSDBundle pathForResource:model.kitImageName ofType:@"png"];
+        self.coffeeImageView.image = [UIImage imageWithContentsOfFile:imagePath];
+    }
+    
+    self.titleCNLabel.text = model.kitCNName;
+    self.titleENLabel.text = model.kitENName;
     
     NSMutableParagraphStyle  *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     // 行间距设置为20
     [paragraphStyle setLineSpacing: 15];
-    NSMutableAttributedString *detail = [[NSMutableAttributedString alloc] initWithString:model.coffeeDetail attributes:@{NSFontAttributeName: [UIFont fontWithName:@"Helvetica Neue" size: 14.0],NSForegroundColorAttributeName: [UIColor colorWithRed:113/255.0 green:120/255.0 blue:130/255.0 alpha:1.0]}];
+    NSMutableAttributedString *detail;
+    if (JSDIsString(model.kitDetail)) {
+        detail = [[NSMutableAttributedString alloc] initWithString:model.kitDetail attributes:@{NSFontAttributeName: [UIFont fontWithName:@"Helvetica Neue" size: 14.0],NSForegroundColorAttributeName: [UIColor colorWithRed:113/255.0 green:120/255.0 blue:130/255.0 alpha:1.0]}];
+    }
+    
     [detail addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [detail length])];
     
     self.detailLabel.attributedText = detail;

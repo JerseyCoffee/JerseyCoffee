@@ -11,6 +11,7 @@
 #import "JSDKitTypeViewCell.h"
 #import <MaterialPageControl.h>
 #import "JSDKitTypeViewModel.h"
+#import "JSDKitTypeStepVC.h"
 
 static CGFloat kUIEdgeInsetsTop = 10;
 static CGFloat kUIEdgeInsetsLeft = 40;
@@ -51,6 +52,18 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.hidden = NO;
 }
 
 #pragma mark - 2.SettingView and Style
@@ -121,6 +134,16 @@ static NSString * const reuseIdentifier = @"Cell";
     cell.model = self.viewModel.listArray[indexPath.item];
     
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [super collectionView:collectionView didSelectItemAtIndexPath:indexPath];
+    
+    JSDKitTypeStepVC* setpVC = [[JSDKitTypeStepVC alloc] init];
+    setpVC.model = self.viewModel.listArray[indexPath.item];
+    
+    [self.navigationController pushViewController:setpVC animated:YES];
 }
 
 #pragma mark <UICollectionViewDelegate>

@@ -117,6 +117,10 @@
 
 - (void)setupData {
     
+    if (JSDIsString(self.model.imageName)) {
+        NSString* imagePath = [JSDBundle pathForResource:self.model.imageName ofType:@"png"];
+        self.coffeeImageView.image = [UIImage imageWithContentsOfFile:imagePath];
+    }
     self.coffeeCNNameLabel.text = self.model.coffeeCNName;
     self.coffeeENNameLabel.text = self.model.coffeeENName;
 

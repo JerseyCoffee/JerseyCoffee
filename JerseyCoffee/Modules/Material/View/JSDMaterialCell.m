@@ -48,8 +48,8 @@
         self.materialImageView.image = [UIImage imageNamed: model.imageName];
     }
     
-    self.meterialNameLabel.text = model.materialName;
-    self.coffeeStoryLabel.text = model.materialDetailTitle.length ? model.materialDetailTitle : @"咖啡故事";
+    self.meterialNameLabel.text = @"咖啡故事";
+    self.coffeeStoryLabel.text = @"COFFEE STORIES";
 }
 
 @end

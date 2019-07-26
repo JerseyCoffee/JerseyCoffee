@@ -19,11 +19,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JSDKitTypeModel : JSDBaseModel
 
-@property (nonatomic, copy) NSString* imageName;
-@property (nonatomic, copy) NSString* coffeeCNName;
-@property (nonatomic, copy) NSString* coffeeENName;
-@property (nonatomic, copy) NSString* coffeeDetail;
-@property (nonatomic, copy) NSString* coffeeID;
+@property (nonatomic, copy) NSString* kitImageName;
+@property (nonatomic, copy) NSString* kitCNName;
+@property (nonatomic, copy) NSString* kitENName;
+@property (nonatomic, copy) NSString* kitDetail;
+@property (nonatomic, copy) NSString* step;
+@property (nonatomic, copy) NSString* kitID;
 
 @end
 

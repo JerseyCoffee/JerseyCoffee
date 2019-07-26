@@ -1,42 +1,20 @@
-[{  "imageName": "latte_coffee",
-	"coffeeCNName": "拿铁咖啡",
-	"coffeeENName": "Caffè Latte",
-	"coffeeDetail": "拿铁咖啡是意大利浓缩咖啡(Espresso)与牛奶的经典混合，意大利人也很喜欢把拿铁作为早餐的饮料。意大利人早晨的厨房里，照得到阳光的炉子上通常会同时煮着咖啡和牛奶。",
+[{  "kitImageName": "frenchpress",
+	"kitCNName": "法式压滤壶",
+	"kitENName": "French Press",
+    "kitDetail": "French Press 是最经典的咖啡冲泡方式之一，起源于 1850 年左右的法国，基本结构就是由一个瓶身和一套带滤网的压杆组成的简单冲泡器具。当然这个结构也适用于泡茶，因此也是冲茶神器。",
+    "step": "①用水温热法压壶和咖啡杯，温杯能保证咖啡冲煮足温而保证口感\n②倒出水，往法压壶中放入适量、磨好的咖啡粉（根据壶的杯量放置已研磨好适合法压壶粗细度的粉）\n③缓慢注入热水（90~96℃），搅拌均匀并加盖焖煮 4 分钟\n④缓慢压下压杆到底，倒出咖啡至已温好的咖啡杯中，尽情享受",
     "coffeeID": ""
 
-},{ "imageName": "latte_coffee",
-    "coffeeCNName": "拿铁咖啡",
-    "coffeeENName": "Caffè Latte",
-    "coffeeDetail": "拿铁咖啡是意大利浓缩咖啡(Espresso)与牛奶的经典混合，意大利人也很喜欢把拿铁作为早餐的饮料。意大利人早晨的厨房里，照得到阳光的炉子上通常会同时煮着咖啡和牛奶。",
+},{ "kitImageName": "dand",
+    "kitCNName": "手冲、滴滤壶",
+    "kitENName": "Hand washing and drip pot",
+    "kitDetail": "似乎还是法国人发明的，不过是由日本人将其发扬光大，因此市面上手冲器具较多来自日本。其基本结构就是一个漏斗滴滤杯和一个承接杯，以及一个长嘴手冲壶。当然基于这种结构原理开发出来的壶就多种多样了，例如在滴滤杯中使用滤纸、滤网或布滤，使用不同材质、造型和功能的手冲壶和滴滤杯，另外全自动冲煮的滴滤咖啡机也很常见，这里简单介绍较传统和通用的手冲咖啡。",
+    "step": "①用水温杯，同时预设好比例加热适量热水\n②将磨好的咖啡粉均匀倒入铺好滤纸的滴滤杯中稍微抖动摊平\n③缓慢注入热水，一般分两次，从咖啡粉的中央开始螺旋圈以达到均匀焖蒸的效果\n④注意水量控制，并等待滴滤完毕后，即可享用",
     "coffeeID ":""
-},{ "imageName": "latte_coffee",
-    "coffeeCNName": "拿铁咖啡",
-    "coffeeENName": "Caffè Latte",
-    "coffeeDetail": "拿铁咖啡是意大利浓缩咖啡(Espresso)与牛奶的经典混合，意大利人也很喜欢把拿铁作为早餐的饮料。意大利人早晨的厨房里，照得到阳光的炉子上通常会同时煮着咖啡和牛奶。",
-    "coffeeID ":""
-},{ "imageName": "latte_coffee",
-    "coffeeCNName": "拿铁咖啡",
-    "coffeeENName": "Caffè Latte",
-    "coffeeDetail": "拿铁咖啡是意大利浓缩咖啡(Espresso)与牛奶的经典混合，意大利人也很喜欢把拿铁作为早餐的饮料。意大利人早晨的厨房里，照得到阳光的炉子上通常会同时煮着咖啡和牛奶。",
-    "coffeeID ":""
-},{ "imageName": "latte_coffee",
-    "coffeeCNName": "拿铁咖啡",
-    "coffeeENName": "Caffè Latte",
-    "coffeeDetail": "拿铁咖啡是意大利浓缩咖啡(Espresso)与牛奶的经典混合，意大利人也很喜欢把拿铁作为早餐的饮料。意大利人早晨的厨房里，照得到阳光的炉子上通常会同时煮着咖啡和牛奶。",
-    "coffeeID ":""
-},{ "imageName": "latte_coffee",
-    "coffeeCNName": "拿铁咖啡",
-    "coffeeENName": "Caffè Latte",
-    "coffeeDetail": "拿铁咖啡是意大利浓缩咖啡(Espresso)与牛奶的经典混合，意大利人也很喜欢把拿铁作为早餐的饮料。意大利人早晨的厨房里，照得到阳光的炉子上通常会同时煮着咖啡和牛奶。",
-    "coffeeID ":""
-},{ "imageName": "latte_coffee",
-    "coffeeCNName": "拿铁咖啡",
-    "coffeeENName": "Caffè Latte",
-    "coffeeDetail": "拿铁咖啡是意大利浓缩咖啡(Espresso)与牛奶的经典混合，意大利人也很喜欢把拿铁作为早餐的饮料。意大利人早晨的厨房里，照得到阳光的炉子上通常会同时煮着咖啡和牛奶。",
-    "coffeeID ":""
-},{ "imageName": "latte_coffee",
-    "coffeeCNName": "拿铁咖啡",
-    "coffeeENName": "Caffè Latte",
-    "coffeeDetail": "拿铁咖啡是意大利浓缩咖啡(Espresso)与牛奶的经典混合，意大利人也很喜欢把拿铁作为早餐的饮料。意大利人早晨的厨房里，照得到阳光的炉子上通常会同时煮着咖啡和牛奶。",
+},{ "kitImageName": "siphon",
+    "kitCNName": "虹吸式咖啡壶",
+    "kitENName": "Siphon coffee maker",
+    "kitDetail": "起源于德国，利用空气压力压水焖煮咖啡的一种冲煮方式，有些类似于蒸汽机的原理。结构上是一对上下放置的玻璃器皿，下部分放水、中间管道、上部放咖啡粉，加热时利用空气压力将下部的水压至上部与咖啡粉混合焖煮，逐渐冷却后咖啡液体经过过滤重新回到底部。",
+    "step": "①放水在壶的下半部分，放咖啡粉在上半部分，加热水\n②加热沸腾后，把咖啡容器插在水容器的上部，注意密封性\n③沸腾中的热水会因为水蒸气的压力，自动压至上半部分与咖啡粉混合\n④观察情况并继续煮至水全部被推至上半壶中，关闭热源\n⑤尝试用湿布或其他方式冷却下壶，让咖啡液体留回下壶，倒出享用\n",
     "coffeeID ":""
 }]

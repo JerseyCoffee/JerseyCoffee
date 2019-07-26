@@ -10,6 +10,7 @@
 
 #import "JSDMyCenterViewModel.h"
 #import "JSDCollectionViewCell.h"
+#import "JSDCoffeeHistoryVC.h"
 
 @interface JSDMyCenterVC ()
 
@@ -78,7 +79,6 @@ static NSString * const reuseIdentifier = @"Cell";
     return 1;
 }
 
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
     return self.viewModel.listArray.count;
@@ -99,8 +99,14 @@ static NSString * const reuseIdentifier = @"Cell";
     JSDMyCenterModel* model = self.viewModel.listArray[indexPath.item];
     
     if (model.route) {
-        UIViewController* vc = [NSClassFromString(model.route) new];
-        [self.navigationController pushViewController:vc animated:YES];
+        JSDCoffeeHistoryVC* historyVC = [NSClassFromString(model.route) new];
+        if ([historyVC isKindOfClass:[JSDCoffeeHistoryVC class]]) {
+            historyVC.titleString = model.title;
+            historyVC.subTitleString = model.subTitle;
+            [self.navigationController pushViewController:historyVC animated:YES];
+        } else {
+            [self.navigationController pushViewController:historyVC animated:YES];
+        }
     }
 }
 
