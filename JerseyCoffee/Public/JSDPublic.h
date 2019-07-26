@@ -36,6 +36,10 @@
 #import "JSDMaterialVC.h"
 #import "JSDCoffeeVC.h"
 
+#pragma View
+
+#import "JSDShowNumberView.h"
+
 
 
 #endif /* JSDPublic_h */

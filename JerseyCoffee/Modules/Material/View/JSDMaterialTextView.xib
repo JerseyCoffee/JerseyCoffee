@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14835.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14790.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -62,6 +64,30 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mue-Py-Qor" customClass="JSDShowNumberView">
+                    <rect key="frame" x="245" y="133" width="90" height="15"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="orj-Q4-TpJ"/>
+                        <constraint firstAttribute="width" constant="90" id="r7X-MM-wH5"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VUD-Ag-GU4" customClass="JSDShowNumberView">
+                    <rect key="frame" x="245" y="190" width="90" height="15"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="Aio-k8-Ilp"/>
+                        <constraint firstAttribute="width" constant="90" id="y0i-g2-nEj"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XB2-hJ-RAA" customClass="JSDShowNumberView">
+                    <rect key="frame" x="245" y="247" width="90" height="15"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="3WI-Fn-MZ4"/>
+                        <constraint firstAttribute="height" constant="15" id="WHx-3K-cw6"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -70,16 +96,22 @@
                 <constraint firstItem="Lbi-VL-HOq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="38" id="Acf-OM-QvL"/>
                 <constraint firstItem="1rv-H3-v47" firstAttribute="top" secondItem="hna-MV-KrA" secondAttribute="bottom" constant="36" id="D9b-Xd-2F0"/>
                 <constraint firstItem="Avx-ad-ifB" firstAttribute="leading" secondItem="Lbi-VL-HOq" secondAttribute="leading" id="EnD-4F-016"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mue-Py-Qor" secondAttribute="trailing" constant="40" id="GdG-54-BE2"/>
                 <constraint firstItem="Yq1-nj-Kqp" firstAttribute="leading" secondItem="Avx-ad-ifB" secondAttribute="leading" id="IST-NZ-SBf"/>
                 <constraint firstItem="Pd1-ep-dN9" firstAttribute="leading" secondItem="Yq1-nj-Kqp" secondAttribute="trailing" id="Jk8-Dv-wNa"/>
+                <constraint firstItem="XB2-hJ-RAA" firstAttribute="trailing" secondItem="mue-Py-Qor" secondAttribute="trailing" id="KBW-8p-UiM"/>
                 <constraint firstItem="hna-MV-KrA" firstAttribute="top" secondItem="Yq1-nj-Kqp" secondAttribute="bottom" constant="36" id="LeC-PR-LHr"/>
+                <constraint firstItem="VUD-Ag-GU4" firstAttribute="trailing" secondItem="mue-Py-Qor" secondAttribute="trailing" id="Lmv-mt-5k9"/>
                 <constraint firstItem="Pd1-ep-dN9" firstAttribute="top" secondItem="Yq1-nj-Kqp" secondAttribute="top" id="N75-jk-Uci"/>
                 <constraint firstItem="n4t-Mc-vlq" firstAttribute="leading" secondItem="1rv-H3-v47" secondAttribute="trailing" id="NmD-P5-EcM"/>
+                <constraint firstItem="mue-Py-Qor" firstAttribute="centerY" secondItem="Pd1-ep-dN9" secondAttribute="centerY" id="RJs-hn-UAZ"/>
                 <constraint firstItem="n4t-Mc-vlq" firstAttribute="top" secondItem="1rv-H3-v47" secondAttribute="top" id="TAl-7u-Iso"/>
                 <constraint firstItem="BlR-aw-edG" firstAttribute="leading" secondItem="hna-MV-KrA" secondAttribute="trailing" id="W09-nr-30I"/>
                 <constraint firstItem="1rv-H3-v47" firstAttribute="leading" secondItem="Yq1-nj-Kqp" secondAttribute="leading" id="Z9D-iq-8Vg"/>
                 <constraint firstItem="BlR-aw-edG" firstAttribute="top" secondItem="hna-MV-KrA" secondAttribute="top" id="dNa-4s-EgM"/>
+                <constraint firstItem="XB2-hJ-RAA" firstAttribute="centerY" secondItem="n4t-Mc-vlq" secondAttribute="centerY" id="j2G-bk-BPZ"/>
                 <constraint firstItem="Lbi-VL-HOq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="32" id="nh5-Sh-wF4"/>
+                <constraint firstItem="VUD-Ag-GU4" firstAttribute="centerY" secondItem="BlR-aw-edG" secondAttribute="centerY" id="uaN-Q3-wTA"/>
                 <constraint firstItem="hna-MV-KrA" firstAttribute="leading" secondItem="Yq1-nj-Kqp" secondAttribute="leading" id="vuG-Ma-bgQ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -87,12 +119,15 @@
             <connections>
                 <outlet property="backENLabel" destination="Pd1-ep-dN9" id="e9M-Ru-g5t"/>
                 <outlet property="bakeCNLabel" destination="Yq1-nj-Kqp" id="Tcb-mw-Xnn"/>
+                <outlet property="bakeNumberView" destination="mue-Py-Qor" id="Q39-7J-MCP"/>
                 <outlet property="chunCNLabel" destination="1rv-H3-v47" id="1cp-5D-pFF"/>
                 <outlet property="chunENLabel" destination="n4t-Mc-vlq" id="nq4-iA-QX1"/>
+                <outlet property="chunNumberView" destination="XB2-hJ-RAA" id="bTa-wI-TUO"/>
                 <outlet property="coffeeNameCNLabel" destination="Lbi-VL-HOq" id="Tzi-4H-wex"/>
                 <outlet property="coffeeNameENLabel" destination="Avx-ad-ifB" id="mG3-Sj-cBm"/>
                 <outlet property="sourCNLabel" destination="hna-MV-KrA" id="naT-F4-XDV"/>
                 <outlet property="sourENLabel" destination="BlR-aw-edG" id="lYp-hH-RFo"/>
+                <outlet property="sourNumberView" destination="VUD-Ag-GU4" id="36t-sY-qyV"/>
             </connections>
             <point key="canvasLocation" x="138.40579710144928" y="100.44642857142857"/>
         </view>

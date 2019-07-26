@@ -24,6 +24,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString* coffeeENName;
 @property (nonatomic, copy) NSString* coffeeDetail;
 @property (nonatomic, copy) NSString* coffeeID;
+@property (nonatomic, assign) float expressoNumber;
+@property (nonatomic, assign) float milkNumber;
+@property (nonatomic, assign) float waterNumber;
 
 @end
 

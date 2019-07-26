@@ -16,6 +16,7 @@
 		5542BA8D22E5BE0100ADCCAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5542BA8B22E5BE0100ADCCAC /* LaunchScreen.storyboard */; };
 		5542BA9022E5BE0100ADCCAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5542BA8F22E5BE0100ADCCAC /* main.m */; };
 		556D4DA822E94A6500E3DBB2 /* JSDMaterialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556D4DA722E94A6500E3DBB2 /* JSDMaterialCell.xib */; };
+		556D4E0922EAA18C00E3DBB2 /* JSDShowNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 556D4E0822EAA18C00E3DBB2 /* JSDShowNumberView.m */; };
 		55BE3C8522E6AFAE00D28107 /* UIColor+JSDStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3C8422E6AFAE00D28107 /* UIColor+JSDStyle.m */; };
 		55BE3C8822E6B21A00D28107 /* JSDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3C8722E6B21A00D28107 /* JSDBaseViewController.m */; };
 		55BE3C8B22E6B23000D28107 /* JSDCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3C8A22E6B23000D28107 /* JSDCollectionViewController.m */; };
@@ -64,6 +65,8 @@
 		5542BA8E22E5BE0100ADCCAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5542BA8F22E5BE0100ADCCAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		556D4DA722E94A6500E3DBB2 /* JSDMaterialCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDMaterialCell.xib; sourceTree = "<group>"; };
+		556D4E0722EAA18C00E3DBB2 /* JSDShowNumberView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDShowNumberView.h; sourceTree = "<group>"; };
+		556D4E0822EAA18C00E3DBB2 /* JSDShowNumberView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDShowNumberView.m; sourceTree = "<group>"; };
 		55703AB722E5C10600C2EC01 /* JSDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDPrefixHeader.pch; sourceTree = "<group>"; };
 		55703AB822E5C10600C2EC01 /* JSDDevMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDDevMacro.h; sourceTree = "<group>"; };
 		55703AB922E5C10600C2EC01 /* JSDMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDMacro.h; sourceTree = "<group>"; };
@@ -169,6 +172,15 @@
 			path = JerseyCoffee;
 			sourceTree = "<group>";
 		};
+		556D4E0622EAA15B00E3DBB2 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				556D4E0722EAA18C00E3DBB2 /* JSDShowNumberView.h */,
+				556D4E0822EAA18C00E3DBB2 /* JSDShowNumberView.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		55703AB022E5C02E00C2EC01 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +237,7 @@
 		55703AB522E5C02E00C2EC01 /* BaseKit */ = {
 			isa = PBXGroup;
 			children = (
+				556D4E0622EAA15B00E3DBB2 /* UIView */,
 			);
 			path = BaseKit;
 			sourceTree = "<group>";
@@ -634,6 +647,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				556D4E0922EAA18C00E3DBB2 /* JSDShowNumberView.m in Sources */,
 				5501257122E7F9F400835DE4 /* JSDMaterialTextView.m in Sources */,
 				601E98C922E9EA8E008CBE2B /* JSDMyCenterViewModel.m in Sources */,
 				55BE3CC022E6B77F00D28107 /* JSDCoffeeVC.m in Sources */,

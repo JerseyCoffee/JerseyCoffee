@@ -24,6 +24,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *waterCNLabel;
 @property (weak, nonatomic) IBOutlet UILabel *waterENLabel;
 
+@property (weak, nonatomic) IBOutlet JSDShowNumberView *espressoNumberView;
+@property (weak, nonatomic) IBOutlet JSDShowNumberView *milkNumberView;
+@property (weak, nonatomic) IBOutlet JSDShowNumberView *waterNumberView;
+
+
 @end
 
 @implementation JSDCoffeeDetailVC
@@ -123,6 +128,10 @@
     
     self.waterCNLabel.text = @"水";
     self.waterENLabel.text = @"/Body";
+    
+    [self.espressoNumberView updateNumber:self.model.expressoNumber];
+    [self.milkNumberView updateNumber:self.model.milkNumber];
+    [self.waterNumberView updateNumber:self.model.waterNumber];
 }
 
 #pragma mark - 4.UITableViewDataSource and UITableViewDelegate

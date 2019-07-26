@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14835.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14790.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,13 +18,16 @@
                 <outlet property="coffeeImageView" destination="YXc-DZ-mUH" id="SJC-0s-8Pe"/>
                 <outlet property="espressoCNLabel" destination="KX9-dV-H9t" id="GgR-32-equ"/>
                 <outlet property="espressoENLabel" destination="5Ro-me-Gg6" id="cms-S5-n78"/>
+                <outlet property="espressoNumberView" destination="DCQ-72-8BT" id="j3W-pL-tXR"/>
                 <outlet property="milkCNLabel" destination="h8v-JN-ByC" id="WBF-xD-p4W"/>
                 <outlet property="milkENLabel" destination="i3N-Xa-Ryb" id="ixf-Gv-Br3"/>
+                <outlet property="milkNumberView" destination="BgL-p2-ksT" id="Ybo-c1-XtU"/>
                 <outlet property="showTextContentView" destination="yhv-wt-Mfi" id="kNP-A3-wH4"/>
                 <outlet property="textContentView" destination="5C0-Y7-6MH" id="0To-IL-U69"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="waterCNLabel" destination="LOH-eK-YUU" id="GCt-XV-9bZ"/>
                 <outlet property="waterENLabel" destination="MEf-Ub-mIo" id="FOI-DV-Ic1"/>
+                <outlet property="waterNumberView" destination="O0J-rb-pOn" id="cya-SM-fIR"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -41,7 +46,7 @@
                             </constraints>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="YXc-DZ-mUH" firstAttribute="centerY" secondItem="20b-o3-ext" secondAttribute="centerY" id="Dzt-RX-gjs"/>
                         <constraint firstItem="YXc-DZ-mUH" firstAttribute="centerX" secondItem="20b-o3-ext" secondAttribute="centerX" id="ITI-Ix-RgT"/>
@@ -102,30 +107,60 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCQ-72-8BT" customClass="JSDShowNumberView">
+                                    <rect key="frame" x="284" y="152" width="90" height="15"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="15" id="XdJ-fa-OdC"/>
+                                        <constraint firstAttribute="width" constant="90" id="aGA-XY-0ya"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BgL-p2-ksT" customClass="JSDShowNumberView">
+                                    <rect key="frame" x="284" y="209.5" width="90" height="15"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="15" id="LIc-fw-Jcb"/>
+                                        <constraint firstAttribute="width" constant="90" id="z12-xF-vLB"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0J-rb-pOn" customClass="JSDShowNumberView">
+                                    <rect key="frame" x="284" y="267.5" width="90" height="15"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="90" id="epo-Pm-B7Z"/>
+                                        <constraint firstAttribute="height" constant="15" id="uWA-00-POn"/>
+                                    </constraints>
+                                </view>
                             </subviews>
-                            <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="mom-R8-IOB" firstAttribute="top" secondItem="5C0-Y7-6MH" secondAttribute="top" constant="50" id="0hF-3h-sz4"/>
                                 <constraint firstItem="KX9-dV-H9t" firstAttribute="leading" secondItem="mom-R8-IOB" secondAttribute="leading" id="15c-uL-jcI"/>
                                 <constraint firstItem="5Ro-me-Gg6" firstAttribute="top" secondItem="KX9-dV-H9t" secondAttribute="top" id="5Sw-7T-ybn"/>
+                                <constraint firstItem="DCQ-72-8BT" firstAttribute="centerY" secondItem="5Ro-me-Gg6" secondAttribute="centerY" id="5oR-uE-88D"/>
+                                <constraint firstItem="O0J-rb-pOn" firstAttribute="trailing" secondItem="DCQ-72-8BT" secondAttribute="trailing" id="9Xm-kg-nvm"/>
                                 <constraint firstItem="LOH-eK-YUU" firstAttribute="top" secondItem="h8v-JN-ByC" secondAttribute="bottom" constant="37" id="BkY-SI-PGZ"/>
                                 <constraint firstItem="i3N-Xa-Ryb" firstAttribute="leading" secondItem="h8v-JN-ByC" secondAttribute="trailing" id="EiB-VE-ehW"/>
                                 <constraint firstItem="MRl-IM-KRS" firstAttribute="top" secondItem="mom-R8-IOB" secondAttribute="bottom" constant="14" id="GXe-vd-Zlj"/>
+                                <constraint firstAttribute="trailing" secondItem="DCQ-72-8BT" secondAttribute="trailing" constant="40" id="H2r-SJ-Gas"/>
                                 <constraint firstItem="h8v-JN-ByC" firstAttribute="leading" secondItem="mom-R8-IOB" secondAttribute="leading" id="L1r-cs-cg8"/>
                                 <constraint firstItem="MRl-IM-KRS" firstAttribute="leading" secondItem="mom-R8-IOB" secondAttribute="leading" id="Lmi-ns-wUG"/>
                                 <constraint firstItem="i3N-Xa-Ryb" firstAttribute="top" secondItem="h8v-JN-ByC" secondAttribute="top" id="MZA-2a-Aey"/>
+                                <constraint firstItem="BgL-p2-ksT" firstAttribute="trailing" secondItem="DCQ-72-8BT" secondAttribute="trailing" id="OeX-xa-5UG"/>
                                 <constraint firstItem="KX9-dV-H9t" firstAttribute="top" secondItem="MRl-IM-KRS" secondAttribute="bottom" constant="43" id="SHK-DN-ewM"/>
                                 <constraint firstItem="h8v-JN-ByC" firstAttribute="top" secondItem="KX9-dV-H9t" secondAttribute="bottom" constant="37" id="UQs-Pp-hgB"/>
                                 <constraint firstAttribute="height" constant="350" id="WVM-ZU-uvp"/>
                                 <constraint firstItem="5Ro-me-Gg6" firstAttribute="leading" secondItem="KX9-dV-H9t" secondAttribute="trailing" id="aTm-dg-LQ6"/>
                                 <constraint firstItem="MEf-Ub-mIo" firstAttribute="leading" secondItem="LOH-eK-YUU" secondAttribute="trailing" id="b8e-ln-lEb"/>
+                                <constraint firstItem="BgL-p2-ksT" firstAttribute="centerY" secondItem="i3N-Xa-Ryb" secondAttribute="centerY" id="g5o-NA-9wm"/>
                                 <constraint firstItem="MEf-Ub-mIo" firstAttribute="top" secondItem="LOH-eK-YUU" secondAttribute="top" id="jwG-pb-Tv0"/>
                                 <constraint firstItem="LOH-eK-YUU" firstAttribute="leading" secondItem="mom-R8-IOB" secondAttribute="leading" id="oyZ-3j-hMg"/>
                                 <constraint firstItem="mom-R8-IOB" firstAttribute="leading" secondItem="5C0-Y7-6MH" secondAttribute="leading" constant="37" id="pMs-xh-PAR"/>
+                                <constraint firstItem="O0J-rb-pOn" firstAttribute="centerY" secondItem="MEf-Ub-mIo" secondAttribute="centerY" id="y2R-Ab-dMz"/>
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="5C0-Y7-6MH" firstAttribute="top" secondItem="yhv-wt-Mfi" secondAttribute="top" constant="20" id="5kl-Yf-5kx"/>
                         <constraint firstAttribute="trailing" secondItem="5C0-Y7-6MH" secondAttribute="trailing" id="AhE-Wi-GNK"/>

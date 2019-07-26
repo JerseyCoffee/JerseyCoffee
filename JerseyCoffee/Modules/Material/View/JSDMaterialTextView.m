@@ -20,6 +20,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *sourENLabel;
 @property (weak, nonatomic) IBOutlet UILabel *chunCNLabel;
 @property (weak, nonatomic) IBOutlet UILabel *chunENLabel;
+@property (weak, nonatomic) IBOutlet JSDShowNumberView *bakeNumberView; //烘焙
+@property (weak, nonatomic) IBOutlet JSDShowNumberView *sourNumberView; //酸度
+@property (weak, nonatomic) IBOutlet JSDShowNumberView *chunNumberView; //醇度
 
 @end
 
@@ -61,6 +64,10 @@
     
     self.coffeeNameCNLabel.text = model.materialName;
     self.coffeeNameENLabel.text = model.materialENName;
+    
+    [self.bakeNumberView updateNumber:model.bakeNumber];
+    [self.sourNumberView updateNumber:model.sourNumber];
+    [self.chunNumberView updateNumber:model.chunNumber];
 }
 
 - (void)updateViewWithModel:(JSDMaterialModel *)model {

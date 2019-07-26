@@ -96,7 +96,7 @@ static NSString * const reuseIdentifier = @"Cell";
         } else {
             make.top.mas_equalTo(46);
         }
-        make.height.mas_equalTo(250);
+        make.height.mas_equalTo(260);
     }];
     
     [self.pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -111,7 +111,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(0);
-        make.top.mas_equalTo(self.textView.mas_bottom).mas_equalTo(20);
+        make.height.mas_equalTo(300);
         make.bottom.mas_equalTo(self.pageControl.mas_top);
     }];
 
