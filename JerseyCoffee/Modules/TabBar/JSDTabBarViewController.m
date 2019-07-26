@@ -23,8 +23,7 @@
         return nil;
     }
     UIEdgeInsets imageInsets = UIEdgeInsetsZero;//UIEdgeInsetsMake(4.5, 0, -4.5, 0);
-//    UIOffset titlePositionAdjustment = UIOffsetMake(0, -3.5);
-    UIOffset titlePositionAdjustment = UIOffsetMake(0, 1.5);
+    UIOffset titlePositionAdjustment = UIOffsetMake(0, -3.5);
     
     CYLTabBarController* tabBarController = [CYLTabBarController tabBarControllerWithViewControllers:self.viewControllers  tabBarItemsAttributes:[self tabBarItemsAttributesForController] imageInsets:imageInsets titlePositionAdjustment:titlePositionAdjustment];
     
@@ -47,18 +46,18 @@
                                                  };
     NSDictionary *materialItemsAttributes = @{
                                                   CYLTabBarItemTitle : @"材料",
-                                                  CYLTabBarItemImage : @"material_tabbar_defalut",
-                                                  CYLTabBarItemSelectedImage : @"material_tabbar_selected",
+                                                  CYLTabBarItemImage : @"material_tabbar_defalut2",
+                                                  CYLTabBarItemSelectedImage : @"material_tabbar_selecte2",
                                                   };
     NSDictionary *kitItemsAttributes = @{
                                                   CYLTabBarItemTitle : @"器具",
-                                                  CYLTabBarItemImage : @"kit_tabbar_selected",
+                                                  CYLTabBarItemImage : @"kit_tabbar_defalut",
                                                   CYLTabBarItemSelectedImage : @"kit_tabbar_selected",
                                                   };
     NSDictionary *myItemsAttributes = @{
                                                   CYLTabBarItemTitle : @"我的",
                                                   CYLTabBarItemImage : @"my_tabbar_default",
-                                                  CYLTabBarItemSelectedImage : @"my_tabbar_default",
+                                                  CYLTabBarItemSelectedImage : @"my_tabbar_selected",
                                                   };
     
     NSArray *tabBarItemsAttributes = @[

@@ -14,6 +14,7 @@ target 'JerseyCoffee' do
 	#pod 'MGSwipeTableCell'
 	pod 'AFNetworking'
 	#pod 'JPush', '3.1.0'
+	pod 'FDFullscreenPopGesture', '1.1'
 	inhibit_all_warnings!  #禁止掉三方库警告
 
 end
