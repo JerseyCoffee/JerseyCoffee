@@ -48,7 +48,6 @@
 - (void)setupNavBar {
     
     self.navigationItem.title = @"咖啡故事";
-    
 }
 
 - (void)setupView {

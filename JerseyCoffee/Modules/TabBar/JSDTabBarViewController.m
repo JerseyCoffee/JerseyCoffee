@@ -45,7 +45,7 @@
                                                  CYLTabBarItemSelectedImage : @"coffee_tabbar_selected",  /* NSString and UIImage are supported*/
                                                  };
     NSDictionary *materialItemsAttributes = @{
-                                                  CYLTabBarItemTitle : @"材料",
+                                                  CYLTabBarItemTitle : @"豆子",
                                                   CYLTabBarItemImage : @"material_tabbar_defalut2",
                                                   CYLTabBarItemSelectedImage : @"material_tabbar_selecte2",
                                                   };

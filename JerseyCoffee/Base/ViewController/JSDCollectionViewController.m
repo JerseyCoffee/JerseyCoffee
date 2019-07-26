@@ -26,8 +26,9 @@ static NSString * const reuseIdentifier = @"Cell";
     
     // Register cell classes
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    [self setupNavigation];
-    
+    if (self.navigationController.viewControllers.count > 1) {
+        [self setupNavigation];
+    }
 }
 
 - (void)setupNavigation {

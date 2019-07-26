@@ -162,10 +162,17 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath API_AVAILABLE(ios(8.0)) {
     
     NSLog(@"当前正在准备展示%ld", indexPath.item);
+    
+//    JSDMaterialModel* model = self.viewModel.listArray[indexPath.item];
+//
+//    [self.textView updateViewWithModel:model];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
     
+//    JSDMaterialModel* model = self.viewModel.listArray[indexPath.item];
+//
+//    [self.textView updateViewWithModel:model];
     NSLog(@"当前正在展示%ld", indexPath.item);
 }
 
@@ -211,16 +218,20 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     [self.pageControl scrollViewDidScroll:scrollView];
+    // 更新View
+    [self updateNumberView:self.pageControl.currentPage];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     [self.pageControl scrollViewDidEndDecelerating:scrollView];
-    //更新 View
+    // 更新View
+    [self updateNumberView:self.pageControl.currentPage];
 }
 
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
     [self.pageControl scrollViewDidEndScrollingAnimation:scrollView];
     // 更新View
+    [self updateNumberView:self.pageControl.currentPage];
 }
 
 #pragma mark - 5.Event Response
@@ -230,6 +241,15 @@ static NSString * const reuseIdentifier = @"Cell";
     CGPoint offset = self.collectionView.contentOffset;
     offset.x = (CGFloat)sender.currentPage * (ScreenWidth - kInterItemSpace - kItemLeftShowWidth - 20);
     [self.collectionView setContentOffset:offset animated: true];
+    // 更新View
+    [self updateNumberView:self.pageControl.currentPage];
+}
+
+- (void)updateNumberView:(NSInteger )item {
+    
+    JSDMaterialModel* model = self.viewModel.listArray[item];
+    
+    [self.textView updateViewWithModel:model];
 }
 
 #pragma mark - 6.Private Methods

@@ -105,7 +105,6 @@ static NSString* const kFeedBackErrorTipSubTitle = @"请打开\"(邮件App)\"设
     [self presentViewController:mailCompose animated:YES completion:nil];
 }
 
-
 - (void)reloadView {
     
 }
@@ -127,19 +126,21 @@ static NSString* const kFeedBackErrorTipSubTitle = @"请打开\"(邮件App)\"设
             break;
         case MFMailComposeResultSaved:
             break;
-        case MFMailComposeResultSent:
+        case MFMailComposeResultSent: {
             NSLog(@"Mail sent: 用户点击发送");
+            // 关闭邮件发送视图
+            MDCSnackbarManager* manager = [MDCSnackbarManager defaultManager];
+            MDCSnackbarMessage* message = [MDCSnackbarMessage messageWithText: kFeedBackSussessTip];
+            [self dismissViewControllerAnimated:YES completion: ^{
+                [manager showMessage:message];
+            }];
             break;
+        }
         case MFMailComposeResultFailed:
             NSLog(@"Mail send errored: %@ : 用户尝试保存或发送邮件失败", [error localizedDescription]);
             break;
     }
-    // 关闭邮件发送视图
-    MDCSnackbarManager* manager = [MDCSnackbarManager defaultManager];
-    MDCSnackbarMessage* message = [MDCSnackbarMessage messageWithText: kFeedBackSussessTip];
-    [self dismissViewControllerAnimated:YES completion: ^{
-        [manager showMessage:message];
-    }];
+
 }
 
 #pragma mark - 5.Event Response

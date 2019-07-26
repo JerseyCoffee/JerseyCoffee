@@ -20,7 +20,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self setupNavigation];
+    if (self.navigationController.viewControllers.count > 1) {
+        [self setupNavigation];
+    }
     
 }
 
