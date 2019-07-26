@@ -9,12 +9,11 @@
 #ifndef JSDPrefixHeader_pch
 #define JSDPrefixHeader_pch
 
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
-#import "JSDMacro.h"
 #import <Masonry.h>
 #import <MJExtension.h>
-#import "JSDDevMacro.h"
 #import "JSDPublic.h"
+#import "JSDMacro.h"
+#import "JSDDevMacro.h"
+#import <AFNetworking.h>
 
 #endif /* JSDPrefixHeader_pch */

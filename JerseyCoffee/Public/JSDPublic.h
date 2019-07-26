@@ -11,10 +11,6 @@
 
 #import "UIColor+JSDStyle.h"
 #import "UIFont+JSDStyle.h"
-//#import "UIView+JSDFrame.h"
-//#import "UIImage+Tool.h"
-//#import "JSDSnackManage.h"
-//#import "JSDUserDataManage.h"
 
 #import <MaterialComponents/MaterialButtons.h>
 #import <MDCCollectionViewCell.h>
@@ -23,11 +19,6 @@
 #import <MaterialComponents/MaterialPalettes.h>
 #import <MaterialTextFields.h>
 #import <CYLBaseViewController.h>
-
-//#import "JSDBaseViewController.h"
-//#import "JSDBaseBackViewController.h"
-//#import "JSDBaseCollectionController.h"
-//#import "JSDBaseNavigationController.h"
 
 #pragma VC
 
