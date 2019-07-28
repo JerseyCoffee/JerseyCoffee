@@ -12,6 +12,7 @@
 #import <MaterialPageControl.h>
 #import "JSDCoffeeViewModel.h"
 #import "JSDCoffeeDetailVC.h"
+#import "JSDAddCoffeeItemVC.h"
 
 static CGFloat kUIEdgeInsetsTop = 10;
 static CGFloat kUIEdgeInsetsLeft = 40;
@@ -26,6 +27,7 @@ static CGFloat kItemLeftShowWidth = 20; //每个 Item 漏出宽度
 
 @property (nonatomic, strong) MDCPageControl* pageControl;
 @property (nonatomic, strong) JSDCoffeeViewModel* viewModel;
+@property (strong, nonatomic) MDCFloatingButton *addItemButton;
 
 @end
 
@@ -77,6 +79,15 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)setupView {
     
     self.view.backgroundColor = [UIColor jsd_mainGrayColor];
+    
+    [self.view addSubview:self.addItemButton];
+    
+    [self.addItemButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(-30);
+        if (@available(iOS 11.0, *)) {
+            make.bottom.mas_equalTo(self.view.mas_safeAreaLayoutGuideBottom).mas_equalTo(-30);
+        }
+    }];
     
     [self.view addSubview:self.pageControl];
     
@@ -205,6 +216,12 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.collectionView setContentOffset:offset animated: true];
 }
 
+- (void)onTouchAddItem:(MDCFloatingButton *)sender {
+    
+    JSDAddCoffeeItemVC* addItemVC = [[JSDAddCoffeeItemVC alloc] init];
+    [self.navigationController pushViewController:addItemVC animated:YES];
+}
+
 #pragma mark - 6.Private Methods
 
 - (void)setupNotification {
@@ -233,6 +250,16 @@ static NSString * const reuseIdentifier = @"Cell";
         _viewModel = [[JSDCoffeeViewModel alloc] init];
     }
     return _viewModel;
+}
+
+- (MDCFloatingButton *)addItemButton {
+    
+    if (!_addItemButton) {
+        _addItemButton = [[MDCFloatingButton alloc] init];
+        _addItemButton.backgroundColor = [UIColor jsd_grayColor];
+        [_addItemButton addTarget:self action:@selector(onTouchAddItem:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _addItemButton;
 }
 
 @end

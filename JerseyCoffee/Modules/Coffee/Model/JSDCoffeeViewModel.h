@@ -13,7 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @class JSDCoffeeModel;
 @interface JSDCoffeeViewModel : JSDBaseModel
 
-@property (nonatomic, strong) NSArray<JSDCoffeeModel* >* listArray;
+@property (nonatomic, strong) NSMutableArray<JSDCoffeeModel* >* listArray;
+- (void)upDateCoffee;
+- (void)addDateCoffee;
 
 @end
 

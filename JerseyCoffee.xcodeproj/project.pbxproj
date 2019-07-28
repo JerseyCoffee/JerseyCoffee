@@ -62,6 +62,11 @@
 		601E98C922E9EA8E008CBE2B /* JSDMyCenterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E98C722E9EA8E008CBE2B /* JSDMyCenterViewModel.m */; };
 		601E98CD22E9F282008CBE2B /* JSDCoffeeHistoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E98CB22E9F282008CBE2B /* JSDCoffeeHistoryVC.m */; };
 		601E98CE22E9F282008CBE2B /* JSDCoffeeHistoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601E98CC22E9F282008CBE2B /* JSDCoffeeHistoryVC.xib */; };
+		601E98D722EC23F5008CBE2B /* JSDAddCoffeeItemVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E98D522EC23F5008CBE2B /* JSDAddCoffeeItemVC.m */; };
+		601E98D822EC23F5008CBE2B /* JSDAddCoffeeItemVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601E98D622EC23F5008CBE2B /* JSDAddCoffeeItemVC.xib */; };
+		601E98DB22EC4540008CBE2B /* JSDSelectedNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E98DA22EC4540008CBE2B /* JSDSelectedNumberView.m */; };
+		601E98DE22EC4D82008CBE2B /* JSDPhotoManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E98DD22EC4D82008CBE2B /* JSDPhotoManage.m */; };
+		601E98E222EDA355008CBE2B /* selected_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 601E98E122EDA355008CBE2B /* selected_photo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -156,6 +161,14 @@
 		601E98CA22E9F282008CBE2B /* JSDCoffeeHistoryVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCoffeeHistoryVC.h; sourceTree = "<group>"; };
 		601E98CB22E9F282008CBE2B /* JSDCoffeeHistoryVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCoffeeHistoryVC.m; sourceTree = "<group>"; };
 		601E98CC22E9F282008CBE2B /* JSDCoffeeHistoryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDCoffeeHistoryVC.xib; sourceTree = "<group>"; };
+		601E98D422EC23F5008CBE2B /* JSDAddCoffeeItemVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDAddCoffeeItemVC.h; sourceTree = "<group>"; };
+		601E98D522EC23F5008CBE2B /* JSDAddCoffeeItemVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDAddCoffeeItemVC.m; sourceTree = "<group>"; };
+		601E98D622EC23F5008CBE2B /* JSDAddCoffeeItemVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDAddCoffeeItemVC.xib; sourceTree = "<group>"; };
+		601E98D922EC4540008CBE2B /* JSDSelectedNumberView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSelectedNumberView.h; sourceTree = "<group>"; };
+		601E98DA22EC4540008CBE2B /* JSDSelectedNumberView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSelectedNumberView.m; sourceTree = "<group>"; };
+		601E98DC22EC4D81008CBE2B /* JSDPhotoManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDPhotoManage.h; sourceTree = "<group>"; };
+		601E98DD22EC4D82008CBE2B /* JSDPhotoManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDPhotoManage.m; sourceTree = "<group>"; };
+		601E98E122EDA355008CBE2B /* selected_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selected_photo.png; sourceTree = "<group>"; };
 		7F5E24E53A3B4D07A28557E2 /* Pods-JerseyCoffee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JerseyCoffee.debug.xcconfig"; path = "Target Support Files/Pods-JerseyCoffee/Pods-JerseyCoffee.debug.xcconfig"; sourceTree = "<group>"; };
 		A40335F599FD0E1C7292803F /* libPods-JerseyCoffee.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JerseyCoffee.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -209,6 +222,8 @@
 			children = (
 				556D4E0722EAA18C00E3DBB2 /* JSDShowNumberView.h */,
 				556D4E0822EAA18C00E3DBB2 /* JSDShowNumberView.m */,
+				601E98D922EC4540008CBE2B /* JSDSelectedNumberView.h */,
+				601E98DA22EC4540008CBE2B /* JSDSelectedNumberView.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -216,6 +231,7 @@
 		556D4E1422EAC65E00E3DBB2 /* ImageAssets */ = {
 			isa = PBXGroup;
 			children = (
+				601E98E122EDA355008CBE2B /* selected_photo.png */,
 				556D4E1522EAD00700E3DBB2 /* dand.png */,
 				556D4E1722EAD00700E3DBB2 /* frenchpress.png */,
 				556D4E1622EAD00700E3DBB2 /* siphon.png */,
@@ -283,6 +299,7 @@
 		55703AB322E5C02E00C2EC01 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				601E98CF22EC23AB008CBE2B /* AddItem */,
 				55BE3CC122E6B7C800D28107 /* TabBar */,
 				55BE3C9222E6B4A300D28107 /* My */,
 				55BE3C9122E6B49800D28107 /* Kit */,
@@ -306,6 +323,8 @@
 		55703AB522E5C02E00C2EC01 /* BaseKit */ = {
 			isa = PBXGroup;
 			children = (
+				601E98DC22EC4D81008CBE2B /* JSDPhotoManage.h */,
+				601E98DD22EC4D82008CBE2B /* JSDPhotoManage.m */,
 				556D4E0622EAA15B00E3DBB2 /* UIView */,
 			);
 			path = BaseKit;
@@ -534,6 +553,48 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		601E98CF22EC23AB008CBE2B /* AddItem */ = {
+			isa = PBXGroup;
+			children = (
+				601E98D022EC23B4008CBE2B /* Coffee */,
+			);
+			path = AddItem;
+			sourceTree = "<group>";
+		};
+		601E98D022EC23B4008CBE2B /* Coffee */ = {
+			isa = PBXGroup;
+			children = (
+				601E98D222EC23CF008CBE2B /* Controller */,
+				601E98D122EC23CE008CBE2B /* Model */,
+				601E98D322EC23CF008CBE2B /* View */,
+			);
+			path = Coffee;
+			sourceTree = "<group>";
+		};
+		601E98D122EC23CE008CBE2B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		601E98D222EC23CF008CBE2B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				601E98D422EC23F5008CBE2B /* JSDAddCoffeeItemVC.h */,
+				601E98D522EC23F5008CBE2B /* JSDAddCoffeeItemVC.m */,
+				601E98D622EC23F5008CBE2B /* JSDAddCoffeeItemVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		601E98D322EC23CF008CBE2B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		99ECA596A68D06A47FFCEDBF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -612,6 +673,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				556D4DA822E94A6500E3DBB2 /* JSDMaterialCell.xib in Resources */,
+				601E98D822EC23F5008CBE2B /* JSDAddCoffeeItemVC.xib in Resources */,
 				55E952E622E98F56008BADB5 /* MaterialData.json in Resources */,
 				5542BA8D22E5BE0100ADCCAC /* LaunchScreen.storyboard in Resources */,
 				5501257322E7F9FE00835DE4 /* JSDMaterialTextView.xib in Resources */,
@@ -631,6 +693,7 @@
 				601E98CE22E9F282008CBE2B /* JSDCoffeeHistoryVC.xib in Resources */,
 				556D4E0F22EAC64300E3DBB2 /* macchiato_coffee.png in Resources */,
 				556D4E1022EAC64300E3DBB2 /* mocha_coffee.png in Resources */,
+				601E98E222EDA355008CBE2B /* selected_photo.png in Resources */,
 				601E98C522E9EA85008CBE2B /* JSDCollectionViewCell.xib in Resources */,
 				556D4E1922EAD00700E3DBB2 /* siphon.png in Resources */,
 				55C2042822E9B05600F193E6 /* JSDCoffeeDetailVC.xib in Resources */,
@@ -740,7 +803,10 @@
 				55BE3C8E22E6B33900D28107 /* JSDBaseNavigationController.m in Sources */,
 				55E952DF22E98474008BADB5 /* JSDKitTypeViewModel.m in Sources */,
 				55BE3CC822E6E16500D28107 /* JSDCoffeeCollectionViewCell.m in Sources */,
+				601E98DE22EC4D82008CBE2B /* JSDPhotoManage.m in Sources */,
+				601E98D722EC23F5008CBE2B /* JSDAddCoffeeItemVC.m in Sources */,
 				556D4E1F22EADA1500E3DBB2 /* JSDFeedBacksVC.m in Sources */,
+				601E98DB22EC4540008CBE2B /* JSDSelectedNumberView.m in Sources */,
 				55BE3CA722E6B5FF00D28107 /* JSDMyCenterVC.m in Sources */,
 				556D4E2422EADDD500E3DBB2 /* JSDAboutUSVC.m in Sources */,
 				55BE3C8822E6B21A00D28107 /* JSDBaseViewController.m in Sources */,

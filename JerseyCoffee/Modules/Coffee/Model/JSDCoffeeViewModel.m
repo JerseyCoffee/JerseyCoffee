@@ -8,17 +8,56 @@
 
 #import "JSDCoffeeViewModel.h"
 
+NSString* const kCoffeeFilePathName = @"coffee.json";
 @implementation JSDCoffeeViewModel
 
-- (NSArray<JSDCoffeeModel *> *)listArray {
+- (NSMutableArray<JSDCoffeeModel *> *)listArray {
     
     if (!_listArray) {
-        NSString* path = [[NSBundle mainBundle] pathForResource:@"coffeeData" ofType:@"json"];
-        NSData* data = [NSData dataWithContentsOfFile:path];
+        NSFileManager* fileManager = [NSFileManager defaultManager];
+        //指向文件目录
+        NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+        NSString* path = [NSString stringWithFormat:@"%@/%@", documentsDirectory, kCoffeeFilePathName];
+        NSString* dataPath = path;
+        if ([fileManager fileExistsAtPath:path]) {
+        } else {
+            dataPath = [[NSBundle mainBundle] pathForResource:@"coffeeData" ofType:@"json"];
+        }
+        NSData* data = [NSData dataWithContentsOfFile:dataPath];
         NSArray* array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
         _listArray = [JSDCoffeeModel mj_objectArrayWithKeyValuesArray:array];
     }
     return _listArray;
+}
+
+- (void)upDateCoffee {
+    
+    NSFileManager* fileManager = [NSFileManager defaultManager];
+    //指向文件目录
+    NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    NSString* path = [NSString stringWithFormat:@"%@/%@", documentsDirectory, kCoffeeFilePathName];
+    NSString* dataPath = path;
+    if ([fileManager fileExistsAtPath:path]) {
+    } else {
+        dataPath = [[NSBundle mainBundle] pathForResource:@"coffee" ofType:@"json"];
+    }
+    NSData* data = [NSData dataWithContentsOfFile:dataPath];
+    NSArray* array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    
+    _listArray = [JSDCoffeeModel mj_objectArrayWithKeyValuesArray:array];
+}
+
+- (void)addDateCoffee {
+    
+    NSFileManager* fileManager = [NSFileManager defaultManager];
+    NSMutableArray* dataArray = [JSDCoffeeModel mj_keyValuesArrayWithObjectArray:self.listArray];
+    NSData* data = [dataArray mj_JSONData];
+    NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    NSString* path = [NSString stringWithFormat:@"%@/%@", documentsDirectory, kCoffeeFilePathName];
+    if ([fileManager fileExistsAtPath:path]) {
+    } else {
+    }
+    [data writeToFile:path atomically:YES];
 }
 
 @end

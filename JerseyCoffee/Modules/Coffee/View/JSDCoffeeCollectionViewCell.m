@@ -8,6 +8,8 @@
 
 #import "JSDCoffeeCollectionViewCell.h"
 
+#import "JSDPhotoManage.h"
+
 @interface JSDCoffeeCollectionViewCell()
 
 @property (weak, nonatomic) IBOutlet UIImageView *coffeeImageView;
@@ -62,8 +64,17 @@
     _model = model;
     
     if (model.imageName) {
-        NSString* imagePath = [JSDBundle pathForResource:model.imageName ofType:@"png"];
-        self.coffeeImageView.image = [UIImage imageWithContentsOfFile:imagePath];
+        if ([model.imageName containsString:kJSDPhotoImageFiles]) {
+            NSLog(@"包含了");
+            NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+            
+            NSString* coffeeName = [NSString stringWithFormat:@"%@/%@.png", documentsDirectory, model.imageName];
+            UIImage* image = [UIImage imageWithContentsOfFile:coffeeName];
+            self.coffeeImageView.image = image;
+        } else {
+            NSString* imagePath = [JSDBundle pathForResource:model.imageName ofType:@"png"];
+            self.coffeeImageView.image = [UIImage imageWithContentsOfFile:imagePath];
+        }
     }
     self.titleCNLabel.text = model.coffeeCNName;
     self.titleENLabel.text = model.coffeeENName;
