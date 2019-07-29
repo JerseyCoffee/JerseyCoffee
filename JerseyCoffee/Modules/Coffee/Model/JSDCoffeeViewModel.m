@@ -47,9 +47,11 @@ NSString* const kCoffeeFilePathName = @"coffee.json";
     _listArray = [JSDCoffeeModel mj_objectArrayWithKeyValuesArray:array];
 }
 
-- (void)addDateCoffee: (JSDCoffeeModel* )coffeeModel {
+- (void)addDateCoffee: (JSDCoffeeModel* _Nullable)coffeeModel {
     
-    [self.listArray addObject:coffeeModel];
+    if (coffeeModel ) {
+        [self.listArray addObject:coffeeModel];
+    }
     NSFileManager* fileManager = [NSFileManager defaultManager];
     NSMutableArray* dataArray = [JSDCoffeeModel mj_keyValuesArrayWithObjectArray:self.listArray];
     NSData* data = [dataArray mj_JSONData];
@@ -59,6 +61,8 @@ NSString* const kCoffeeFilePathName = @"coffee.json";
     } else {
     }
     [data writeToFile:path atomically:YES];
+    
+     [[NSNotificationCenter defaultCenter] postNotificationName:kCoffeeListChangeNotifaction object:nil];
 }
 
 - (void)editDataCoffee: (JSDCoffeeModel *)coffeeModel {
@@ -70,6 +74,7 @@ NSString* const kCoffeeFilePathName = @"coffee.json";
             break;
         }
     }
+    [self addDateCoffee: nil];
 }
 
 @end

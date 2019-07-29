@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSMutableArray<JSDCoffeeModel* >* listArray;
 - (void)upDateCoffee;
-- (void)addDateCoffee: (JSDCoffeeModel* )coffeeModel;
+- (void)addDateCoffee: (JSDCoffeeModel* _Nullable)coffeeModel;
 - (void)editDataCoffee: (JSDCoffeeModel *)coffeeModel;
 
 @end

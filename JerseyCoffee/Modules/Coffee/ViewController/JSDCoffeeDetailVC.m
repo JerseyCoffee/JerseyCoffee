@@ -59,6 +59,7 @@
     
     [super viewWillAppear:animated];
     
+    [self setupNavBar];
     [self setupData];
 }
 

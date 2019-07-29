@@ -135,7 +135,6 @@
             self.havaPhoto = YES;
             self.coffeeImageView.image = image;
         } else {
-//            self.havaPhoto = NO;
         }
     }];
 }
@@ -182,6 +181,7 @@
         self.model.imageName = coffeeName;
     }
     self.model.coffeeCNName = self.coffeeCNNameTextField.text;
+    self.model.coffeeENName = self.coffeeENNameTextField.text;
     self.model.coffeeDetail = self.coffeeIntroTextField.text;
     
     self.model.expressoNumber = self.bakeNumberView.currentNumber;
@@ -204,7 +204,6 @@
     MDCSnackbarManager* manager = [MDCSnackbarManager defaultManager];
     MDCSnackbarMessage* message = [MDCSnackbarMessage messageWithText: @"咖啡品种已添加成功, 可在列表进行查看"];
     [manager showMessage:message];
-    [[NSNotificationCenter defaultCenter] postNotificationName:kCoffeeListChangeNotifaction object:nil];
 }
 
 - (void)updateCoffee {
@@ -220,20 +219,13 @@
         self.model.imageName = coffeeName;
     }
     self.model.coffeeCNName = self.coffeeCNNameTextField.text;
+    self.model.coffeeENName = self.coffeeENNameTextField.text;
     self.model.coffeeDetail = self.coffeeIntroTextField.text;
+    
     self.model.expressoNumber = self.bakeNumberView.currentNumber;
     self.model.milkNumber = self.sourNumberView.currentNumber;
     self.model.waterNumber = self.chunNumberView.currentNumber;
     self.model.canEdit = YES;
-    //获取系统当前时间
-    NSDate *currentDate = [NSDate date];
-    //用于格式化NSDate对象
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    //设置格式
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    //NSDate转NSString
-    NSString *currentDateString = [dateFormatter stringFromDate:currentDate];
-    self.model.coffeeID = currentDateString;
     
     [coffeeViewModel editDataCoffee:self.model];
     // 添加完成
@@ -241,7 +233,7 @@
     MDCSnackbarManager* manager = [MDCSnackbarManager defaultManager];
     MDCSnackbarMessage* message = [MDCSnackbarMessage messageWithText: @"咖啡品种已更新成功, 可在列表进行查看"];
     [manager showMessage:message];
-    [[NSNotificationCenter defaultCenter] postNotificationName:kCoffeeListChangeNotifaction object:nil];
+    
 }
 
 #pragma mark - 7.GET & SET
