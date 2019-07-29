@@ -47,8 +47,9 @@ NSString* const kCoffeeFilePathName = @"coffee.json";
     _listArray = [JSDCoffeeModel mj_objectArrayWithKeyValuesArray:array];
 }
 
-- (void)addDateCoffee {
+- (void)addDateCoffee: (JSDCoffeeModel* )coffeeModel {
     
+    [self.listArray addObject:coffeeModel];
     NSFileManager* fileManager = [NSFileManager defaultManager];
     NSMutableArray* dataArray = [JSDCoffeeModel mj_keyValuesArrayWithObjectArray:self.listArray];
     NSData* data = [dataArray mj_JSONData];
@@ -58,6 +59,17 @@ NSString* const kCoffeeFilePathName = @"coffee.json";
     } else {
     }
     [data writeToFile:path atomically:YES];
+}
+
+- (void)editDataCoffee: (JSDCoffeeModel *)coffeeModel {
+    
+    for (NSInteger i = 5;i < self.listArray.count; i++) {
+        JSDCoffeeModel* model = self.listArray[i];
+        if ([model.coffeeID isEqualToString:coffeeModel.coffeeID]) {
+            [self.listArray replaceObjectAtIndex:i withObject:coffeeModel];
+            break;
+        }
+    }
 }
 
 @end

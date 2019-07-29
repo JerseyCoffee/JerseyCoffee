@@ -21,7 +21,7 @@ static CGFloat kUIEdgeInsetsRight = 40;
 static CGFloat kLineItemSpace = 0;    //水平
 static CGFloat kInterItemSpace = 20;    //垂直
 static CGFloat kItemLeftShowWidth = 20; //每个 Item 漏出宽度
-
+NSString* const kCoffeeListChangeNotifaction = @"coffeeListChangeNotifaction";
 
 @interface JSDCoffeeVC ()
 
@@ -225,6 +225,16 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark - 6.Private Methods
 
 - (void)setupNotification {
+ 
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(coffeeListChangeNotification:) name:kCoffeeListChangeNotifaction object:nil];
+}
+
+- (void)coffeeListChangeNotification:(id)notification {
+    
+    [self.viewModel upDateCoffee];
+    
+    [self.collectionView reloadData];
+    _pageControl.numberOfPages = self.viewModel.listArray.count;
     
 }
 

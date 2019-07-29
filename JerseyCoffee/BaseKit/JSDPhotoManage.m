@@ -186,7 +186,7 @@ NSString* const kJSDPhotoImageFiles = @"PhotoImage/coffee_";
 
 #pragma mark -- Image
 
-+ (void)savaImageView:(UIImageView *)imageView {
++ (void)savaImageView:(UIImageView *)imageView fileName:(nonnull NSString *)fileName {
     
     NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
 
@@ -199,9 +199,8 @@ NSString* const kJSDPhotoImageFiles = @"PhotoImage/coffee_";
     }
     NSData* data = UIImagePNGRepresentation(imageView.image);
     if (data) {
-//        BOOL result = [data writeToFile:path  atomically: YES];
         NSError* error;
-        NSString* imageName = [NSString stringWithFormat:@"%@/%@%ld", documentsDirectory, kJSDPhotoImageFiles, imageView.animationRepeatCount];
+        NSString* imageName = [NSString stringWithFormat:@"%@/%@%@", documentsDirectory, kJSDPhotoImageFiles, fileName];
         BOOL result = [data writeToFile:imageName options:NSDataWritingAtomic error: &error];
         if (error) {
             NSLog(@"保存结果%d---%@", result, error);

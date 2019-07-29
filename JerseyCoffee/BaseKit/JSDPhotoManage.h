@@ -21,7 +21,7 @@ typedef NS_ENUM(NSInteger, YZHImagePickerSourceType) {
 + (void)presentWithViewController:(UIViewController *)viewController
                        sourceType:(YZHImagePickerSourceType)sourceType
                     finishPicking:(void (^)(UIImage *image))finishPicking;
-+ (void)savaImageView:(UIImageView *)imageView;
++ (void)savaImageView:(UIImageView *)imageView fileName:(NSString *)fileName;
 
 @end
 

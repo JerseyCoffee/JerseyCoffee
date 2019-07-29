@@ -15,7 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSMutableArray<JSDCoffeeModel* >* listArray;
 - (void)upDateCoffee;
-- (void)addDateCoffee;
+- (void)addDateCoffee: (JSDCoffeeModel* )coffeeModel;
+- (void)editDataCoffee: (JSDCoffeeModel *)coffeeModel;
 
 @end
 
@@ -29,6 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) float expressoNumber;
 @property (nonatomic, assign) float milkNumber;
 @property (nonatomic, assign) float waterNumber;
+@property (nonatomic, assign) BOOL canEdit;
 
 @end
 

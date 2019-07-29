@@ -79,7 +79,6 @@ static NSInteger kImageViewCount = 5;
         
         UIImageView* imageView = self.listImageViews[i];
         if (i < number) {// 高亮
-            
             imageView.highlighted = YES;
         } else { //
             imageView.highlighted = NO;

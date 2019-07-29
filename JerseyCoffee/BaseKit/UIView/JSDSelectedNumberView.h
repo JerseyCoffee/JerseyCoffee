@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface JSDSelectedNumberView : JSDBaseView
 
 @property (assign, nonatomic) NSInteger currentNumber;
+- (void)updateNumber:(NSInteger )number;
 
 @end
 

@@ -11,6 +11,7 @@
 
 #import "UIColor+JSDStyle.h"
 #import "UIFont+JSDStyle.h"
+#import "JSDPhotoManage.h"
 
 #import <MaterialComponents/MaterialButtons.h>
 #import <MDCCollectionViewCell.h>

@@ -100,4 +100,18 @@ static NSInteger kImageViewCount = 5;
     self.currentNumber = sender.tag + 1;
 }
 
+- (void)updateNumber:(NSInteger)number {
+    
+    for (NSInteger i = 0; i < kImageViewCount; i++) {
+        
+        UIButton* btn = self.listButtonViews[i];
+        if (i < number) {// 高亮
+            btn.selected = YES;
+        } else { //
+            btn.selected = NO;
+        }
+    }
+    self.currentNumber = number;
+}
+
 @end

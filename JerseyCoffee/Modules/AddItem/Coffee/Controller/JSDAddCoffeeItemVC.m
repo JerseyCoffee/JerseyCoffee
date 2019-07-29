@@ -105,6 +105,23 @@
 - (void)setupData {
     
     [self.addCoffeeButton addTarget:self action:@selector(onTouchAddCoffee:) forControlEvents:UIControlEventTouchUpInside];
+    //存在这设置
+    if (self.model.canEdit) {
+        NSLog(@"包含了");
+        if (JSDIsString(self.model.imageName)) {
+            NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+            
+            NSString* coffeeName = [NSString stringWithFormat:@"%@/%@.png", documentsDirectory, self.model.imageName];
+            UIImage* image = [UIImage imageWithContentsOfFile:coffeeName];
+            self.coffeeImageView.image = image;
+        }
+        self.coffeeCNNameTextField.text = self.model.coffeeCNName;
+        self.coffeeENNameTextField.text = self.model.coffeeENName;
+        [self.bakeNumberView updateNumber:self.model.expressoNumber];
+        [self.sourNumberView updateNumber:self.model.milkNumber];
+        [self.chunNumberView updateNumber:self.model.waterNumber];
+        self.coffeeIntroTextField.text = self.model.coffeeDetail;
+    }
 }
 
 #pragma mark - 4.UITableViewDataSource and UITableViewDelegate
@@ -128,7 +145,12 @@
     BOOL havaImageView = self.coffeeImageView.image;
     BOOL havaCoffeeName = JSDIsString(self.coffeeCNNameTextField.text);
     if (havaImageView && havaCoffeeName) {
-        [self addCoffee];
+        if (self.model.canEdit) {
+            [self updateCoffee];
+        } else {
+            [self addCoffee];
+        }
+        
     } else {
         MDCSnackbarManager* snackManger = [MDCSnackbarManager defaultManager];
         MDCSnackbarMessage* message = [MDCSnackbarMessage messageWithText:@"请添加图片和咖啡名称"];
@@ -153,10 +175,10 @@
     if (self.havaPhoto) {
         //TODO: 保存相片写法有坑
         self.coffeeImageView.animationRepeatCount = coffeeViewModel.listArray.count;
-        [JSDPhotoManage savaImageView:self.coffeeImageView];
-//        NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+        NSString* coffeeFileName = self.coffeeCNNameTextField.text;
+        [JSDPhotoManage savaImageView:self.coffeeImageView fileName: coffeeFileName];
         
-        NSString* coffeeName = [NSString stringWithFormat:@"%@%ld", kJSDPhotoImageFiles, self.coffeeImageView.animationRepeatCount];
+        NSString* coffeeName = [NSString stringWithFormat:@"%@%@", kJSDPhotoImageFiles, coffeeFileName];
         self.model.imageName = coffeeName;
     }
     self.model.coffeeCNName = self.coffeeCNNameTextField.text;
@@ -165,9 +187,61 @@
     self.model.expressoNumber = self.bakeNumberView.currentNumber;
     self.model.milkNumber = self.sourNumberView.currentNumber;
     self.model.waterNumber = self.chunNumberView.currentNumber;
-    [coffeeViewModel.listArray addObject:self.model];
+    self.model.canEdit = YES;
+    //获取系统当前时间
+    NSDate *currentDate = [NSDate date];
+    //用于格式化NSDate对象
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    //设置格式
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    //NSDate转NSString
+    NSString *currentDateString = [dateFormatter stringFromDate:currentDate];
+    self.model.coffeeID = currentDateString;
     
-    [coffeeViewModel addDateCoffee];
+    [coffeeViewModel addDateCoffee: self.model];
+    // 添加完成
+    [self.navigationController popViewControllerAnimated:YES];
+    MDCSnackbarManager* manager = [MDCSnackbarManager defaultManager];
+    MDCSnackbarMessage* message = [MDCSnackbarMessage messageWithText: @"咖啡品种已添加成功, 可在列表进行查看"];
+    [manager showMessage:message];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kCoffeeListChangeNotifaction object:nil];
+}
+
+- (void)updateCoffee {
+    
+    JSDCoffeeViewModel* coffeeViewModel = [[JSDCoffeeViewModel alloc] init];
+    if (self.havaPhoto) {
+        //TODO: 保存相片写法有坑
+        self.coffeeImageView.animationRepeatCount = coffeeViewModel.listArray.count;
+        NSString* coffeeFileName = self.coffeeCNNameTextField.text;
+        [JSDPhotoManage savaImageView:self.coffeeImageView fileName: coffeeFileName];
+        
+        NSString* coffeeName = [NSString stringWithFormat:@"%@%@", kJSDPhotoImageFiles, coffeeFileName];
+        self.model.imageName = coffeeName;
+    }
+    self.model.coffeeCNName = self.coffeeCNNameTextField.text;
+    self.model.coffeeDetail = self.coffeeIntroTextField.text;
+    self.model.expressoNumber = self.bakeNumberView.currentNumber;
+    self.model.milkNumber = self.sourNumberView.currentNumber;
+    self.model.waterNumber = self.chunNumberView.currentNumber;
+    self.model.canEdit = YES;
+    //获取系统当前时间
+    NSDate *currentDate = [NSDate date];
+    //用于格式化NSDate对象
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    //设置格式
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    //NSDate转NSString
+    NSString *currentDateString = [dateFormatter stringFromDate:currentDate];
+    self.model.coffeeID = currentDateString;
+    
+    [coffeeViewModel editDataCoffee:self.model];
+    // 添加完成
+    [self.navigationController popViewControllerAnimated:YES];
+    MDCSnackbarManager* manager = [MDCSnackbarManager defaultManager];
+    MDCSnackbarMessage* message = [MDCSnackbarMessage messageWithText: @"咖啡品种已更新成功, 可在列表进行查看"];
+    [manager showMessage:message];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kCoffeeListChangeNotifaction object:nil];
 }
 
 #pragma mark - 7.GET & SET
@@ -221,7 +295,6 @@
     
     if (!_model) {
         _model = [[JSDCoffeeModel alloc] init];
-        
     }
     return _model;
 }

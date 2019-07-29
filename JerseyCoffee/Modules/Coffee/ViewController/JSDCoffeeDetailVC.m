@@ -8,6 +8,8 @@
 
 #import "JSDCoffeeDetailVC.h"
 
+#import "JSDAddCoffeeItemVC.h"
+
 @interface JSDCoffeeDetailVC ()
 
 @property (weak, nonatomic) IBOutlet UIView *coffeeImageContentView;
@@ -47,11 +49,17 @@
     [self setupData];
     //4.设置通知
     [self setupNotification];
-    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    [self setupData];
 }
 
 #pragma mark - 2.SettingView and Style
@@ -59,6 +67,10 @@
 - (void)setupNavBar {
     
     self.navigationItem.title = self.model.coffeeCNName;
+    //可编辑
+    if (self.model.canEdit) {
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"编辑" style:UIBarButtonItemStyleDone target:self action:@selector(onTouchEdit:)];
+    }
 }
 
 - (void)setupView {
@@ -117,9 +129,18 @@
 
 - (void)setupData {
     
-    if (JSDIsString(self.model.imageName)) {
-        NSString* imagePath = [JSDBundle pathForResource:self.model.imageName ofType:@"png"];
-        self.coffeeImageView.image = [UIImage imageWithContentsOfFile:imagePath];
+    if (self.model.imageName) {
+        if ([self.model.imageName containsString:kJSDPhotoImageFiles]) {
+            NSLog(@"包含了");
+            NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+            
+            NSString* coffeeName = [NSString stringWithFormat:@"%@/%@.png", documentsDirectory, self.model.imageName];
+            UIImage* image = [UIImage imageWithContentsOfFile:coffeeName];
+            self.coffeeImageView.image = image;
+        } else {
+            NSString* imagePath = [JSDBundle pathForResource:self.model.imageName ofType:@"png"];
+            self.coffeeImageView.image = [UIImage imageWithContentsOfFile:imagePath];
+        }
     }
     self.coffeeCNNameLabel.text = self.model.coffeeCNName;
     self.coffeeENNameLabel.text = self.model.coffeeENName;
@@ -141,6 +162,14 @@
 #pragma mark - 4.UITableViewDataSource and UITableViewDelegate
 
 #pragma mark - 5.Event Response
+
+- (void)onTouchEdit:(id)sender {
+    
+    JSDAddCoffeeItemVC* coffeeEditVC = [[JSDAddCoffeeItemVC alloc] init];
+    coffeeEditVC.model = self.model;
+    
+    [self.navigationController pushViewController:coffeeEditVC animated:YES];
+}
 
 #pragma mark - 6.Private Methods
 
