@@ -110,7 +110,6 @@
         NSLog(@"包含了");
         if (JSDIsString(self.model.kitImageName)) {
             NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
-            
             NSString* coffeeName = [NSString stringWithFormat:@"%@/%@.png", documentsDirectory, self.model.kitImageName];
             UIImage* image = [UIImage imageWithContentsOfFile:coffeeName];
             self.coffeeImageView.image = image;

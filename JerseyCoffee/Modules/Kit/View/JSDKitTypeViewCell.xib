@@ -27,25 +27,25 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="拿铁咖啡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zG3-CH-hho">
-                        <rect key="frame" x="117.5" y="239" width="69" height="21"/>
+                        <rect key="frame" x="117.5" y="219" width="69" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caffè Latte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBn-zE-mUW">
-                        <rect key="frame" x="109.5" y="275" width="85" height="21"/>
+                        <rect key="frame" x="109.5" y="255" width="85" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXV-hb-e1J">
-                        <rect key="frame" x="20" y="316" width="9" height="21"/>
+                        <rect key="frame" x="20" y="296" width="9" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="拿铁咖啡是意大利浓缩咖啡(Espresso)与牛奶的经典混合，意大利人也很喜欢把拿铁作为早餐的饮料。意大利人早晨的厨房里，照得到阳光的炉子上通常会同时煮着咖啡和牛奶。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhV-9h-ucC">
-                        <rect key="frame" x="20" y="346" width="264" height="119"/>
+                        <rect key="frame" x="20" y="307" width="264" height="119"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="126" id="kDM-Sw-k9w"/>
                         </constraints>
@@ -54,7 +54,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3R-Nv-8JS">
-                        <rect key="frame" x="276" y="475" width="8" height="21"/>
+                        <rect key="frame" x="276" y="431" width="8" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -65,14 +65,15 @@
                 <constraint firstItem="fTY-si-txK" firstAttribute="centerX" secondItem="FGd-1I-8Pe" secondAttribute="centerX" id="7II-Lh-apo"/>
                 <constraint firstItem="fTY-si-txK" firstAttribute="top" secondItem="FGd-1I-8Pe" secondAttribute="top" constant="45" id="AXT-Se-RDz"/>
                 <constraint firstItem="zG3-CH-hho" firstAttribute="centerX" secondItem="FGd-1I-8Pe" secondAttribute="centerX" id="Bgz-Vv-lMs"/>
-                <constraint firstItem="dhV-9h-ucC" firstAttribute="top" secondItem="CBn-zE-mUW" secondAttribute="bottom" constant="50" id="D4Q-9V-jc5"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="V3R-Nv-8JS" secondAttribute="bottom" constant="15" id="HT3-H3-qjr"/>
                 <constraint firstItem="IXV-hb-e1J" firstAttribute="top" secondItem="CBn-zE-mUW" secondAttribute="bottom" constant="20" id="Inz-bD-blh"/>
                 <constraint firstAttribute="trailing" secondItem="V3R-Nv-8JS" secondAttribute="trailing" constant="20" id="J2L-iX-nq8"/>
-                <constraint firstItem="zG3-CH-hho" firstAttribute="top" secondItem="fTY-si-txK" secondAttribute="bottom" constant="40" id="TlT-UZ-VYp"/>
+                <constraint firstItem="dhV-9h-ucC" firstAttribute="top" secondItem="IXV-hb-e1J" secondAttribute="bottom" constant="-10" id="OlH-pN-7nK"/>
+                <constraint firstItem="zG3-CH-hho" firstAttribute="top" secondItem="fTY-si-txK" secondAttribute="bottom" constant="20" id="TlT-UZ-VYp"/>
                 <constraint firstItem="dhV-9h-ucC" firstAttribute="leading" secondItem="IXV-hb-e1J" secondAttribute="leading" id="co3-BR-eQA"/>
                 <constraint firstItem="CBn-zE-mUW" firstAttribute="top" secondItem="zG3-CH-hho" secondAttribute="bottom" constant="15" id="gtz-im-bTZ"/>
                 <constraint firstItem="CBn-zE-mUW" firstAttribute="centerX" secondItem="FGd-1I-8Pe" secondAttribute="centerX" id="pIF-r4-E90"/>
-                <constraint firstItem="V3R-Nv-8JS" firstAttribute="top" secondItem="dhV-9h-ucC" secondAttribute="bottom" constant="10" id="q52-LL-EIz"/>
+                <constraint firstItem="V3R-Nv-8JS" firstAttribute="top" secondItem="dhV-9h-ucC" secondAttribute="bottom" constant="5" id="q52-LL-EIz"/>
                 <constraint firstAttribute="trailing" secondItem="dhV-9h-ucC" secondAttribute="trailing" constant="20" id="uLk-4o-Pg3"/>
                 <constraint firstItem="IXV-hb-e1J" firstAttribute="leading" secondItem="FGd-1I-8Pe" secondAttribute="leading" constant="20" id="wpm-7U-tSB"/>
             </constraints>

@@ -48,15 +48,7 @@
     
     self.detailLeftRight.textColor = [UIColor jsd_mainTextColor];
     self.detailLeftRight.font = [UIFont jsd_fontSize:36];
-
-
-    NSMutableParagraphStyle  *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    // 行间距设置为20
-    [paragraphStyle setLineSpacing: 15];
-    NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"拿铁咖啡是意大利浓缩咖啡(Espresso)与牛奶的经典混合，意大利人也很喜欢把拿铁作为早餐的饮料。意大利人早晨的厨房里，照得到阳光的炉子上通常会同时煮着咖啡和牛奶。" attributes:@{NSFontAttributeName: [UIFont fontWithName:@"Helvetica Neue" size: 14.0],NSForegroundColorAttributeName: [UIColor colorWithRed:113/255.0 green:120/255.0 blue:130/255.0 alpha:1.0]}];
-    [string addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [string length])];
     
-    self.detailLabel.attributedText = string;
 }
 
 - (void)setModel:(JSDCoffeeModel *)model {
@@ -72,20 +64,27 @@
             UIImage* image = [UIImage imageWithContentsOfFile:coffeeName];
             self.coffeeImageView.image = image;
         } else {
-            NSString* imagePath = [JSDBundle pathForResource:model.imageName ofType:@"png"];
-            self.coffeeImageView.image = [UIImage imageWithContentsOfFile:imagePath];
+            if (JSDIsString(model.imageName)) {
+                NSString* imagePath = [JSDBundle pathForResource:model.imageName ofType:@"png"];
+                self.coffeeImageView.image = [UIImage imageWithContentsOfFile:imagePath];
+            } else {
+                NSString* imagePath = [JSDBundle pathForResource:@"latte_coffee" ofType:@"png"];
+                self.coffeeImageView.image = [UIImage imageWithContentsOfFile:imagePath];
+            }
         }
     }
     self.titleCNLabel.text = model.coffeeCNName;
     self.titleENLabel.text = model.coffeeENName;
     
-    NSMutableParagraphStyle  *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    // 行间距设置为20
-    [paragraphStyle setLineSpacing: 15];
-    NSMutableAttributedString *detail = [[NSMutableAttributedString alloc] initWithString:model.coffeeDetail attributes:@{NSFontAttributeName: [UIFont fontWithName:@"Helvetica Neue" size: 14.0],NSForegroundColorAttributeName: [UIColor colorWithRed:113/255.0 green:120/255.0 blue:130/255.0 alpha:1.0]}];
-    [detail addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [detail length])];
-    
-    self.detailLabel.attributedText = detail;
+    if (JSDIsString(self.model.coffeeDetail)) {
+        NSMutableParagraphStyle  *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+        // 行间距设置为20
+        [paragraphStyle setLineSpacing: 15];
+        NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString: self.model.coffeeDetail attributes:@{NSFontAttributeName: [UIFont fontWithName:@"Helvetica Neue" size: 14.0],NSForegroundColorAttributeName: [UIColor colorWithRed:113/255.0 green:120/255.0 blue:130/255.0 alpha:1.0]}];
+        [string addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [string length])];
+
+        self.detailLabel.attributedText = string;
+    }
 }
 
 @end

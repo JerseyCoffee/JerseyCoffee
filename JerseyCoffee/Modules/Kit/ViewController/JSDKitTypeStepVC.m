@@ -105,25 +105,30 @@
             UIImage* image = [UIImage imageWithContentsOfFile:coffeeName];
             self.kitImageView.image = image;
         } else {
-            NSString* imagePath = [JSDBundle pathForResource:self.model.kitImageName ofType:@"png"];
-            self.kitImageView.image = [UIImage imageWithContentsOfFile:imagePath];
+            if (JSDIsString(self.model.kitImageName)) {
+                NSString* imagePath = [JSDBundle pathForResource:self.model.kitImageName ofType:@"png"];
+                self.kitImageView.image = [UIImage imageWithContentsOfFile:imagePath];
+            } else {
+                NSString* imagePath = [JSDBundle pathForResource:@"dand" ofType:@"png"];
+                self.kitImageView.image = [UIImage imageWithContentsOfFile:imagePath];
+            }
         }
     }
     
     self.kitNameLabel.text = self.model.kitCNName;
     
+    if (JSDIsString(self.model.step)) {
     NSMutableParagraphStyle  *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     // 行间距设置为20
     [paragraphStyle setLineSpacing: 15];
-    [paragraphStyle setLineSpacing: 15];
     NSMutableAttributedString *detail;
-    if (JSDIsString(self.model.step)) {
+    
         detail = [[NSMutableAttributedString alloc] initWithString:self.model.step attributes:@{NSFontAttributeName: [UIFont fontWithName:@"Helvetica Neue" size: 14.0],NSForegroundColorAttributeName: [UIColor colorWithRed:113/255.0 green:120/255.0 blue:130/255.0 alpha:1.0]}];
-    }
     [detail addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [detail length])];
     
     self.stepTextLabel.numberOfLines = 0;
     self.stepTextLabel.attributedText = detail;
+    }
 }
 
 #pragma mark - 4.UITableViewDataSource and UITableViewDelegate

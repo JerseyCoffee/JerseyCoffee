@@ -139,8 +139,13 @@
             UIImage* image = [UIImage imageWithContentsOfFile:coffeeName];
             self.coffeeImageView.image = image;
         } else {
-            NSString* imagePath = [JSDBundle pathForResource:self.model.imageName ofType:@"png"];
-            self.coffeeImageView.image = [UIImage imageWithContentsOfFile:imagePath];
+            if (JSDIsString(self.model.imageName)) {
+                NSString* imagePath = [JSDBundle pathForResource:self.model.imageName ofType:@"png"];
+                self.coffeeImageView.image = [UIImage imageWithContentsOfFile:imagePath];
+            } else {
+                NSString* imagePath = [JSDBundle pathForResource:@"latte_coffee" ofType:@"png"];
+                self.coffeeImageView.image = [UIImage imageWithContentsOfFile:imagePath];
+            }
         }
     }
     self.coffeeCNNameLabel.text = self.model.coffeeCNName;
