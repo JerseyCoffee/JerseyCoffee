@@ -14,8 +14,8 @@
     
     if (!_listArray) {
         NSArray* array = @[@{@"title": @"官网",
-                             @"detail": @"https://www.jianshu.com/p/216691edbd0d",
-                               
+                             @"detail": @"https://www.jianshu.com/p/ceda10b4552e",
+                             
                                },
                            @{@"title": @"App 版本",
                              @"detail": @"V1.0.0",

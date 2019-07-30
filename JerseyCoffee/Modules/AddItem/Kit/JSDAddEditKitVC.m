@@ -129,7 +129,10 @@
 - (void)onTouchSave:(id) sender {
     
     BOOL havakitName = JSDIsString(self.kitCNNameTextField.text);
-    BOOL havaImageView = self.coffeeImageView.image;
+    BOOL havaImageView = NO;
+    if (self.coffeeImageView.image) {
+        havaImageView = YES;
+    }
     if (havakitName && havaImageView) {
         if (self.model.canEdit) {
             [self updatekit];

@@ -141,7 +141,10 @@
 
 - (void)onTouchSave:(id) sender {
     
-    BOOL havaImageView = self.coffeeImageView.image;
+    BOOL havaImageView = NO;
+    if (self.coffeeImageView.image) {
+        havaImageView = YES;
+    }
     BOOL havaCoffeeName = JSDIsString(self.coffeeCNNameTextField.text);
     if (havaImageView && havaCoffeeName) {
         if (self.model.canEdit) {
