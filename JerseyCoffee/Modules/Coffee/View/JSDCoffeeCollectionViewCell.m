@@ -79,7 +79,7 @@
     if (JSDIsString(self.model.coffeeDetail)) {
         NSMutableParagraphStyle  *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
         // 行间距设置为20
-        [paragraphStyle setLineSpacing: 15];
+        [paragraphStyle setLineSpacing: 10];
         NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString: self.model.coffeeDetail attributes:@{NSFontAttributeName: [UIFont fontWithName:@"Helvetica Neue" size: 14.0],NSForegroundColorAttributeName: [UIColor colorWithRed:113/255.0 green:120/255.0 blue:130/255.0 alpha:1.0]}];
         [string addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [string length])];
 

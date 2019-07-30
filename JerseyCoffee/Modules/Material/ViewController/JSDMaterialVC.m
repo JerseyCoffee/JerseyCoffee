@@ -92,8 +92,11 @@ static NSString * const reuseIdentifier = @"Cell";
     
     [self.addItemButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(-30);
+        make.width.height.mas_offset(60);
         if (@available(iOS 11.0, *)) {
             make.bottom.mas_equalTo(self.view.mas_safeAreaLayoutGuideBottom).mas_equalTo(-30);
+        } else {
+            make.bottom.mas_equalTo(-30);
         }
     }];
 
@@ -327,9 +330,11 @@ static NSString * const reuseIdentifier = @"Cell";
     if (!_addItemButton) {
         _addItemButton = [[MDCFloatingButton alloc] init];
         _addItemButton.backgroundColor = [UIColor whiteColor];
-        [_addItemButton setBackgroundImage:[UIImage imageWithContentsOfFile:[JSDBundle pathForResource:@"AddItem" ofType:@"png"]] forState:UIControlStateNormal];
+        [_addItemButton setImage:[UIImage imageWithContentsOfFile:[JSDBundle pathForResource:@"AddItem" ofType:@"png"]] forState:UIControlStateNormal];
+        _addItemButton.contentMode = UIViewContentModeCenter;
         [_addItemButton addTarget:self action:@selector(onTouchAddItem:) forControlEvents:UIControlEventTouchUpInside];
         _addItemButton.layer.masksToBounds = YES;
+        _addItemButton.imageEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
     }
     return _addItemButton;
 }

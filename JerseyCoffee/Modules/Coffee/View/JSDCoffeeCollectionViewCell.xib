@@ -28,30 +28,42 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="拿铁咖啡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJ2-dE-wpx">
                         <rect key="frame" x="117.5" y="224" width="69.5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="mmh-y4-l79"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caffè Latte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGZ-iU-x9h">
                         <rect key="frame" x="109.5" y="260" width="85" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="xwB-lR-Eic"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRi-CT-2hk">
                         <rect key="frame" x="20" y="291" width="8.5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="FVz-tP-JNX"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="拿铁咖啡是意大利浓缩咖啡(Espresso)与牛奶的经典混合，意大利人也很喜欢把拿铁作为早餐的饮料。意大利人早晨的厨房里，照得到阳光的炉子上通常会同时煮着咖啡和牛奶。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dY7-q9-3RB">
-                        <rect key="frame" x="20" y="302" width="264" height="119"/>
+                        <rect key="frame" x="20" y="312" width="264" height="119"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMh-mJ-dwD">
-                        <rect key="frame" x="275.5" y="421" width="8.5" height="21"/>
+                        <rect key="frame" x="275.5" y="441" width="8.5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="oX8-Yn-tQQ"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -59,7 +71,7 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="DMh-mJ-dwD" firstAttribute="top" secondItem="dY7-q9-3RB" secondAttribute="bottom" id="B76-nV-unS"/>
+                <constraint firstItem="DMh-mJ-dwD" firstAttribute="top" secondItem="dY7-q9-3RB" secondAttribute="bottom" constant="10" id="B76-nV-unS"/>
                 <constraint firstItem="a3T-Oa-Uuw" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="C9E-RA-uEN"/>
                 <constraint firstItem="HJ2-dE-wpx" firstAttribute="top" secondItem="a3T-Oa-Uuw" secondAttribute="bottom" constant="25" id="EbV-yw-gSQ"/>
                 <constraint firstItem="dY7-q9-3RB" firstAttribute="leading" secondItem="pRi-CT-2hk" secondAttribute="leading" id="Rfe-hz-QrB"/>
@@ -69,7 +81,7 @@
                 <constraint firstAttribute="trailing" secondItem="DMh-mJ-dwD" secondAttribute="trailing" constant="20" id="e1d-bO-N61"/>
                 <constraint firstAttribute="trailing" secondItem="dY7-q9-3RB" secondAttribute="trailing" constant="20" id="e4G-cA-qxr"/>
                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="DMh-mJ-dwD" secondAttribute="bottom" constant="20" id="fsd-Fm-uUU"/>
-                <constraint firstItem="dY7-q9-3RB" firstAttribute="top" secondItem="pRi-CT-2hk" secondAttribute="bottom" constant="-10" id="g89-X8-KUX"/>
+                <constraint firstItem="dY7-q9-3RB" firstAttribute="top" secondItem="pRi-CT-2hk" secondAttribute="bottom" id="g89-X8-KUX"/>
                 <constraint firstItem="pRi-CT-2hk" firstAttribute="top" secondItem="JGZ-iU-x9h" secondAttribute="bottom" constant="10" id="tWk-UI-wKP"/>
                 <constraint firstItem="HJ2-dE-wpx" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="urs-zV-veI"/>
                 <constraint firstItem="a3T-Oa-Uuw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="45" id="wWH-gJ-CZt"/>
