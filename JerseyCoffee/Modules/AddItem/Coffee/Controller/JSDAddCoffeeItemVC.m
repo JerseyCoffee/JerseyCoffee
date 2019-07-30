@@ -85,7 +85,7 @@
     self.coffeeImageView.backgroundColor = [UIColor jsd_grayColor];
     NSString* path = [JSDBundle pathForResource:@"selected_photo" ofType:@"png"];
     self.coffeeImageView.image = [UIImage imageNamed:path];
-    self.coffeeImageView.contentMode = UIViewContentModeScaleToFill;
+    self.coffeeImageView.contentMode = UIViewContentModeCenter;
     self.addCoffeeButton.backgroundColor = [UIColor clearColor];
     self.coffeeImageView.layer.cornerRadius = 5;
     self.coffeeImageView.layer.masksToBounds = YES;
@@ -113,6 +113,7 @@
             
             NSString* coffeeName = [NSString stringWithFormat:@"%@/%@.png", documentsDirectory, self.model.imageName];
             UIImage* image = [UIImage imageWithContentsOfFile:coffeeName];
+            self.coffeeImageView.contentMode = UIViewContentModeScaleToFill;
             self.coffeeImageView.image = image;
         }
         self.coffeeCNNameTextField.text = self.model.coffeeCNName;
@@ -133,6 +134,7 @@
     [JSDPhotoManage presentWithViewController:self sourceType:YZHImagePickerSourceTypePhotoLibrary finishPicking:^(UIImage * _Nonnull image) {
         if (image) {
             self.havaPhoto = YES;
+            self.coffeeImageView.contentMode = UIViewContentModeScaleToFill;
             self.coffeeImageView.image = image;
         } else {
         }

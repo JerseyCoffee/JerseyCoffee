@@ -15,7 +15,8 @@
 		5534DCA122EF01AF006E8ABB /* JSDAddEditMaterialVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5534DC9F22EF01AF006E8ABB /* JSDAddEditMaterialVC.xib */; };
 		5534DCA622F00188006E8ABB /* JSDAddEditKitVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5534DCA422F00188006E8ABB /* JSDAddEditKitVC.m */; };
 		5534DCA722F00188006E8ABB /* JSDAddEditKitVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5534DCA522F00188006E8ABB /* JSDAddEditKitVC.xib */; };
-		5534DCAB22F032F6006E8ABB /* AddItem.png in Resources */ = {isa = PBXBuildFile; fileRef = 5534DCAA22F032F6006E8ABB /* AddItem.png */; };
+		5534DCAD22F03621006E8ABB /* selected_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5534DCAC22F0361F006E8ABB /* selected_photo.png */; };
+		5534DCB322F03844006E8ABB /* AddItem.png in Resources */ = {isa = PBXBuildFile; fileRef = 5534DCB222F03844006E8ABB /* AddItem.png */; };
 		5542BA8222E5BE0000ADCCAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5542BA8122E5BE0000ADCCAC /* AppDelegate.m */; };
 		5542BA8A22E5BE0100ADCCAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5542BA8922E5BE0100ADCCAC /* Assets.xcassets */; };
 		5542BA8D22E5BE0100ADCCAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5542BA8B22E5BE0100ADCCAC /* LaunchScreen.storyboard */; };
@@ -71,7 +72,6 @@
 		601E98D822EC23F5008CBE2B /* JSDAddCoffeeItemVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601E98D622EC23F5008CBE2B /* JSDAddCoffeeItemVC.xib */; };
 		601E98DB22EC4540008CBE2B /* JSDSelectedNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E98DA22EC4540008CBE2B /* JSDSelectedNumberView.m */; };
 		601E98DE22EC4D82008CBE2B /* JSDPhotoManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E98DD22EC4D82008CBE2B /* JSDPhotoManage.m */; };
-		601E98E222EDA355008CBE2B /* selected_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 601E98E122EDA355008CBE2B /* selected_photo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,7 +87,8 @@
 		5534DCA322F00188006E8ABB /* JSDAddEditKitVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDAddEditKitVC.h; sourceTree = "<group>"; };
 		5534DCA422F00188006E8ABB /* JSDAddEditKitVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDAddEditKitVC.m; sourceTree = "<group>"; };
 		5534DCA522F00188006E8ABB /* JSDAddEditKitVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDAddEditKitVC.xib; sourceTree = "<group>"; };
-		5534DCAA22F032F6006E8ABB /* AddItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddItem.png; sourceTree = "<group>"; };
+		5534DCAC22F0361F006E8ABB /* selected_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selected_photo.png; sourceTree = "<group>"; };
+		5534DCB222F03844006E8ABB /* AddItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddItem.png; sourceTree = "<group>"; };
 		5542BA7D22E5BE0000ADCCAC /* JerseyCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JerseyCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5542BA8022E5BE0000ADCCAC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5542BA8122E5BE0000ADCCAC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -180,7 +181,6 @@
 		601E98DA22EC4540008CBE2B /* JSDSelectedNumberView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSelectedNumberView.m; sourceTree = "<group>"; };
 		601E98DC22EC4D81008CBE2B /* JSDPhotoManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDPhotoManage.h; sourceTree = "<group>"; };
 		601E98DD22EC4D82008CBE2B /* JSDPhotoManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDPhotoManage.m; sourceTree = "<group>"; };
-		601E98E122EDA355008CBE2B /* selected_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selected_photo.png; sourceTree = "<group>"; };
 		7F5E24E53A3B4D07A28557E2 /* Pods-JerseyCoffee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JerseyCoffee.debug.xcconfig"; path = "Target Support Files/Pods-JerseyCoffee/Pods-JerseyCoffee.debug.xcconfig"; sourceTree = "<group>"; };
 		A40335F599FD0E1C7292803F /* libPods-JerseyCoffee.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JerseyCoffee.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -263,8 +263,8 @@
 		556D4E1422EAC65E00E3DBB2 /* ImageAssets */ = {
 			isa = PBXGroup;
 			children = (
-				5534DCAA22F032F6006E8ABB /* AddItem.png */,
-				601E98E122EDA355008CBE2B /* selected_photo.png */,
+				5534DCB222F03844006E8ABB /* AddItem.png */,
+				5534DCAC22F0361F006E8ABB /* selected_photo.png */,
 				556D4E1522EAD00700E3DBB2 /* dand.png */,
 				556D4E1722EAD00700E3DBB2 /* frenchpress.png */,
 				556D4E1622EAD00700E3DBB2 /* siphon.png */,
@@ -713,7 +713,7 @@
 				5542BA8D22E5BE0100ADCCAC /* LaunchScreen.storyboard in Resources */,
 				5501257322E7F9FE00835DE4 /* JSDMaterialTextView.xib in Resources */,
 				556D4E1122EAC64300E3DBB2 /* cappuccino_coffee.png in Resources */,
-				5534DCAB22F032F6006E8ABB /* AddItem.png in Resources */,
+				5534DCB322F03844006E8ABB /* AddItem.png in Resources */,
 				55BE3CC922E6E16500D28107 /* JSDCoffeeCollectionViewCell.xib in Resources */,
 				55E952E122E984AC008BADB5 /* kitTypeData.json in Resources */,
 				55E952DC22E95FAE008BADB5 /* coffeeData.json in Resources */,
@@ -730,11 +730,11 @@
 				601E98CE22E9F282008CBE2B /* JSDCoffeeHistoryVC.xib in Resources */,
 				556D4E0F22EAC64300E3DBB2 /* macchiato_coffee.png in Resources */,
 				556D4E1022EAC64300E3DBB2 /* mocha_coffee.png in Resources */,
-				601E98E222EDA355008CBE2B /* selected_photo.png in Resources */,
 				601E98C522E9EA85008CBE2B /* JSDCollectionViewCell.xib in Resources */,
 				5534DCA122EF01AF006E8ABB /* JSDAddEditMaterialVC.xib in Resources */,
 				556D4E1922EAD00700E3DBB2 /* siphon.png in Resources */,
 				55C2042822E9B05600F193E6 /* JSDCoffeeDetailVC.xib in Resources */,
+				5534DCAD22F03621006E8ABB /* selected_photo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
