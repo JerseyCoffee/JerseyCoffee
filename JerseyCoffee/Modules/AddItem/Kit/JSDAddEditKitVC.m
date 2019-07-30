@@ -129,6 +129,7 @@
 
 - (void)onTouchSave:(id) sender {
     
+    //暂时不强行要求图片
     BOOL havakitName = JSDIsString(self.kitCNNameTextField.text);
     BOOL havaImageView = NO;
     if (self.coffeeImageView.image) {
@@ -154,7 +155,7 @@
 
 - (void)onTouchAddCoffee:(id) sender {
     
-    [JSDPhotoManage presentWithViewController:self sourceType:YZHImagePickerSourceTypePhotoLibrary finishPicking:^(UIImage * _Nonnull image) {
+    [JSDPhotoManage presentWithViewController:self sourceType:JSDImagePickerSourceTypePhotoLibrary finishPicking:^(UIImage * _Nonnull image) {
         if (image) {
             self.havaImage = YES;
             self.coffeeImageView.contentMode = UIViewContentModeScaleToFill;

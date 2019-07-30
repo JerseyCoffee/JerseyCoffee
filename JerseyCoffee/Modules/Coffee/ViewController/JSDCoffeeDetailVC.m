@@ -147,6 +147,9 @@
                 self.coffeeImageView.image = [UIImage imageWithContentsOfFile:imagePath];
             }
         }
+    } else {
+        NSString* imagePath = [JSDBundle pathForResource:@"latte_coffee" ofType:@"png"];
+        self.coffeeImageView.image = [UIImage imageWithContentsOfFile:imagePath];
     }
     self.coffeeCNNameLabel.text = self.model.coffeeCNName;
     self.coffeeENNameLabel.text = self.model.coffeeENName;

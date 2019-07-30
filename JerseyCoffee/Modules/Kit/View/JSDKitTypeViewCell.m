@@ -70,6 +70,9 @@
             }
 
         }
+    } else {
+        NSString* imagePath = [JSDBundle pathForResource:@"dand" ofType:@"png"];
+        self.coffeeImageView.image = [UIImage imageWithContentsOfFile:imagePath];
     }
     
     self.titleCNLabel.text = model.kitCNName;
@@ -86,6 +89,8 @@
         [detail addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [detail length])];
         
         self.detailLabel.attributedText = detail;
+    } else {
+        self.detailLabel.text = nil;
     }
  
 }

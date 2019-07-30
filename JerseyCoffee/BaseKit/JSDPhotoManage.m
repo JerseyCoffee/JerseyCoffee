@@ -1,20 +1,21 @@
 //
-//  YZHPhotoManage.m
-//  YZHYolo
+//  JSDPhotoManage.m
+//  JSDYolo
 //
 //  Created by Jersey on 2018/9/25.
-//  Copyright © 2018年 YZHChain. All rights reserved.
+//  Copyright © 2018年 JSDChain. All rights reserved.
 //
 
 #import "JSDPhotoManage.h"
-//#import "UIViewController+YZHTool.h"
+//#import "UIViewController+JSDTool.h"
+#import <Photos/Photos.h>
 
 NSString* const kJSDPhotoImageFiles = @"PhotoImage/coffee_";
 NSString* const kJSDKitImageFiles = @"PhotoImage/kit_";
 
 @interface JSDPhotoManage () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
-@property(nonatomic, assign) YZHImagePickerSourceType sourceType;
+@property(nonatomic, assign) JSDImagePickerSourceType sourceType;
 @property (nonatomic, copy) void (^finishPicking)(UIImage *image);
 
 @end
@@ -32,7 +33,7 @@ NSString* const kJSDKitImageFiles = @"PhotoImage/kit_";
 
 #pragma mark - Method
 
-+ (void)presentWithViewController:(UIViewController *)viewController sourceType:(YZHImagePickerSourceType)sourceType finishPicking:(void (^)(UIImage *))finishPicking
++ (void)presentWithViewController:(UIViewController *)viewController sourceType:(JSDImagePickerSourceType)sourceType finishPicking:(void (^)(UIImage *))finishPicking
 {
     [JSDPhotoManage sharePhotoManage].sourceType = sourceType;
     [JSDPhotoManage sharePhotoManage].finishPicking = finishPicking;
@@ -45,11 +46,11 @@ NSString* const kJSDKitImageFiles = @"PhotoImage/kit_";
 {
     UIImagePickerController *controller = [[UIImagePickerController alloc] init];
 //    //修复警告 Snapshotting a view that has not been rendered results in an empty snapshot. Ensure your view has been rendered at least once before snapshotting or snapshot after screen updates.
-//    UIViewController* currentVC = [UIViewController yzh_findTopViewController];
+//    UIViewController* currentVC = [UIViewController JSD_findTopViewController];
 //    currentVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     
     switch (self.sourceType) {
-        case YZHImagePickerSourceTypeCamera:
+        case JSDImagePickerSourceTypeCamera:
         {
             if (self.isCameraAvailable && [self doesCameraSupportTakingPhotos]) {
                 controller.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -60,43 +61,49 @@ NSString* const kJSDKitImageFiles = @"PhotoImage/kit_";
             }
         }
             break;
-        case YZHImagePickerSourceTypePhotoLibrary:
+        case JSDImagePickerSourceTypePhotoLibrary: {
+            
             controller.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        }
             break;
             
-            case YZHImagePickerSourceTypePhotosAlbum:
+            case JSDImagePickerSourceTypePhotosAlbum:
             controller.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
             break;
         default:
             controller.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
             break;
     }
-    //    NSMutableArray *mediaTypes = [[NSMutableArray alloc] init];
-    //    [mediaTypes addObject:(__bridge NSString *)kUTTypeImage];
-    //    controller.mediaTypes = mediaTypes;
-    controller.delegate = self;
-    controller.allowsEditing = YES;
-    // 修改导航栏字体颜色.
-    [controller.navigationBar setTintColor:[UIColor jsd_mainGrayColor]];
-    [viewController presentViewController:controller animated:YES completion:nil];
-    
-    //    if ([self isPhotoLibraryAvailable]) {
-    //        UIImagePickerController *controller = [[UIImagePickerController alloc] init];
-    //        controller.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    //        NSMutableArray *mediaTypes = [[NSMutableArray alloc] init];
-    //        [mediaTypes addObject:(__bridge NSString *)kUTTypeImage];
-    //        controller.mediaTypes = mediaTypes;
-    //        controller.delegate = self;
-    //        [self presentViewController:controller animated:YES completion:^(void) {
-    //            NSLog(@"Picker View Controller is presented");
-    //        }];
-    //    }
-    
+    if (@available(iOS 11, *)) {
+        controller.delegate = self;
+        controller.allowsEditing = YES;
+        // 修改导航栏字体颜色.
+        [controller.navigationBar setTintColor:[UIColor jsd_mainGrayColor]];
+        [viewController presentViewController:controller animated:YES completion:nil];
+    } else {
+        PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
+        if (status == PHAuthorizationStatusAuthorized) {
+            controller.delegate = self;
+            controller.allowsEditing = YES;
+            // 修改导航栏字体颜色.
+            [controller.navigationBar setTintColor:[UIColor jsd_mainGrayColor]];
+            [viewController presentViewController:controller animated:YES completion:nil];
+        } else {
+            UIAlertController* alertVC = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"请点击前往设置开启应用相册读取权限, 否则无法正常选取相片" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+            UIAlertAction* gotoAction = [UIAlertAction actionWithTitle:@"前往" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString: UIApplicationOpenSettingsURLString]];
+            }];
+            [alertVC addAction:cancelAction];
+            [alertVC addAction:gotoAction];
+            [JSDAppWindow.rootViewController presentViewController:alertVC animated:YES completion:nil];
+        }
+    }
 }
 
 - (void)clean
 {
-    self.sourceType = YZHImagePickerSourceTypePhotoLibrary;
+    self.sourceType = JSDImagePickerSourceTypePhotoLibrary;
     self.finishPicking = nil;
 }
 
@@ -105,12 +112,22 @@ NSString* const kJSDKitImageFiles = @"PhotoImage/kit_";
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     [picker dismissViewControllerAnimated:YES completion:^{
-        //        CGRect crop = [[info valueForKey:UIImagePickerControllerCropRect] CGRectValue];
-        //        UIImage *originalImage = [info objectForKey:UIImagePickerControllerOriginalImage];
-        //        BOOL isContained = CGRectContainsRect(CGRectMake(0, 0, originalImage.size.width, originalImage.size.height), crop);
-        
-        UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
-        self.finishPicking ? self.finishPicking(image) : NULL;
+
+        PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
+        if (status == PHAuthorizationStatusAuthorized) {
+            UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
+            self.finishPicking ? self.finishPicking(image) : NULL;
+        } else {
+            
+            UIAlertController* alertVC = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"请点击前往设置开启相册读取权限, 否则无法正常选取相片" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+            UIAlertAction* gotoAction = [UIAlertAction actionWithTitle:@"前往" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString: UIApplicationOpenSettingsURLString]];
+            }];
+            [alertVC addAction:cancelAction];
+            [alertVC addAction:gotoAction];
+            [JSDAppWindow.rootViewController presentViewController:alertVC animated:YES completion:nil];
+        }
     }];
     
     //    if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
