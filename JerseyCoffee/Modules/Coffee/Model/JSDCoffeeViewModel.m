@@ -8,7 +8,7 @@
 
 #import "JSDCoffeeViewModel.h"
 
-NSString* const kCoffeeFilePathName = @"coffee.json";
+static NSString* const kCoffeeFilePathName = @"coffee.json";
 @implementation JSDCoffeeViewModel
 
 - (NSMutableArray<JSDCoffeeModel *> *)listArray {
@@ -62,7 +62,7 @@ NSString* const kCoffeeFilePathName = @"coffee.json";
     }
     [data writeToFile:path atomically:YES];
     
-     [[NSNotificationCenter defaultCenter] postNotificationName:kCoffeeListChangeNotifaction object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kKitListChangeNotifaction object:nil];
 }
 
 - (void)editDataCoffee: (JSDCoffeeModel *)coffeeModel {

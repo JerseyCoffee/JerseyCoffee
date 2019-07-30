@@ -8,6 +8,8 @@
 
 #import "JSDMaterialDetailVC.h"
 
+#import "JSDAddEditMaterialVC.h"
+
 @interface JSDMaterialDetailVC ()
 
 @property (weak, nonatomic) IBOutlet UIView *showImageContenView;
@@ -43,11 +45,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    [self setupData];
+}
+
 #pragma mark - 2.SettingView and Style
 
 - (void)setupNavBar {
     
     self.navigationItem.title = @"咖啡故事";
+    
+    if (self.model.canEdit) {
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"编辑" style:UIBarButtonItemStyleDone target:self action:@selector(onTouchEdit:)];
+    }
 }
 
 - (void)setupView {
@@ -98,6 +111,14 @@
 #pragma mark - 4.UITableViewDataSource and UITableViewDelegate
 
 #pragma mark - 5.Event Response
+
+- (void)onTouchEdit:(id)sender {
+    
+    JSDAddEditMaterialVC* editVC = [[JSDAddEditMaterialVC alloc] init];
+    editVC.model = self.model;
+    
+    [self.navigationController pushViewController:editVC animated:YES];
+}
 
 #pragma mark - 6.Private Methods
 

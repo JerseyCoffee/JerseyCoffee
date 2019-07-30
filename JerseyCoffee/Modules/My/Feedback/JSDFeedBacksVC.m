@@ -123,8 +123,12 @@ static NSString* const kFeedBackErrorTipSubTitle = @"请打开\"(邮件App)\"设
     switch (result) {
         case MFMailComposeResultCancelled:
             NSLog(@"Mail send canceled: 用户取消编辑");
+            [self dismissViewControllerAnimated:YES completion: ^{
+            }];
             break;
         case MFMailComposeResultSaved:
+            [self dismissViewControllerAnimated:YES completion: ^{
+            }];
             break;
         case MFMailComposeResultSent: {
             NSLog(@"Mail sent: 用户点击发送");

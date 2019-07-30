@@ -266,8 +266,10 @@ static NSString * const reuseIdentifier = @"Cell";
     
     if (!_addItemButton) {
         _addItemButton = [[MDCFloatingButton alloc] init];
-        _addItemButton.backgroundColor = [UIColor jsd_grayColor];
+//        _addItemButton.backgroundColor = [UIColor jsd_grayColor];
+        [_addItemButton setBackgroundImage:[UIImage imageWithContentsOfFile:[JSDBundle pathForResource:@"AddItem" ofType:@"png"]] forState:UIControlStateNormal];
         [_addItemButton addTarget:self action:@selector(onTouchAddItem:) forControlEvents:UIControlEventTouchUpInside];
+        _addItemButton.layer.masksToBounds = YES;
     }
     return _addItemButton;
 }

@@ -12,6 +12,7 @@
 #import <MaterialPageControl.h>
 #import "JSDKitTypeViewModel.h"
 #import "JSDKitTypeStepVC.h"
+#import "JSDAddEditKitVC.h"
 
 static CGFloat kUIEdgeInsetsTop = 10;
 static CGFloat kUIEdgeInsetsLeft = 40;
@@ -21,10 +22,13 @@ static CGFloat kLineItemSpace = 0;    //水平
 static CGFloat kInterItemSpace = 20;    //垂直
 static CGFloat kItemLeftShowWidth = 20; //每个 Item 漏出宽度
 
+NSString* const kKitListChangeNotifaction = @"KitListChangeNotifaction";
+
 @interface JSDKitTypeVC ()
 
 @property (nonatomic, strong) MDCPageControl* pageControl;
 @property (nonatomic, strong) JSDKitTypeViewModel* viewModel;
+@property (strong, nonatomic) MDCFloatingButton *addItemButton;
 
 @end
 
@@ -77,6 +81,15 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)setupView {
     
     self.view.backgroundColor = [UIColor jsd_mainGrayColor];
+    
+    [self.view addSubview:self.addItemButton];
+    
+    [self.addItemButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(-30);
+        if (@available(iOS 11.0, *)) {
+            make.bottom.mas_equalTo(self.view.mas_safeAreaLayoutGuideBottom).mas_equalTo(-30);
+        }
+    }];
     
     [self.view addSubview:self.pageControl];
     
@@ -204,10 +217,26 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.collectionView setContentOffset:offset animated: true];
 }
 
+- (void)onTouchAddItem:(id)sender {
+    
+    JSDAddEditKitVC* addVC = [[JSDAddEditKitVC alloc] init];
+    
+    [self.navigationController pushViewController:addVC animated:YES];
+}
+
 #pragma mark - 6.Private Methods
 
 - (void)setupNotification {
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(kitListChangeNotification:) name:kKitListChangeNotifaction object:nil];
+}
+
+- (void)kitListChangeNotification:(id)notification {
+    
+    [self.viewModel upDateKit];
+    
+    [self.collectionView reloadData];
+    _pageControl.numberOfPages = self.viewModel.listArray.count;
 }
 
 #pragma mark - 7.GET & SET
@@ -232,5 +261,18 @@ static NSString * const reuseIdentifier = @"Cell";
     }
     return _viewModel;
 }
+
+- (MDCFloatingButton *)addItemButton {
+    
+    if (!_addItemButton) {
+        _addItemButton = [[MDCFloatingButton alloc] init];
+        _addItemButton.backgroundColor = [UIColor jsd_grayColor];
+        [_addItemButton setBackgroundImage:[UIImage imageWithContentsOfFile:[JSDBundle pathForResource:@"AddItem" ofType:@"png"]] forState:UIControlStateNormal];
+        [_addItemButton addTarget:self action:@selector(onTouchAddItem:) forControlEvents:UIControlEventTouchUpInside];
+        _addItemButton.layer.masksToBounds = YES;
+    }
+    return _addItemButton;
+}
+
 
 @end

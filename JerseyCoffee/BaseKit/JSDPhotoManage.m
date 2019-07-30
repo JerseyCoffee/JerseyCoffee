@@ -10,6 +10,8 @@
 //#import "UIViewController+YZHTool.h"
 
 NSString* const kJSDPhotoImageFiles = @"PhotoImage/coffee_";
+NSString* const kJSDKitImageFiles = @"PhotoImage/kit_";
+
 @interface JSDPhotoManage () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property(nonatomic, assign) YZHImagePickerSourceType sourceType;
@@ -210,6 +212,32 @@ NSString* const kJSDPhotoImageFiles = @"PhotoImage/coffee_";
         NSLog(@"图片转换 PNG 失败");
     }
    
+}
+
++ (void)savaKitImageView:(UIImageView *)imageView fileName:(nonnull NSString *)fileName {
+    
+    NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    
+    NSString* filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory, kJSDKitImageFiles];
+    
+    NSFileManager* fileManage = [NSFileManager defaultManager];
+    if (![fileManage fileExistsAtPath: filePath]) {
+        BOOL isSuccess = [fileManage createDirectoryAtPath:filePath withIntermediateDirectories:YES attributes:nil error:nil];
+        NSLog(@"isSiccess = %d",isSuccess);
+    }
+    NSData* data = UIImagePNGRepresentation(imageView.image);
+    if (data) {
+        NSError* error;
+        NSString* imageName = [NSString stringWithFormat:@"%@/%@%@", documentsDirectory, kJSDKitImageFiles, fileName];
+        BOOL result = [data writeToFile:imageName options:NSDataWritingAtomic error: &error];
+        if (error) {
+            NSLog(@"保存结果%d---%@", result, error);
+        }
+        
+    } else {
+        NSLog(@"图片转换 PNG 失败");
+    }
+    
 }
 
 @end

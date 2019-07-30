@@ -53,8 +53,17 @@
     _model = model;
     
     if (model.kitImageName) {
-        NSString* imagePath = [JSDBundle pathForResource:model.kitImageName ofType:@"png"];
-        self.coffeeImageView.image = [UIImage imageWithContentsOfFile:imagePath];
+        if ([model.kitImageName containsString:kJSDKitImageFiles]) {
+            NSLog(@"包含了");
+            NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+            
+            NSString* coffeeName = [NSString stringWithFormat:@"%@/%@.png", documentsDirectory, model.kitImageName];
+            UIImage* image = [UIImage imageWithContentsOfFile:coffeeName];
+            self.coffeeImageView.image = image;
+        } else {
+            NSString* imagePath = [JSDBundle pathForResource:model.kitImageName ofType:@"png"];
+            self.coffeeImageView.image = [UIImage imageWithContentsOfFile:imagePath];
+        }
     }
     
     self.titleCNLabel.text = model.kitCNName;

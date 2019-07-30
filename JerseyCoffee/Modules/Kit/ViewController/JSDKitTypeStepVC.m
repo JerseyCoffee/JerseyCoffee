@@ -8,6 +8,8 @@
 
 #import "JSDKitTypeStepVC.h"
 
+#import "JSDAddEditKitVC.h"
+
 @interface JSDKitTypeStepVC ()
 
 @property (weak, nonatomic) IBOutlet UIView *showImageViewContentView;
@@ -43,10 +45,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear: animated];
+    
+    [self setupData];
+}
+
 #pragma mark - 2.SettingView and Style
 
 - (void)setupNavBar {
     self.navigationItem.title = @"使用指南";
+    
+    if (self.model.canEdit) {
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"编辑" style:UIBarButtonItemStyleDone target:self action:@selector(onTouchEdit:)];
+    }
 }
 
 - (void)setupView {
@@ -83,9 +96,18 @@
 
 - (void)setupData {
     
-    if (JSDIsString(self.model.kitImageName)) {
-        NSString* path = [JSDBundle pathForResource:self.model.kitImageName ofType:@"png"];
-        self.kitImageView.image = [UIImage imageWithContentsOfFile:path];
+    if (self.model.kitImageName) {
+        if ([self.model.kitImageName containsString:kJSDKitImageFiles]) {
+            NSLog(@"包含了");
+            NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+            
+            NSString* coffeeName = [NSString stringWithFormat:@"%@/%@.png", documentsDirectory, self.model.kitImageName];
+            UIImage* image = [UIImage imageWithContentsOfFile:coffeeName];
+            self.kitImageView.image = image;
+        } else {
+            NSString* imagePath = [JSDBundle pathForResource:self.model.kitImageName ofType:@"png"];
+            self.kitImageView.image = [UIImage imageWithContentsOfFile:imagePath];
+        }
     }
     
     self.kitNameLabel.text = self.model.kitCNName;
@@ -107,6 +129,14 @@
 #pragma mark - 4.UITableViewDataSource and UITableViewDelegate
 
 #pragma mark - 5.Event Response
+
+- (void)onTouchEdit:(id)sender {
+    
+    JSDAddEditKitVC* editVC = [[JSDAddEditKitVC alloc] init];
+    editVC.model = self.model;
+    
+    [self.navigationController pushViewController:editVC animated:YES];
+}
 
 #pragma mark - 6.Private Methods
 

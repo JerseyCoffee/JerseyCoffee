@@ -13,7 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 @class JSDKitTypeModel;
 @interface JSDKitTypeViewModel : JSDBaseModel
 
-@property (nonatomic, strong) NSArray<JSDKitTypeModel* >* listArray;
+@property (nonatomic, strong) NSMutableArray<JSDKitTypeModel* >* listArray;
+
+- (void)upDateKit;
+- (void)addDateKit: (JSDKitTypeModel* _Nullable)KitModel;
+- (void)editDataKit: (JSDKitTypeModel *)kitModel;
 
 @end
 
@@ -25,6 +29,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString* kitDetail;
 @property (nonatomic, copy) NSString* step;
 @property (nonatomic, copy) NSString* kitID;
+@property (nonatomic, assign) BOOL canEdit;
+
 
 @end
 

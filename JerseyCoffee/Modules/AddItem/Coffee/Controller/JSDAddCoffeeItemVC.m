@@ -87,10 +87,10 @@
     self.coffeeImageView.image = [UIImage imageNamed:path];
     self.coffeeImageView.contentMode = UIViewContentModeScaleToFill;
     self.addCoffeeButton.backgroundColor = [UIColor clearColor];
-    self.coffeeImageView.layer.cornerRadius = 40;
+    self.coffeeImageView.layer.cornerRadius = 5;
     self.coffeeImageView.layer.masksToBounds = YES;
     self.addCoffeeButton.layer.masksToBounds = YES;
-    self.addCoffeeButton.layer.cornerRadius = 40;
+    self.addCoffeeButton.layer.cornerRadius = 5;
     
     self.coffeeParameterView.layer.cornerRadius = 5;
     self.coffeeParameterView.layer.masksToBounds = YES;

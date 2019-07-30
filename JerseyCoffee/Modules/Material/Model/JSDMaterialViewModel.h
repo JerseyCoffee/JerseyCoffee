@@ -13,7 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 @class JSDMaterialModel;
 @interface JSDMaterialViewModel : JSDBaseModel
 
-@property (nonatomic, strong) NSArray<JSDMaterialModel* >* listArray;
+@property (nonatomic, strong) NSMutableArray<JSDMaterialModel* >* listArray;
+
+- (void)upDateMaterial;
+- (void)addDateMaterial: (JSDMaterialModel* _Nullable)MaterialModel;
+- (void)editDataMaterial: (JSDMaterialModel *)materialModel;
 
 @end
 
@@ -27,6 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) float bakeNumber;
 @property (nonatomic, assign) float sourNumber;
 @property (nonatomic, assign) float chunNumber;
+@property (nonatomic, assign) BOOL canEdit;
+@property (nonatomic, copy) NSString* materialID;
 
 @end
 

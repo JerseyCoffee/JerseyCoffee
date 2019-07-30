@@ -13,6 +13,9 @@
 		5501257322E7F9FE00835DE4 /* JSDMaterialTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5501257222E7F9FE00835DE4 /* JSDMaterialTextView.xib */; };
 		5534DCA022EF01AF006E8ABB /* JSDAddEditMaterialVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5534DC9E22EF01AF006E8ABB /* JSDAddEditMaterialVC.m */; };
 		5534DCA122EF01AF006E8ABB /* JSDAddEditMaterialVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5534DC9F22EF01AF006E8ABB /* JSDAddEditMaterialVC.xib */; };
+		5534DCA622F00188006E8ABB /* JSDAddEditKitVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5534DCA422F00188006E8ABB /* JSDAddEditKitVC.m */; };
+		5534DCA722F00188006E8ABB /* JSDAddEditKitVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5534DCA522F00188006E8ABB /* JSDAddEditKitVC.xib */; };
+		5534DCA922F001D7006E8ABB /* AddItem.png in Resources */ = {isa = PBXBuildFile; fileRef = 5534DCA822F001D7006E8ABB /* AddItem.png */; };
 		5542BA8222E5BE0000ADCCAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5542BA8122E5BE0000ADCCAC /* AppDelegate.m */; };
 		5542BA8A22E5BE0100ADCCAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5542BA8922E5BE0100ADCCAC /* Assets.xcassets */; };
 		5542BA8D22E5BE0100ADCCAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5542BA8B22E5BE0100ADCCAC /* LaunchScreen.storyboard */; };
@@ -56,7 +59,7 @@
 		55E952DA22E95D10008BADB5 /* JSDCoffeeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E952D922E95D10008BADB5 /* JSDCoffeeViewModel.m */; };
 		55E952DC22E95FAE008BADB5 /* coffeeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 55E952DB22E95FAE008BADB5 /* coffeeData.json */; };
 		55E952DF22E98474008BADB5 /* JSDKitTypeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E952DE22E98474008BADB5 /* JSDKitTypeViewModel.m */; };
-		55E952E122E984AC008BADB5 /* kitTyopeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 55E952E022E984AC008BADB5 /* kitTyopeData.json */; };
+		55E952E122E984AC008BADB5 /* kitTypeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 55E952E022E984AC008BADB5 /* kitTypeData.json */; };
 		55E952E422E98E4D008BADB5 /* JSDMaterialViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E952E322E98E4D008BADB5 /* JSDMaterialViewModel.m */; };
 		55E952E622E98F56008BADB5 /* MaterialData.json in Resources */ = {isa = PBXBuildFile; fileRef = 55E952E522E98F56008BADB5 /* MaterialData.json */; };
 		601E98C522E9EA85008CBE2B /* JSDCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601E98C222E9EA85008CBE2B /* JSDCollectionViewCell.xib */; };
@@ -81,6 +84,10 @@
 		5534DC9D22EF01AF006E8ABB /* JSDAddEditMaterialVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDAddEditMaterialVC.h; sourceTree = "<group>"; };
 		5534DC9E22EF01AF006E8ABB /* JSDAddEditMaterialVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDAddEditMaterialVC.m; sourceTree = "<group>"; };
 		5534DC9F22EF01AF006E8ABB /* JSDAddEditMaterialVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDAddEditMaterialVC.xib; sourceTree = "<group>"; };
+		5534DCA322F00188006E8ABB /* JSDAddEditKitVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDAddEditKitVC.h; sourceTree = "<group>"; };
+		5534DCA422F00188006E8ABB /* JSDAddEditKitVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDAddEditKitVC.m; sourceTree = "<group>"; };
+		5534DCA522F00188006E8ABB /* JSDAddEditKitVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDAddEditKitVC.xib; sourceTree = "<group>"; };
+		5534DCA822F001D7006E8ABB /* AddItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddItem.png; sourceTree = "<group>"; };
 		5542BA7D22E5BE0000ADCCAC /* JerseyCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JerseyCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5542BA8022E5BE0000ADCCAC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5542BA8122E5BE0000ADCCAC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -154,7 +161,7 @@
 		55E952DB22E95FAE008BADB5 /* coffeeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = coffeeData.json; sourceTree = "<group>"; };
 		55E952DD22E98474008BADB5 /* JSDKitTypeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDKitTypeViewModel.h; sourceTree = "<group>"; };
 		55E952DE22E98474008BADB5 /* JSDKitTypeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDKitTypeViewModel.m; sourceTree = "<group>"; };
-		55E952E022E984AC008BADB5 /* kitTyopeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kitTyopeData.json; sourceTree = "<group>"; };
+		55E952E022E984AC008BADB5 /* kitTypeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kitTypeData.json; sourceTree = "<group>"; };
 		55E952E222E98E4D008BADB5 /* JSDMaterialViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDMaterialViewModel.h; sourceTree = "<group>"; };
 		55E952E322E98E4D008BADB5 /* JSDMaterialViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDMaterialViewModel.m; sourceTree = "<group>"; };
 		55E952E522E98F56008BADB5 /* MaterialData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MaterialData.json; path = JerseyCoffee/Modules/Material/MaterialData.json; sourceTree = SOURCE_ROOT; };
@@ -198,6 +205,16 @@
 				5534DC9F22EF01AF006E8ABB /* JSDAddEditMaterialVC.xib */,
 			);
 			path = Material;
+			sourceTree = "<group>";
+		};
+		5534DCA222F00168006E8ABB /* Kit */ = {
+			isa = PBXGroup;
+			children = (
+				5534DCA322F00188006E8ABB /* JSDAddEditKitVC.h */,
+				5534DCA422F00188006E8ABB /* JSDAddEditKitVC.m */,
+				5534DCA522F00188006E8ABB /* JSDAddEditKitVC.xib */,
+			);
+			path = Kit;
 			sourceTree = "<group>";
 		};
 		5542BA7422E5BE0000ADCCAC = {
@@ -247,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				601E98E122EDA355008CBE2B /* selected_photo.png */,
+				5534DCA822F001D7006E8ABB /* AddItem.png */,
 				556D4E1522EAD00700E3DBB2 /* dand.png */,
 				556D4E1722EAD00700E3DBB2 /* frenchpress.png */,
 				556D4E1622EAD00700E3DBB2 /* siphon.png */,
@@ -466,7 +484,7 @@
 		55BE3C9822E6B58B00D28107 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				55E952E022E984AC008BADB5 /* kitTyopeData.json */,
+				55E952E022E984AC008BADB5 /* kitTypeData.json */,
 				55E952DD22E98474008BADB5 /* JSDKitTypeViewModel.h */,
 				55E952DE22E98474008BADB5 /* JSDKitTypeViewModel.m */,
 			);
@@ -571,6 +589,7 @@
 		601E98CF22EC23AB008CBE2B /* AddItem */ = {
 			isa = PBXGroup;
 			children = (
+				5534DCA222F00168006E8ABB /* Kit */,
 				5534DC9C22EF017B006E8ABB /* Material */,
 				601E98D022EC23B4008CBE2B /* Coffee */,
 			);
@@ -694,9 +713,11 @@
 				5542BA8D22E5BE0100ADCCAC /* LaunchScreen.storyboard in Resources */,
 				5501257322E7F9FE00835DE4 /* JSDMaterialTextView.xib in Resources */,
 				556D4E1122EAC64300E3DBB2 /* cappuccino_coffee.png in Resources */,
+				5534DCA922F001D7006E8ABB /* AddItem.png in Resources */,
 				55BE3CC922E6E16500D28107 /* JSDCoffeeCollectionViewCell.xib in Resources */,
-				55E952E122E984AC008BADB5 /* kitTyopeData.json in Resources */,
+				55E952E122E984AC008BADB5 /* kitTypeData.json in Resources */,
 				55E952DC22E95FAE008BADB5 /* coffeeData.json in Resources */,
+				5534DCA722F00188006E8ABB /* JSDAddEditKitVC.xib in Resources */,
 				556D4E1222EAC64300E3DBB2 /* latte_coffee.png in Resources */,
 				556D4E1322EAC64300E3DBB2 /* americano_coffee.png in Resources */,
 				5542BA8A22E5BE0100ADCCAC /* Assets.xcassets in Resources */,
@@ -836,6 +857,7 @@
 				55E952E422E98E4D008BADB5 /* JSDMaterialViewModel.m in Sources */,
 				55E952D322E951A5008BADB5 /* JSDKitTypeViewCell.m in Sources */,
 				55BE3C8522E6AFAE00D28107 /* UIColor+JSDStyle.m in Sources */,
+				5534DCA622F00188006E8ABB /* JSDAddEditKitVC.m in Sources */,
 				5501256D22E7F2D400835DE4 /* JSDMaterialCell.m in Sources */,
 				55C2042722E9B05600F193E6 /* JSDCoffeeDetailVC.m in Sources */,
 				55C2042C22E9B07F00F193E6 /* JSDMaterialDetailVC.m in Sources */,
