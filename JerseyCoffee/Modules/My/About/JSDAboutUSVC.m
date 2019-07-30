@@ -11,7 +11,7 @@
 #import <MDCCollectionViewTextCell.h>
 #import "JSDAbountViewModel.h"
 
-static NSString* const kJSDAppleID = @"1474763959";
+static NSString* const kJSDAppleID = @"1474780395";
 
 @interface JSDAboutUSVC ()
 

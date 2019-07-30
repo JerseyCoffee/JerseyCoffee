@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-extern NSString* const kKitListChangeNotifaction;
+extern NSString* const kCoffeeListChangeNotifaction;
 
 @interface JSDCoffeeVC : JSDCollectionViewController
 

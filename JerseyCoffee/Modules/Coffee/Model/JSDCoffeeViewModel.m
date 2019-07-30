@@ -62,7 +62,7 @@ static NSString* const kCoffeeFilePathName = @"coffee.json";
     }
     [data writeToFile:path atomically:YES];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:kKitListChangeNotifaction object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kCoffeeListChangeNotifaction object:nil];
 }
 
 - (void)editDataCoffee: (JSDCoffeeModel *)coffeeModel {
