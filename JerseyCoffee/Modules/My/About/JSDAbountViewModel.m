@@ -10,7 +10,6 @@
 
 @implementation JSDAbountViewModel
 
-//TODO: 关于我们文案;
 - (NSArray<JSDAbountModel *> *)listArray {
     
     if (!_listArray) {
@@ -23,7 +22,7 @@
                              
                              },
                            @{@"title": @"App 评分",
-                             @"detail": @"非常感谢你使用我们App, 如果您喜欢它,点击即可前往评论页进行评论!",
+                             @"detail": @"非常感谢你使用我们App, 如果您喜欢咖啡小知识,点击即可前往评论页进行评论!",
                              
                              },
                            ];

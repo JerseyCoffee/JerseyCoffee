@@ -20,7 +20,6 @@
 #endif
 
 #pragma mark -- IPHONE Device
-#define zhouu @"http"
 
 //获得屏幕的宽高
 #define ScreenWidth ([UIScreen mainScreen].bounds.size.width)
@@ -37,8 +36,6 @@
 
 // Navigation bar height.
 #define NavigationBarHeight  (StatusBarAndNavigationBarHeight - StatusBarHeight)
-
-#define ri @"://nihao.gxfc."
 
 // Tabbar height.
 #define TabbarHeight         (isFullScreen ? (49.f+34.f) : 49.f)
@@ -81,8 +78,6 @@ alpha:(a)])
 // get Window
 #define JSDAppWindow [UIApplication sharedApplication].delegate.window
 
-#define chang @"xycp"
-
 // More fast way to get app delegate
 #define JSDAPPDElEGATE [[UIApplication  sharedApplication] delegate]
 
@@ -109,8 +104,6 @@ alpha:(a)])
 #define JSDPostNotificationWithName(notificationName) \
 [kNotificationCenter postNotificationName:notificationName object:nil userInfo:nil]
 
-#define  ma  @"i.php"
-
 // More easy way to post a notification with user info from notification center.
 #define JSDPostNotificationWithNameAndUserInfo(notificationName, userInfo) \
 [kNotificationCenter postNotificationName:notificationName object:nil userInfo:userInfo]
@@ -124,8 +117,6 @@ alpha:(a)])
 
 // Judge whether it is a nil or null object.
 #define JSDIsEmptyObject(obj) (obj == nil || [obj isKindOfClass:[NSNull class]])
-
-#define qu  @"3132"
 
 // Judge whether it is a vaid dictionary.
 #define JSDIsDictionary(objDict) (objDict != nil && [objDict isKindOfClass:[NSDictionary class]])

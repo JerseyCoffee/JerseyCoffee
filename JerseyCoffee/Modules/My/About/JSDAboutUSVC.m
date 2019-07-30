@@ -11,7 +11,7 @@
 #import <MDCCollectionViewTextCell.h>
 #import "JSDAbountViewModel.h"
 
-static NSString* const kJSDAppleID = @"1473619521";
+static NSString* const kJSDAppleID = @"1474763959";
 
 @interface JSDAboutUSVC ()
 
@@ -107,17 +107,15 @@ static NSString * const reuseIdentifier = @"Cell";
     
     JSDAbountModel* model = self.viewModel.listArray[indexPath.item];
     
-    if (indexPath.row == 1) {
+    if (indexPath.row == 0) {
         // 关闭邮件发送视图
         MDCSnackbarManager* manager = [MDCSnackbarManager defaultManager];
         MDCSnackbarMessage* message = [MDCSnackbarMessage messageWithText: @"官网已复制到剪切板"];
         UIPasteboard* pasterboard = [[UIPasteboard alloc] init];
-        //TODO:官网
         pasterboard.string = model.detail;
         [manager showMessage:message];
 
     } else if (indexPath.row == 2) {
-        //TODO:
         NSString* appId = kJSDAppleID;
         NSString *urlString = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/cn/app/id%@?mt=8&action=write-review", appId];
         if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:urlString]]) {

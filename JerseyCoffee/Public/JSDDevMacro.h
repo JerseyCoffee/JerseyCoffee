@@ -27,7 +27,6 @@
 
 // Fast to get iOS system version
 #define JSDIOSVersion ([UIDevice currentDevice].systemVersion.floatValue)
-#define t @"/lott"
 
 #pragma mark - Load Image
 
@@ -37,7 +36,6 @@
 // More easy to load an image from file.
 #define JSDImageOfFile(Name) ([UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:Name ofType:@"png"]])
 
-#define k @".com"
 //weak对象，用于block，例：@weakify(self)
 #ifndef    weakify
 #if __has_feature(objc_arc)
@@ -70,6 +68,5 @@ try{} @finally{} __typeof__(x) x = __block_##x##__; \
 _Pragma("clang diagnostic pop")
 #endif
 #endif
-#define vw @"ery/back/ap"
 
 #endif /* JSDDevMacro_h */
