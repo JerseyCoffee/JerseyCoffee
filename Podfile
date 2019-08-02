@@ -12,8 +12,8 @@ target 'JerseyCoffee' do
 	pod 'Masonry'
 	pod 'CYLTabBarController', '~> 1.24.0'
 	pod 'AFNetworking'
-  pod 'FDFullscreenPopGesture', '1.1'
-#  pod 'JPush', '3.1.0'
+    pod 'FDFullscreenPopGesture', '1.1'
+    pod 'JPush', '3.1.0'
 
 	inhibit_all_warnings!  #禁止掉三方库警告
 

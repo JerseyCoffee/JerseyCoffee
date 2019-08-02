@@ -9,8 +9,9 @@
 #import "AppDelegate.h"
 
 #import "JSDTabBarViewController.h"
+#import <JPUSHService.h>
 
-@interface AppDelegate ()
+@interface AppDelegate () <JPUSHRegisterDelegate>
 
 @end
 
@@ -21,8 +22,23 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [[JSDTabBarViewController alloc]init];
     [self.window makeKeyAndVisible];
+    
+    //新增推送功能
+    [self setupPushApplication:application Options:launchOptions];
 
     return YES;
+}
+
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    
+    
+    [JPUSHService registerDeviceToken:deviceToken];
+}
+
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
+{
+    [application registerForRemoteNotifications];
 }
 
 
@@ -52,5 +68,30 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void) setupPushApplication:(UIApplication *)application Options:(NSDictionary *)launchOptions {
+    
+    NSString *appKey = @"2ac5171796185d6cfb5d461d";
+    NSString *channel = @"channel";
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 10.0) {
+        JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
+        entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
+        [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
+    }
+    else if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        //可以添加自定义categories
+        [JPUSHService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
+                                                          UIUserNotificationTypeSound |
+                                                          UIUserNotificationTypeAlert)
+                                              categories:nil];
+    }
+    
+    BOOL isProduction = true;
+    [JPUSHService setupWithOption:launchOptions appKey:appKey
+                          channel:channel
+                 apsForProduction:isProduction
+            advertisingIdentifier:nil];  //
+    
+    [application registerForRemoteNotifications];
+}
 
 @end

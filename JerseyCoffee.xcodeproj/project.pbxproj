@@ -121,6 +121,7 @@
 		55703AB922E5C10600C2EC01 /* JSDMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDMacro.h; sourceTree = "<group>"; };
 		55703ABA22E5C10600C2EC01 /* JSDPublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDPublic.h; sourceTree = "<group>"; };
 		55727CA022F3CD8C00559B72 /* selected_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selected_photo.png; sourceTree = "<group>"; };
+		55727CA222F3D12300559B72 /* JerseyCoffee.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JerseyCoffee.entitlements; sourceTree = "<group>"; };
 		55BE3C8322E6AFAE00D28107 /* UIColor+JSDStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+JSDStyle.h"; sourceTree = "<group>"; };
 		55BE3C8422E6AFAE00D28107 /* UIColor+JSDStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JSDStyle.m"; sourceTree = "<group>"; };
 		55BE3C8622E6B21A00D28107 /* JSDBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDBaseViewController.h; sourceTree = "<group>"; };
@@ -238,6 +239,7 @@
 		5542BA7F22E5BE0000ADCCAC /* JerseyCoffee */ = {
 			isa = PBXGroup;
 			children = (
+				55727CA222F3D12300559B72 /* JerseyCoffee.entitlements */,
 				55703AB222E5C02E00C2EC01 /* Application */,
 				55703AB022E5C02E00C2EC01 /* Base */,
 				55703AB522E5C02E00C2EC01 /* BaseKit */,
@@ -681,6 +683,11 @@
 				TargetAttributes = {
 					5542BA7C22E5BE0000ADCCAC = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -1002,6 +1009,7 @@
 			baseConfigurationReference = 7F5E24E53A3B4D07A28557E2 /* Pods-JerseyCoffee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = JerseyCoffee/JerseyCoffee.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8PB3C9ADKV;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/JerseyCoffee/Public/JSDPrefixHeader.pch";
@@ -1022,6 +1030,7 @@
 			baseConfigurationReference = 2741154BE751079261D2B9F7 /* Pods-JerseyCoffee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = JerseyCoffee/JerseyCoffee.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8PB3C9ADKV;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/JerseyCoffee/Public/JSDPrefixHeader.pch";
