@@ -15,7 +15,6 @@
 		5534DCA122EF01AF006E8ABB /* JSDAddEditMaterialVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5534DC9F22EF01AF006E8ABB /* JSDAddEditMaterialVC.xib */; };
 		5534DCA622F00188006E8ABB /* JSDAddEditKitVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5534DCA422F00188006E8ABB /* JSDAddEditKitVC.m */; };
 		5534DCA722F00188006E8ABB /* JSDAddEditKitVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5534DCA522F00188006E8ABB /* JSDAddEditKitVC.xib */; };
-		5534DCAD22F03621006E8ABB /* selected_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5534DCAC22F0361F006E8ABB /* selected_photo.png */; };
 		5534DCB322F03844006E8ABB /* AddItem.png in Resources */ = {isa = PBXBuildFile; fileRef = 5534DCB222F03844006E8ABB /* AddItem.png */; };
 		5542BA8222E5BE0000ADCCAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5542BA8122E5BE0000ADCCAC /* AppDelegate.m */; };
 		5542BA8A22E5BE0100ADCCAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5542BA8922E5BE0100ADCCAC /* Assets.xcassets */; };
@@ -37,6 +36,7 @@
 		556D4E2722EADF6400E3DBB2 /* JSDAbountViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 556D4E2622EADF6400E3DBB2 /* JSDAbountViewModel.m */; };
 		556D4E2B22EAE48800E3DBB2 /* JSDKitTypeStepVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 556D4E2922EAE48800E3DBB2 /* JSDKitTypeStepVC.m */; };
 		556D4E2C22EAE48800E3DBB2 /* JSDKitTypeStepVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556D4E2A22EAE48800E3DBB2 /* JSDKitTypeStepVC.xib */; };
+		55727CA122F3CD8D00559B72 /* selected_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 55727CA022F3CD8C00559B72 /* selected_photo.png */; };
 		55BE3C8522E6AFAE00D28107 /* UIColor+JSDStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3C8422E6AFAE00D28107 /* UIColor+JSDStyle.m */; };
 		55BE3C8822E6B21A00D28107 /* JSDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3C8722E6B21A00D28107 /* JSDBaseViewController.m */; };
 		55BE3C8B22E6B23000D28107 /* JSDCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3C8A22E6B23000D28107 /* JSDCollectionViewController.m */; };
@@ -87,7 +87,6 @@
 		5534DCA322F00188006E8ABB /* JSDAddEditKitVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDAddEditKitVC.h; sourceTree = "<group>"; };
 		5534DCA422F00188006E8ABB /* JSDAddEditKitVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDAddEditKitVC.m; sourceTree = "<group>"; };
 		5534DCA522F00188006E8ABB /* JSDAddEditKitVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDAddEditKitVC.xib; sourceTree = "<group>"; };
-		5534DCAC22F0361F006E8ABB /* selected_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selected_photo.png; sourceTree = "<group>"; };
 		5534DCB222F03844006E8ABB /* AddItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddItem.png; sourceTree = "<group>"; };
 		5542BA7D22E5BE0000ADCCAC /* JerseyCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JerseyCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5542BA8022E5BE0000ADCCAC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -121,6 +120,7 @@
 		55703AB822E5C10600C2EC01 /* JSDDevMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDDevMacro.h; sourceTree = "<group>"; };
 		55703AB922E5C10600C2EC01 /* JSDMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDMacro.h; sourceTree = "<group>"; };
 		55703ABA22E5C10600C2EC01 /* JSDPublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDPublic.h; sourceTree = "<group>"; };
+		55727CA022F3CD8C00559B72 /* selected_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selected_photo.png; sourceTree = "<group>"; };
 		55BE3C8322E6AFAE00D28107 /* UIColor+JSDStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+JSDStyle.h"; sourceTree = "<group>"; };
 		55BE3C8422E6AFAE00D28107 /* UIColor+JSDStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JSDStyle.m"; sourceTree = "<group>"; };
 		55BE3C8622E6B21A00D28107 /* JSDBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDBaseViewController.h; sourceTree = "<group>"; };
@@ -264,7 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				5534DCB222F03844006E8ABB /* AddItem.png */,
-				5534DCAC22F0361F006E8ABB /* selected_photo.png */,
+				55727CA022F3CD8C00559B72 /* selected_photo.png */,
 				556D4E1522EAD00700E3DBB2 /* dand.png */,
 				556D4E1722EAD00700E3DBB2 /* frenchpress.png */,
 				556D4E1622EAD00700E3DBB2 /* siphon.png */,
@@ -734,7 +734,7 @@
 				5534DCA122EF01AF006E8ABB /* JSDAddEditMaterialVC.xib in Resources */,
 				556D4E1922EAD00700E3DBB2 /* siphon.png in Resources */,
 				55C2042822E9B05600F193E6 /* JSDCoffeeDetailVC.xib in Resources */,
-				5534DCAD22F03621006E8ABB /* selected_photo.png in Resources */,
+				55727CA122F3CD8D00559B72 /* selected_photo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

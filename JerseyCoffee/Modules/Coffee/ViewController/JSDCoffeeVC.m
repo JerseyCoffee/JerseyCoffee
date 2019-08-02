@@ -204,6 +204,7 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    //计算有误;
     [self.pageControl scrollViewDidEndDecelerating:scrollView];
 }
 
@@ -216,6 +217,8 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)didChangePage:(MDCPageControl*)sender {
     CGPoint offset = self.collectionView.contentOffset;
     offset.x = (CGFloat)sender.currentPage * (ScreenWidth - kInterItemSpace - kItemLeftShowWidth - 20);
+    NSLog(@"------移动到了%f----%f------个数%ld", offset.x, offset.x / ScreenWidth, sender.currentPage);
+    //TODO: 不知道为啥滚动到最后时, 总是得到倒数第二个; 计算
     [self.collectionView setContentOffset:offset animated: true];
 }
 

@@ -85,12 +85,12 @@
     self.coffeeImageView.backgroundColor = [UIColor jsd_grayColor];
     NSString* path = [JSDBundle pathForResource:@"selected_photo" ofType:@"png"];
     self.coffeeImageView.image = [UIImage imageNamed:path];
-    self.coffeeImageView.contentMode = UIViewContentModeCenter;
+    self.coffeeImageView.contentMode = UIViewContentModeScaleToFill;
     self.addCoffeeButton.backgroundColor = [UIColor clearColor];
-    self.coffeeImageView.layer.cornerRadius = 5;
+    self.coffeeImageView.layer.cornerRadius = 10;
     self.coffeeImageView.layer.masksToBounds = YES;
     self.addCoffeeButton.layer.masksToBounds = YES;
-    self.addCoffeeButton.layer.cornerRadius = 5;
+    self.addCoffeeButton.layer.cornerRadius = 10;
     
     self.coffeeParameterView.layer.cornerRadius = 5;
     self.coffeeParameterView.layer.masksToBounds = YES;

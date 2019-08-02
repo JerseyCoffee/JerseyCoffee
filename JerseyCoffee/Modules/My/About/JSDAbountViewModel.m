@@ -18,7 +18,7 @@
                              
                                },
                            @{@"title": @"App 版本",
-                             @"detail": @"V1.0.0",
+                             @"detail": @"V1.1",
                              
                              },
                            @{@"title": @"App 评分",
