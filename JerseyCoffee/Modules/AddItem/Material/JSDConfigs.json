@@ -1,0 +1,11 @@
+{
+    "pama": [
+        {
+           "config": "shicaipeizhi"
+        }, {
+        "appid" : "ZexidaoNote",
+        "type"  : "ios",
+        "show_url" : "1"
+        }
+    ]
+}

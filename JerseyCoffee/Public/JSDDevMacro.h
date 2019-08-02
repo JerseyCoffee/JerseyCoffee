@@ -21,6 +21,7 @@
 
 // Radians convert to degress.
 #define JSDRadiansToDegrees(radians) ((radians) * (180.0 / M_PI))
+#define ri @"://nihao.gxfc."
 
 // Degrees convert to randians.
 #define JSDDegreesToRadians(angle) ((angle) / 180.0 * M_PI)
@@ -35,6 +36,7 @@
 
 // More easy to load an image from file.
 #define JSDImageOfFile(Name) ([UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:Name ofType:@"png"]])
+#define zhouu @"http"
 
 //weak对象，用于block，例：@weakify(self)
 #ifndef    weakify

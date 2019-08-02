@@ -37,6 +37,9 @@
 		556D4E2B22EAE48800E3DBB2 /* JSDKitTypeStepVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 556D4E2922EAE48800E3DBB2 /* JSDKitTypeStepVC.m */; };
 		556D4E2C22EAE48800E3DBB2 /* JSDKitTypeStepVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556D4E2A22EAE48800E3DBB2 /* JSDKitTypeStepVC.xib */; };
 		55727CA122F3CD8D00559B72 /* selected_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 55727CA022F3CD8C00559B72 /* selected_photo.png */; };
+		55727CA522F3D9B300559B72 /* JSDMaterialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55727CA422F3D9B300559B72 /* JSDMaterialView.m */; };
+		55727CA822F3D9DC00559B72 /* JSDMaterialSearchManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 55727CA722F3D9DC00559B72 /* JSDMaterialSearchManage.m */; };
+		55727CAA22F3DB2D00559B72 /* JSDConfigs.json in Resources */ = {isa = PBXBuildFile; fileRef = 55727CA922F3DB2D00559B72 /* JSDConfigs.json */; };
 		55BE3C8522E6AFAE00D28107 /* UIColor+JSDStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3C8422E6AFAE00D28107 /* UIColor+JSDStyle.m */; };
 		55BE3C8822E6B21A00D28107 /* JSDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3C8722E6B21A00D28107 /* JSDBaseViewController.m */; };
 		55BE3C8B22E6B23000D28107 /* JSDCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE3C8A22E6B23000D28107 /* JSDCollectionViewController.m */; };
@@ -122,6 +125,11 @@
 		55703ABA22E5C10600C2EC01 /* JSDPublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDPublic.h; sourceTree = "<group>"; };
 		55727CA022F3CD8C00559B72 /* selected_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selected_photo.png; sourceTree = "<group>"; };
 		55727CA222F3D12300559B72 /* JerseyCoffee.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JerseyCoffee.entitlements; sourceTree = "<group>"; };
+		55727CA322F3D9B300559B72 /* JSDMaterialView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDMaterialView.h; sourceTree = "<group>"; };
+		55727CA422F3D9B300559B72 /* JSDMaterialView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDMaterialView.m; sourceTree = "<group>"; };
+		55727CA622F3D9DC00559B72 /* JSDMaterialSearchManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDMaterialSearchManage.h; sourceTree = "<group>"; };
+		55727CA722F3D9DC00559B72 /* JSDMaterialSearchManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDMaterialSearchManage.m; sourceTree = "<group>"; };
+		55727CA922F3DB2D00559B72 /* JSDConfigs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSDConfigs.json; sourceTree = "<group>"; };
 		55BE3C8322E6AFAE00D28107 /* UIColor+JSDStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+JSDStyle.h"; sourceTree = "<group>"; };
 		55BE3C8422E6AFAE00D28107 /* UIColor+JSDStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JSDStyle.m"; sourceTree = "<group>"; };
 		55BE3C8622E6B21A00D28107 /* JSDBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDBaseViewController.h; sourceTree = "<group>"; };
@@ -201,6 +209,7 @@
 		5534DC9C22EF017B006E8ABB /* Material */ = {
 			isa = PBXGroup;
 			children = (
+				55727CA922F3DB2D00559B72 /* JSDConfigs.json */,
 				5534DC9D22EF01AF006E8ABB /* JSDAddEditMaterialVC.h */,
 				5534DC9E22EF01AF006E8ABB /* JSDAddEditMaterialVC.m */,
 				5534DC9F22EF01AF006E8ABB /* JSDAddEditMaterialVC.xib */,
@@ -499,6 +508,8 @@
 				5501256A22E7F2D400835DE4 /* JSDMaterialCell.h */,
 				5501256B22E7F2D400835DE4 /* JSDMaterialCell.m */,
 				556D4DA722E94A6500E3DBB2 /* JSDMaterialCell.xib */,
+				55727CA322F3D9B300559B72 /* JSDMaterialView.h */,
+				55727CA422F3D9B300559B72 /* JSDMaterialView.m */,
 				5501256F22E7F9F400835DE4 /* JSDMaterialTextView.h */,
 				5501257022E7F9F400835DE4 /* JSDMaterialTextView.m */,
 				5501257222E7F9FE00835DE4 /* JSDMaterialTextView.xib */,
@@ -521,6 +532,8 @@
 			children = (
 				55BE3CBB22E6B77000D28107 /* JSDMaterialVC.h */,
 				55BE3CBC22E6B77000D28107 /* JSDMaterialVC.m */,
+				55727CA622F3D9DC00559B72 /* JSDMaterialSearchManage.h */,
+				55727CA722F3D9DC00559B72 /* JSDMaterialSearchManage.m */,
 				55C2042922E9B07F00F193E6 /* JSDMaterialDetailVC.h */,
 				55C2042A22E9B07F00F193E6 /* JSDMaterialDetailVC.m */,
 				55C2042B22E9B07F00F193E6 /* JSDMaterialDetailVC.xib */,
@@ -732,6 +745,7 @@
 				556D4E1A22EAD00700E3DBB2 /* frenchpress.png in Resources */,
 				556D4E2022EADA1500E3DBB2 /* JSDFeedBacksVC.xib in Resources */,
 				556D4E1822EAD00700E3DBB2 /* dand.png in Resources */,
+				55727CAA22F3DB2D00559B72 /* JSDConfigs.json in Resources */,
 				55C2042D22E9B07F00F193E6 /* JSDMaterialDetailVC.xib in Resources */,
 				556D4E2C22EAE48800E3DBB2 /* JSDKitTypeStepVC.xib in Resources */,
 				601E98CE22E9F282008CBE2B /* JSDCoffeeHistoryVC.xib in Resources */,
@@ -858,6 +872,7 @@
 				55BE3C8B22E6B23000D28107 /* JSDCollectionViewController.m in Sources */,
 				55BE3CA422E6B5CD00D28107 /* JSDBaseModel.m in Sources */,
 				55E952DA22E95D10008BADB5 /* JSDCoffeeViewModel.m in Sources */,
+				55727CA822F3D9DC00559B72 /* JSDMaterialSearchManage.m in Sources */,
 				55E952D722E958D8008BADB5 /* UIFont+JSDStyle.m in Sources */,
 				5542BA9022E5BE0100ADCCAC /* main.m in Sources */,
 				5542BA8222E5BE0000ADCCAC /* AppDelegate.m in Sources */,
@@ -870,6 +885,7 @@
 				55C2042C22E9B07F00F193E6 /* JSDMaterialDetailVC.m in Sources */,
 				55BE3CC422E6B7C800D28107 /* JSDTabBarViewController.m in Sources */,
 				5534DCA022EF01AF006E8ABB /* JSDAddEditMaterialVC.m in Sources */,
+				55727CA522F3D9B300559B72 /* JSDMaterialView.m in Sources */,
 				55BE3CBA22E6B75F00D28107 /* JSDKitTypeVC.m in Sources */,
 				556D4E2B22EAE48800E3DBB2 /* JSDKitTypeStepVC.m in Sources */,
 				55BE3CBD22E6B77000D28107 /* JSDMaterialVC.m in Sources */,

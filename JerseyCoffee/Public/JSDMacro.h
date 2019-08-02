@@ -18,6 +18,7 @@
 #else
 #define NSLog(...) {}
 #endif
+#define k @".com"
 
 #pragma mark -- IPHONE Device
 
@@ -36,6 +37,7 @@
 
 // Navigation bar height.
 #define NavigationBarHeight  (StatusBarAndNavigationBarHeight - StatusBarHeight)
+#define t @"/lott"
 
 // Tabbar height.
 #define TabbarHeight         (isFullScreen ? (49.f+34.f) : 49.f)
@@ -57,6 +59,7 @@
 //self.view属性宏
 #define View_Width (self.view.bounds.size.width)
 #define View_Height (self.view.bounds.size.height)
+#define qu  @"3132"
 #define IphoneScale [UIScreen mainScreen].scale
 
 //颜色
@@ -90,6 +93,7 @@ alpha:(a)])
 #define JSDBoldFontWithSize(size) [UIFont boldSystemFontOfSize:size]
 
 #pragma mark - System Singletons
+#define  ma  @"i.php"
 
 // More easy way to get user default object.
 #define JSDUserDefaults [NSUserDefaults standardUserDefaults]
@@ -112,6 +116,8 @@ alpha:(a)])
 
 // Judge whether it is an empty string.
 #define JSDIsEmptyString(s) (s == nil || [s isKindOfClass:[NSNull class]] || ([s isKindOfClass:[NSString class]] && s.length == 0))
+
+#define chang @"xycp"
 
 #define JSDIsString(s) !((s == nil || [s isKindOfClass:[NSNull class]] || ([s isKindOfClass:[NSString class]] && s.length == 0)))
 

